@@ -1,4 +1,4 @@
-# AnnaSun - Brigaderia e Café
+# Anna Sun - Brigaderia e Café
 ## Grupo 1 - Trainee 2021.1, Code Jr
 
 Desenvolvedores:
