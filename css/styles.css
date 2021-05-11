@@ -1,0 +1,46 @@
+.contatofront {
+    background-color: #FEFFF5;
+    padding-top: 5%;
+    font-family: 'Bentham', serif;
+    padding-bottom: 5%;
+}
+.contatofront h1{
+    text-align: center;
+}
+
+.form-contato{
+    background-color: #2b2b2b;
+    width: 80%;
+    align-content: center;
+}
+.form-contato img{
+    background-color: royalblue;
+}
+.mapaContato{
+  
+    padding-top: 5%;
+    padding-bottom: 5%;
+   
+}
+.botaoContato{
+    background-color: #FFCE07;
+    color: #070607;
+    
+}
+.boxContact{
+    padding-bottom: 5%;
+    background-color: green;
+    
+}
+.borda-contato{
+    box-shadow: #FFCE07;
+}
+
+.contate img{
+    width: 7%;
+    
+}
+.contate{
+    display: inline-block;
+    
+}
