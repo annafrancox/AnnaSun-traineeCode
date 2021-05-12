@@ -1,0 +1,34 @@
+.container-header{
+    background-color: #f47b7f;
+    width: 100%;
+}
+
+/* Arrumar as margins direto pelo html
+    Ver se o nav ta colocar em cima quando der scroll na pagina
+*/
+
+
+.container-header img{
+    width: 75px;
+}
+
+.container-header ul li{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin-right: 24px
+}
+
+.container-header ul li a{
+    color: #070607 ;
+}
+
+.container-header ul li.active{
+    font-weight: bold;
+    border-bottom: 2px solid #070607;
+}
+
+@media(max-width: 1000px){
+    .container-header img{
+        width: 64px;
+    }
+}
