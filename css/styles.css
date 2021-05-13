@@ -1,6 +1,5 @@
 .contatofront {
-    background-color: #FEFFF5;
-    padding-top: 4%;
+    background-image: url("../img/background.png");
     font-family: 'Bentham', serif;
     padding-bottom: 4%;
 }
@@ -8,15 +7,24 @@
     text-align: center;
     padding-bottom: 5%;
 }
+.contatoImage {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0px;
+}
+.contatoImage img{
+    width: 20%;
+    background-color: #FEFFF5;
+    border-radius: 100%;
+}
+
 
 .form-contato{
     background-color: #2b2b2b;
-    width: 1000%;
+    width: 0%;
     align-content: center;
 }
-.form-contato img{
-    background-color: royalblue;
-}
+
 .mapaContato{
   
     padding-top: 5%;
@@ -30,14 +38,29 @@
 }
 .boxContact{
     padding-bottom: 5%;
-    background-color: green;
     
 }
 .borda-contato{
-    box-shadow: #FFCE07;
+    border: 1px solid #FEFFF5;
+    border-radius: 30px;
+    background-color: #FEFFF5;
+    box-shadow: 5px 5px 3px #888888;
 }
 
 .phone{
     float: left;
+}
+
+.text-form{
+    font-size: 20px;
+}
+.contactLinks a {
+    color: #070607 !important;
+}
+.contactLinks a {
+    text-decoration: none !important;
+}
+.contactLinks a:hover{
+    text-decoration: none;
 }
 
