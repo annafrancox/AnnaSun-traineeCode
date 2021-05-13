@@ -3,23 +3,38 @@
 * {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    text-align: center;
+    align-items: center;
 }
 
 body{
-    background-color: #F47B7F;
+    background-color: #FFFFF5;
     font-family: 'Bentham', serif;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    align-items: center;
+}
+
+div.container{
+    text-align: center;
+    align-items: center;
 }
 
 /* Carousel: */
 
+div.carousel{
+    border: #F47B7F double 5px;
+}
+
 div#carouselText{
     background-color: #ffce07;
-    opacity: 80%;
+    opacity: 90%;
     border-radius: 5px;
-    color: #070607;
     font-family: 'Montserrat';
-    font-weight: bolder;
+    color: #FFFFF5;
+    font-weight: 900;
+    box-shadow: 2px 2px 7px black;
+    text-shadow: #070607 2px 1px 4px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -30,21 +45,149 @@ div#carouselText{
 
 /* Infos: */
 
-div.row{
-    background-color: #FFFFF5;
-    border-radius: 5px;
-    margin: 25px 10px 25px 10px;
-    padding: 15px 25px 15px 25px;
+div.info{
+    background-color: #ffce07;
+    opacity: 90%;
+    height: 70%;
+    margin: 25px 0 30px 0;
+    padding: 10px 20px 10px 20px;
 }
 
-div.col-sm-auto{
-    width: auto;
-
-}
-
-div.row img{
+div.info img{
     display: block;
-    max-width: 35%;
+    max-width: 50%;
     height: auto;
 }
 
+div.info-inside h4{
+    text-align: center;
+    font-family: 'Bentham';
+    color: #FFFFF5;
+    text-shadow: #070607 2px 1px 4px;
+    border: #070607 solid 0.5px;
+    border-radius: 5px;
+    font-size: xx-large;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+div.info-inside p{
+    text-align: justify;
+    font-size: medium;
+    font-weight: 900;
+    color: #070607;
+}
+
+div.info-inside a{
+    color: #070607;
+    background-color: #FFFFF5;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+div.info-inside a:hover{
+    background-color: #F47B7F;
+    color: #FFFFF5;
+}
+
+hr#pink{
+    background-color: #F47B7F;
+}
+
+/* Product Page: */
+
+div.productPage{
+    align-items: center !important;
+    text-align: center !important;
+}
+
+div.productPage h1{
+    font-family: 'Bentham';
+    color: #070607;
+    margin: 10px 0 40px 0;
+}
+
+a#noStyle{
+    color: #070607;
+    text-decoration: none;
+    outline: #070607 double 5px;
+    padding: 10px 15px 10px 15px;
+    background-color: #ffce07;
+}
+
+a#noStyle:hover{
+    text-decoration: none;
+}
+
+div.product{
+    border: none;
+    max-width: 30% !important;
+    margin: 10px 10px 5px 10px;
+    padding: 0 0 0 0;
+    outline: #F47B7F double 5px;
+    background-color: #FFFFF5;
+    text-align:center !important;
+    align-items: center !important;
+}
+
+div.product a{
+    width: fit-content;
+    text-decoration:none;
+    color:#070607;
+}
+
+div.product:hover{
+    background-color: #ffffae;
+
+}
+
+div.product h2{
+    text-align:center;
+    font-weight: bolder;
+}
+
+div.product img{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+hr{
+    background-color: #ffce07;
+}
+
+/* Contact page: */
+
+div.contactPage{
+    background-image: url("../img/background.png");
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    margin: 40px;
+    outline: #ffce07 double 5px;
+    margin: 30px 0 0 0;
+    padding: 0 0 0 0;
+}
+
+div.contact h4{
+    font-weight: 900;
+    color: #FFFFF5;
+}
+
+div.contact a{
+    color: #FFFFF5;
+    background-color: #ffce07;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+div.contact a:hover{
+    background-color: #FFFFF5;
+    color: #F47B7F;
+}
