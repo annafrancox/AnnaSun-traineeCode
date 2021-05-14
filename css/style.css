@@ -1,5 +1,6 @@
 .logo{
     margin-top: -2%;
+    background-color: #fefff5;
 
 }
 .texto-a{
@@ -24,9 +25,11 @@
     font-family: 'Bentham'; 
     color: #070607;
     font-size: 200%;
+    background-color: #fefff5;
 }
 .mvv{
     border: #f47b7f double 6px;
+    background-color: #fefff5
     
 }
 .principal{
