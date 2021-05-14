@@ -1,17 +1,20 @@
+.logo{
+    margin-top: -2%;
 
-.texto-a{
-    margin: 6% ;
 }
 .texto-a{
+    margin: 6% ;
     font-size: 120%;
+    line-height: 200%;
 }
 .image-a img{
     width: 120% !important;
-    margin-top: 20%;
-    margin-right: 14%;
+    margin-top: 32%;
 }
 .cards-a{
-    margin-top: -5%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+
 }
 .cards-a p{
     font-family: "Montserrat";
@@ -25,6 +28,12 @@
 .mvv{
     border: #f47b7f double 6px;
     
+}
+.principal{
+    background-color: #fefff5;
+}
+body{
+    background-image: url("../img/bg50.png");
 }
 
 @media (max-width: 900px) {
@@ -45,5 +54,8 @@
     }
     .cards-a{
         margin-top: 5%;
+    }
+    body{
+        background-image: none;
     }
 }
