@@ -1,11 +1,13 @@
 .contatofront {
-    background-image: url("../img/background.png");
+    background-image: url(../img/70.png);
     font-family: 'Bentham', serif;
     padding-bottom: 4%;
 }
 .contatofront h1{
     text-align: center;
     padding-bottom: 5%;
+    font-family: myFirstFont;
+
 }
 .contatoImage {
     display: flex;
@@ -15,7 +17,6 @@
 .contatoImage img{
     width: 20%;
     background-color: #FEFFF5;
-    border-radius: 100%;
 }
 
 
@@ -34,6 +35,7 @@
 .botaoContato{
     background-color: #FFCE07;
     color: #070607;
+    font-family: 'Montserrat', sans-serif;
     
 }
 .boxContact{
@@ -41,9 +43,9 @@
     
 }
 .borda-contato{
-    border: 1px solid #FEFFF5;
+    border: 1px solid #FCD9DA;
     border-radius: 30px;
-    background-color: #FEFFF5;
+    background-color: #FCD9DA;
     box-shadow: 5px 5px 3px #888888;
 }
 
@@ -64,3 +66,24 @@
     text-decoration: none;
 }
 
+.container-Contact{
+    display: flex;
+    
+}
+.borda-contato label input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.borda-contato h2{
+    text-align: center;
+    font-family: myFirstFont;
+}
+.contact-info h2{
+    text-align: center;
+    font-family: myFirstFont;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(adam_Script.otf);
+  }
