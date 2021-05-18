@@ -1,0 +1,161 @@
+/* Standard + Body: */
+
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+body{
+    background-color: #FFFFF5;
+    background-image: url(../img/company/bg.png);
+    font-family: 'Bentham', serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #070607;
+}
+
+/* Carousel: */
+
+.carousel{
+    max-width: 80%;
+    margin: auto;
+}
+
+.fas{
+    color: #ED1C24;
+    font-size: 2rem;
+}
+
+div#carouselText{
+    background-color: #ED1C24;
+    opacity: 85%;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    color: #FFFFF5;
+    font-weight: bold;
+    box-shadow: 2px 2px 7px black;
+    text-shadow: #070607 2px 1px 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* Main: */
+
+hr{
+    background-color: #F47B7F;
+    margin: 50px 0 30px 0;
+}
+
+a#noStyle{
+    text-decoration: none;
+    color: #070607;
+}
+
+/* About Us: */
+
+.info{
+    background-color: #ffce07;
+    border-radius: 8px;
+    opacity: 90%;
+    height: 70%;
+    margin: 25px 0 30px 0;
+    padding: 10px 20px 10px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.info img{
+    display: block;
+    max-width: 50%;
+    height: auto;
+}
+
+.info-inside h4{
+    text-align: center;
+    font-family: 'Bentham';
+    color: #FFFFF5;
+    text-shadow: #070607 2px 1px 4px;
+    font-size: xx-large;
+}
+
+.info-inside p{
+    text-align: justify;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.info-inside a{
+    color: #FFFFF5;
+    background-color: #ED1C24;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.info-inside a:hover{
+    background-color: #F47B7F;
+    color: #FFFFF5;
+}
+
+/* Product Page: */
+
+.productPage h1{
+    padding: 10px 0 20px 0;
+    font-family: 'Bentham';
+}
+
+.product{
+    max-width: 30% !important;
+    width: 30% !important;
+    margin: 30px 0 50px 0;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product:hover{
+    background-color: #F47B7F;
+}
+
+/* Contact Page: */
+
+.contactPage{
+    background-image: url(../img/company/bgpirulito.png);
+    width: 100%;
+    height: 200px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    margin: 40px 0 40px 0;
+    outline: #ffce07 double 5px;
+}
+
+.contactPage h4{
+    color: #070607;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.contactPage a{
+    color: #FFFFF5;
+    background-color: #ED1C24;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: large;
+    font-weight: 550;
+}
+
+.contact a:hover{
+    background-color: #F47B7F;
+    color: #FFFFF5;
+}
+
+@media screen and (max-width: 900px){
+    body{
+        background-image: none;
+    }
+
+}
