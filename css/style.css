@@ -1,3 +1,4 @@
+
 .logo{
     margin-top: -2%;
     background-color: #fefff5;
@@ -19,24 +20,26 @@
 }
 .cards-a p{
     font-family: "Montserrat";
+    background-color: #fdeced;
 }
 .cards-a h5{
     text-align: center; 
     font-family: 'Bentham'; 
     color: #070607;
     font-size: 200%;
-    background-color: #fefff5;
+    background-color: #fdeced;
 }
 .mvv{
     
-    border: #f47b7f double 6px;
-    background-color: #fefff5
-    
+    border: #fcd9d4 double 6px;
+    background-color: #fdeced;
 }
 .principal{
     background-color: #fefff5;
 }
-body{
+.quem_somos{
+    margin-top: 6%;
+    margin-bottom: 6%;
     background-image: url("../img/bg50.png");
 }
 
@@ -59,7 +62,7 @@ body{
     .cards-a{
         margin-top: 5%;
     }
-    body{
+    .quem_somos{
         background-image: none;
     }
 }
@@ -96,4 +99,76 @@ body{
     .container-header img{
         width: 64px;
     }
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+    color: #070607;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
+    line-height: 50px; /* Vertically center the text there */
+    background-color: #fcd9da;
+    text-align: center;
+ }
+
+.footer h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer li{
+    line-height: 18px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: #070607;
+}
+.footer a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+} 
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+.copyright {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
 }
