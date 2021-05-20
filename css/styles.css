@@ -1,89 +1,72 @@
-.contatofront {
-    background-image: url(../img/70.png);
-    font-family: 'Bentham', serif;
-    padding-bottom: 4%;
-}
-.contatofront h1{
-    text-align: center;
-    padding-bottom: 5%;
-    font-family: myFirstFont;
-
-}
-.contatoImage {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 0px;
-}
-.contatoImage img{
-    width: 20%;
-    background-color: #FEFFF5;
-}
-
-
-.form-contato{
-    background-color: #2b2b2b;
-    width: 0%;
-    align-content: center;
-}
-
-.mapaContato{
-  
-    padding-top: 5%;
-    padding-bottom: 5%;
-   width: 90%;
-}
-.botaoContato{
-    background-color: #FFCE07;
-    color: #070607;
-    font-family: 'Montserrat', sans-serif;
-    
-}
-.boxContact{
-    padding-bottom: 5%;
-    
-}
-.borda-contato{
-    border: 1px solid #FCD9DA;
-    border-radius: 30px;
-    background-color: #FCD9DA;
-    box-shadow: 5px 5px 3px #888888;
-}
-
-.phone{
-    float: left;
-}
-
-.text-form{
-    font-size: 20px;
-}
-.contactLinks a {
-    color: #070607 !important;
-}
-.contactLinks a {
-    text-decoration: none !important;
-}
-.contactLinks a:hover{
-    text-decoration: none;
-}
-
-.container-Contact{
-    display: flex;
-    
-}
-.borda-contato label input{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-}
-
-.borda-contato h2{
-    text-align: center;
-    font-family: myFirstFont;
-}
-.contact-info h2{
-    text-align: center;
-    font-family: myFirstFont;
-}
-@font-face {
-    font-family: myFirstFont;
-    src: url(adam_Script.otf);
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
   }
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+    color: #070607;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
+    line-height: 50px; /* Vertically center the text there */
+    background-color: #fcd9da;
+    text-align: center;
+ }
+
+.footer h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer li{
+    line-height: 18px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: #070607;
+}
+.footer a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+} 
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
+}
