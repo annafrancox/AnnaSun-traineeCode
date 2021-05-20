@@ -1,72 +1,72 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-  }
 body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-}
-.footer {
-    color: #070607;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto; /* Set the fixed height of the footer here */
-    line-height: 50px; /* Vertically center the text there */
-    background-color: #fcd9da;
-    text-align: center;
- }
-
-.footer h6{
-    margin-top: 30px;
-    font-size: 30px;
-    margin-bottom: 10px;
-    font-family: 'Bentham', serif;
+    background-size: 100%;
+    background-image: url(../img/flowers.png);
 }
 
-.footer ul{
-    list-style: none;
-}
 
-.footer li{
-    line-height: 18px;
-    margin-left: -40px;
-    margin-top: 5px;
-    display: block;
-    font-size: 15px;
+@font-face {
+    font-family: myFirstFont;
+    src: url(adam_Script.otf);
+  }
+.addProduct{
+    background-image: url(../img/70.png);
     font-family: 'Montserrat', sans-serif;
 }
 
-.footer a{
+.btn-addProduct{
+    background-color: #FFCE07;
     color: #070607;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
 }
-.footer a:hover {
-    color: #ed1c24;
-    text-decoration: none;
-} 
-  /* Custom page CSS
-  -------------------------------------------------- */
-  /* Not required for template or sticky footer method. */
-  
+.buttonSubmit{
+    display: flex;
+    justify-content: center;
+}
+.formBorder{
+    background-color: #FEFFF5;
+}
+.foto-view img{
+    width: 15%;
+}
+.buttonAdminProd{
+    display: flex;
+    justify-content: space-between;
+}
+.buttonCreate {
+    display: flex;
+    justify-content: center;
+}
+.buttonCreate button {
+    color: #070607;
+    background-color: #FFCE07;
+}
+
+
+.card-deck {
+    margin-top: 15px;
+}
+
 .container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
+    margin-bottom: 15px;
 }
 
-.copyright {
-    display: block;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
+.ver {
+    background-color: #070607 !important;
+    border-color: #070607 !important;
 }
 
-.copyright span {
-    color: #ed1c24;
+.card-body h5 {
+    font-family: 'Bentham';
+    color: #070607;
+    font-size: 25px;
 }
 
-.copyright p {
-    margin: 8px;
-    line-height: 15px;
+.card {
+    background-color: #fffff5 !important;
+}
+
+.card p {
+    font-family: 'Montserrat';
 }
