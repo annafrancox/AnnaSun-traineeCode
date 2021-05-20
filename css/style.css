@@ -25,16 +25,53 @@
     font-family: 'Bentham'; 
     color: #070607;
     font-size: 200%;
-    background-color: #fefff5;
+    background-color: #fcd9d4;
 }
 .mvv{
-    border: #f47b7f double 6px;
-    background-color: #fefff5
+    background-color: #fcd9d4;
     
 }
 .principal{
     background-color: #fefff5;
 }
+
+
+.view-adm{
+    background-color: #fefff5;
+    color: #070607;
+    font-family: 'Bentham';
+    margin-left: 14%;
+    margin-right: 14%;
+}
+.topicos th{
+    background-color: #fcd9da;
+    border-top: #ed1c24 solid;
+    font-size: 120%;
+    color:#070607;
+}
+.perfil-pic{
+    width: 120px;
+}
+.adicionar a{
+    background-color: #ffce07;
+    border-color: #ffce07;
+    color: #fefff5;
+
+}
+.adicionar a:hover{
+    background-color: #ffce07;
+    border-color: #070607 ;
+    
+}
+.adicionar{
+    width: 73.3%;
+    height: auto;
+    text-align: right;
+}
+.dados{
+    font-family: "Montserrat";
+}
+
 body{
     background-image: url("../img/bg50.png");
 }
