@@ -43,7 +43,7 @@ div#carouselText{
 /* Main: */
 
 hr{
-    background-color: #F47B7F;
+    background-color: #FCD9DA;
     margin: 50px 0 30px 0;
 }
 
@@ -96,8 +96,8 @@ a#noStyle{
 }
 
 .info-inside a:hover{
-    background-color: #F47B7F;
-    color: #FFFFF5;
+    background-color: #FCD9DA;
+    color: #070607;
 }
 
 /* Product Page: */
@@ -112,7 +112,7 @@ a#noStyle{
 }
 
 .product:hover{
-    background-color: #F47B7F;
+    background-color: #FCD9DA;
 }
 
 /* Contact Page: */
@@ -143,8 +143,8 @@ a#noStyle{
 }
 
 .contact a:hover{
-    background-color: #F47B7F;
-    color: #FFFFF5;
+    background-color: #FCD9DA;
+    color: #070607;
 }
 
 @media screen and (max-width: 900px){
@@ -152,4 +152,29 @@ a#noStyle{
         background-image: none;
     }
 
+    .carousel{
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .info{
+        height: 40%;
+    }
+
+    .info img{
+        max-width: 30%;
+    }
+
+    .info-inside h4{
+        font-size: 1.5rem;
+    }
+
+    .info-inside p{
+        font-size: 0.9rem;
+    }
+
+    .info-inside a{
+        font-size: medium;
+    }
+    
 }
