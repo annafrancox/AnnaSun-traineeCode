@@ -1,0 +1,38 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(adam_Script.otf);
+  }
+.addProduct{
+    background-image: url(../img/70.png);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-addProduct{
+    background-color: #FFCE07;
+    color: #070607;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.buttonSubmit{
+    display: flex;
+    justify-content: center;
+}
+.formBorder{
+    background-color: #FEFFF5;
+}
+.foto-view img{
+    width: 15%;
+}
+.buttonAdminProd{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttonCreate {
+    display: flex;
+    justify-content: center;
+}
+.buttonCreate button {
+    color: #070607;
+    background-color: #FFCE07;
+}
