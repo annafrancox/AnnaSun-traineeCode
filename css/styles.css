@@ -96,12 +96,13 @@
 
 .footer {
     color: #070607;
-    bottom: 0;
+    margin-bottom: 0;
     width: 100%;
     height: auto; /* Set the fixed height of the footer here */
     line-height: 50px; /* Vertically center the text there */
     background-color: #fcd9da;
     text-align: center;
+    
  }
 
 .footer h6{
