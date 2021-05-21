@@ -1,11 +1,10 @@
 body {
   font-family: "Montserrat";
   background-image: url("../img/bg.jpeg");
-  background-size: contain;
+  background-size: cover;
 }
 
-.container {
-}
+/* ARRUMAR NOME DA CLASSE*/
 
 .card-deck {
   margin-top: 30px;
@@ -54,11 +53,18 @@ body {
   border: 1px solid black;
 }
 
+/* Products Details */
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .product-details {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 120px;
 }
 
 .product-details img {
@@ -78,4 +84,12 @@ body {
 
 .product-details .product-body p {
   font-size: 24px;
+}
+
+.product-details .product-body .product-price {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffce07;
+  border-radius: 35px;
+  padding: 15px;
 }
