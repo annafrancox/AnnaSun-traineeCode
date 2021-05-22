@@ -1,7 +1,7 @@
 
+/* quem somos */
 .logo{
     margin-top: -2%;
-    background-color: #fefff5;
 
 }
 .texto-a{
@@ -30,7 +30,7 @@
     background-color: #fdeced;
 }
 .mvv{
-    
+    display: inline-block;
     border: #fcd9d4 double 6px;
     background-color: #fdeced;
 }
@@ -44,8 +44,6 @@
 }
 
 @media (max-width: 900px) {
-    
-
     .logo{
         justify-content: center;
         display: block;    
@@ -71,11 +69,7 @@
     width: 100%;
 }
 
-/* Arrumar as margins direto pelo html
-    Ver se o nav ta colocar em cima quando der scroll na pagina
-*/
-
-
+/* NavBar */
 .container-header img{
     width: 75px;
 }
@@ -100,53 +94,47 @@
         width: 64px;
     }
 }
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-  }
-body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-}
-.footer {
-    color: #070607;
-    position: absolute;
-    bottom: 0;
+
+/* footer */
+.footer-annasun {
+    color: #070607 !important;
+    position: absolute; 
     width: 100%;
-    height: auto; /* Set the fixed height of the footer here */
-    line-height: 50px; /* Vertically center the text there */
+    height: auto; /*Set the fixed height of the footer here*/ 
     background-color: #fcd9da;
     text-align: center;
  }
+ .footer-annasun img{
+     width: 150px;
+     margin-top: 10%;
+ }
 
-.footer h6{
+.footer-annasun h6{
     margin-top: 30px;
     font-size: 30px;
     margin-bottom: 10px;
     font-family: 'Bentham', serif;
 }
 
-.footer ul{
+.footer-annasun ul{
     list-style: none;
-}
-
-.footer li{
-    line-height: 18px;
+    line-height: 22px;
     margin-left: -40px;
     margin-top: 5px;
     display: block;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
-
-.footer a{
+.footer-annasun a{
     color: #070607;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-.footer a:hover {
+.footer-annasun a:hover {
     color: #ed1c24;
     text-decoration: none;
-} 
+}
+
   /* Custom page CSS
   -------------------------------------------------- */
   /* Not required for template or sticky footer method. */
