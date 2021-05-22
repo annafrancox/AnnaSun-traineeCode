@@ -1,3 +1,8 @@
+/* ===================================================
+                        NAVBAR:
+======================================================
+*/
+
 .container-header{
     background-color: #fcd9da;
     width: 100%;
@@ -6,7 +11,6 @@
 /* Arrumar as margins direto pelo html
     Ver se o nav ta colocar em cima quando der scroll na pagina
 */
-
 
 .container-header img{
     width: 75px;
@@ -27,8 +31,277 @@
     border-bottom: 2px solid #070607;
 }
 
-@media(max-width: 1000px){
+/* =====================================================
+                        HOME:
+========================================================
+*/
+
+/* Standard + Body: */
+
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+body{
+    background-color: #FFFFF5;
+    background-image: url(../img/company/bg.png);
+    font-family: 'Bentham', serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #070607;
+}
+
+.space{
+    margin: 150px auto 275px auto;
+}
+
+/* Carousel: */
+
+.carousel{
+    max-width: 70%;
+    margin: auto;
+}
+
+.fas{
+    color: #ED1C24;
+    font-size: 2rem;
+}
+
+div#carouselText{
+    background-color: #ED1C24;
+    opacity: 85%;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    color: #FFFFF5;
+    font-weight: bold;
+    box-shadow: 2px 2px 7px black;
+    text-shadow: #070607 2px 1px 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* Main: */
+
+hr{
+    background-color: #FCD9DA;
+    margin: 50px 0 30px 0;
+}
+
+a#noStyle{
+    text-decoration: none;
+    color: #070607;
+}
+
+/* About Us: */
+
+.info{
+    background-color: #ffce07;
+    border-radius: 8px;
+    opacity: 90%;
+    height: 70%;
+    margin: 25px 0 30px 0;
+    padding: 10px 20px 10px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.info img{
+    display: block;
+    max-width: 50%;
+    height: auto;
+}
+
+.info-inside h4{
+    text-align: center;
+    font-family: 'Bentham';
+    color: #FFFFF5;
+    text-shadow: #070607 2px 1px 4px;
+    font-size: xx-large;
+}
+
+.info-inside p{
+    text-align: justify;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.info-inside a{
+    color: #FFFFF5;
+    background-color: #ED1C24;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.info-inside a:hover{
+    background-color: #FCD9DA;
+    color: #070607;
+}
+
+/* Product Page: */
+
+.productPage h1{
+    padding: 10px 0 20px 0;
+    font-family: 'Bentham';
+}
+
+.product{
+    margin: 30px 0 50px 0;
+}
+
+.product:hover{
+    background-color: #FCD9DA;
+}
+
+/* Contact Page: */
+
+.contactPage{
+    background-image: url(../img/company/bgpirulito.png);
+    width: 100%;
+    height: 200px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    margin: 40px 0 40px 0;
+    outline: #ffce07 double 5px;
+}
+
+.contactPage h4{
+    color: #070607;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.contactPage a{
+    color: #FFFFF5;
+    background-color: #ED1C24;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: large;
+    font-weight: 550;
+}
+
+.contact a:hover{
+    background-color: #FCD9DA;
+    color: #070607;
+}
+
+@media screen and (max-width: 900px){
+    body{
+        background-image: none;
+    }
+
     .container-header img{
         width: 64px;
     }
+
+    .carousel{
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .info{
+        height: 40%;
+    }
+
+    .info img{
+        max-width: 30%;
+    }
+
+    .info-inside h4{
+        font-size: 1.5rem;
+    }
+
+    .info-inside p{
+        font-size: 0.9rem;
+    }
+
+    .info-inside a{
+        font-size: medium;
+    }
+    
+}
+
+/*
+====================================================
+                        FOOTER:
+====================================================
+*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.footer {
+    color: #070607;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
+    line-height: 50px; /* Vertically center the text there */
+    background-color: #fcd9da;
+    text-align: center;
+}
+
+.footer h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer li{
+    line-height: 18px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: #070607;
+}
+.footer a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+} 
+/* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+/*.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}*/
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
 }
