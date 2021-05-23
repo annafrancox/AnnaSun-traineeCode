@@ -43,15 +43,6 @@ body {
     background-color: #FFCE07;
 }
 
-
-.card-deck {
-    margin-top: 15px;
-}
-
-.container {
-    margin-bottom: 15px;
-}
-
 .ver {
     background-color: #070607 !important;
     border-color: #070607 !important;
@@ -63,7 +54,7 @@ body {
     font-size: 25px;
 }
 
-.card {
+.card-bckg {
     background-color: #fffff5 !important;
 }
 
