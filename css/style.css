@@ -1,55 +1,25 @@
-.logo{
-    margin-top: -2%;
-    background-color: #fefff5;
-
+/**
+    View adm
+**/
+.view_adm{
+    background-image: url("../img/bg50.png");
 }
-.texto-a{
-    margin: 6% ;
-    font-size: 120%;
-    line-height: 200%;
-}
-.image-a img{
-    width: 120% !important;
-    margin-top: 32%;
-}
-.cards-a{
-    margin-top: 0%;
-    margin-bottom: 2%;
-
-}
-.cards-a p{
-    font-family: "Montserrat";
-}
-.cards-a h5{
-    text-align: center; 
-    font-family: 'Bentham'; 
-    color: #070607;
-    font-size: 200%;
-    background-color: #fcd9d4;
-}
-.mvv{
-    background-color: #fcd9d4;
-    
-}
-.principal{
-    background-color: #fefff5;
-}
-
-.view-adm{
+.principal_adm{
     background-color: #fefff5;
     color: #070607;
     font-family: 'Bentham';
-    margin-left: 14%;
-    margin-right: 14%;
+}
+.principal_adm div, th,td{
+    background-color: #fefff5;
 }
 .topicos th{
-    background-color: #fcd9da;
-    border-top: #ed1c24 solid;
+    background-color: #fefff5 !important;
     font-size: 120%;
     color:#070607;
 }
 .perfil-pic{
     width: 120px;
+    height: 120px;
 }
 .adicionar a{
     background-color: #ffce07;
@@ -58,8 +28,8 @@
 
 }
 .adicionar a:hover{
-    background-color: #ffce07;
-    border-color: #070607 ;
+    background-color: #f3ae2e;
+    border-color: #f3ae2e ;
     
 }
 .adicionar{
@@ -69,32 +39,33 @@
 }
 .dados{
     font-family: "Montserrat";
-}
-
-body{
-    background-image: url("../img/bg50.png");
-}
-
-@media (max-width: 900px) {
     
+}
+.dados td{
+    font-size: 130%;
+    line-height: 520%;
+    
+}
+.botao_excluir{
+    color:#ed1c24;
 
-    .logo{
-        justify-content: center;
-        display: block;    
+}
+.botao_editar{
+    color: green;
+}
+
+
+@media (max-width: 100px) {
+    
+    .view_adm{
+        background-image: none !important;
     }
-    .image-a {
-        width: 68%;
-        margin-top: 6%;
-        margin-left: 8%;
-        
+    .dados td{
+        font-size: 100%;
+        line-height: normal;
     }
-    .texto-a{
-        margin-left: 16%;
-    }
-    .cards-a{
-        margin-top: 5%;
-    }
-    body{
-        background-image: none;
+    .perfil-pic{
+        width: 50px;
+        height: 50px;
     }
 }
