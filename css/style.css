@@ -1,0 +1,21 @@
+body{
+    font-family: 'Bentham', serif;
+}
+
+.nav-bg {
+    background-color: #ed1c23f1 !important;
+}
+
+.brand-styling{
+    font-family: 'Bentham' !important;
+    font-size: large;
+}
+
+.menu-styling{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+}
+
+.menu-styling i{
+    padding: 0 3px 0 15px !important;
+}
