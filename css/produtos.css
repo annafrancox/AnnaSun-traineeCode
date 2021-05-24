@@ -4,20 +4,24 @@ body {
   background-size: contain;
 }
 
-/* ARRUMAR NOME DA CLASSE*/
-
-.card-deck {
+.card-deck-products {
   margin-top: 30px;
 }
 
-.card {
+.card-product {
   padding: 20px;
   border-radius: 30px;
   background-color: white;
   border: none;
 }
 
-.card img {
+.card-product:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.card-product img {
   width: 250px;
   height: 200px;
   border-radius: 30px;
@@ -25,30 +29,30 @@ body {
 .card .card-img-container {
   text-align: center;
 }
-.card .card-text {
+.card-product .card-text {
   height: 60%;
 }
 
-.card .card-body .card-title {
+.card-product .card-body .card-title {
   font-weight: bold;
 }
 
-.card .card-info {
+.card-product .card-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card .card-info .card-price {
+.card-product .card-info .card-price {
   font-weight: bold;
 }
 
-.card .card-body .btn {
+.card-product .card-body .btn {
   background-color: #ffce07;
   color: black;
 }
 
-.card .card-body .btn:hover {
+.card-product .card-body .btn:hover {
   background-color: #cea606;
   border: 1px solid black;
 }
@@ -69,7 +73,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .product-details img {
   width: 400px;
   border-radius: 25px;
@@ -97,9 +100,38 @@ body {
   padding: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
+  .product-wrapper {
+    height: 100vh;
+    width: 100vw;
+  }
   .product-details {
+    display: flex;
     flex-direction: column;
-    padding: 100px;
+    width: 90%;
+  }
+
+  .product-details img {
+    width: 70vw;
+    max-width: 400px;
+  }
+
+  .product-details .image-container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .product-details .product-body {
+    width: 95%;
+    margin: 0;
+  }
+
+  .product-details .product-body h1 {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .product-details .product-body p {
+    font-size: 20px;
   }
 }
