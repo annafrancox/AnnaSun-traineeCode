@@ -1,6 +1,7 @@
 /**
     View adm
 **/
+
 .view_adm{
     background-image: url("../img/bg50.png");
 }
@@ -8,10 +9,12 @@
     background-color: #fefff5;
     color: #070607;
     font-family: 'Bentham';
+
 }
 .principal_adm div, th,td{
     background-color: #fefff5;
 }
+
 .topicos th{
     background-color: #fefff5 !important;
     font-size: 120%;
@@ -54,18 +57,57 @@
     color: green;
 }
 
-
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
     
     .view_adm{
         background-image: none !important;
     }
     .dados td{
         font-size: 100%;
-        line-height: normal;
+        line-height: 1;
     }
     .perfil-pic{
         width: 50px;
         height: 50px;
+    }
+    .myrow_adm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/**
+    Users
+**/
+.addUsuario{
+    background-image: url("../img/bg50.png");
+    color: #070607;
+    font-family: 'Bentham';
+    background-color: #fefff5;
+}
+.users_div1{
+    padding-top: 2%;
+}
+.users_adm{
+    background-color: #fefff5;
+}
+.button_users{
+    font-weight: 1;
+    background-color: #ffce07 ;
+    border-color: #ffce07 solid 6px;
+}
+.button_users:hover{
+    background-color: #f3ae2e;
+    border-color: #f3ae2e solid 6px;
+    
+}
+.button_users:focus,.button_users:active, .digita_adm:focus, .digita_adm:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+@media (max-width: 1000px) {
+    .addUsuario{
+         background-image: none;
     }
 }
