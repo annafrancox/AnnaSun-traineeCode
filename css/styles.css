@@ -1,8 +1,8 @@
+/* Inicio código pag view_categorias / criar_categorias / editar_categorias */
 body {
     background-size: 100%;
     background-image: url(../img/flowers.png);
 }
-
 
 @font-face {
     font-family: myFirstFont;
@@ -48,7 +48,7 @@ body {
     border-color: #070607 !important;
 }
 
-.card-body h5 {
+.titulo5 h5 {
     font-family: 'Bentham';
     color: #070607;
     font-size: 25px;
@@ -61,3 +61,12 @@ body {
 .card p {
     font-family: 'Montserrat';
 }
+
+.modalcentro{
+    text-align: center;
+}
+
+.modalcentro p{
+    margin-top: 10px;
+}
+/* Fim código pag view_categorias / criar_categorias / editar_categorias */
