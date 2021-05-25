@@ -1,0 +1,185 @@
+/* ===================================================
+                        NAVBAR:
+======================================================*/
+
+.container-header{
+    background-color: #fcd9da;
+    width: 100%;
+}
+
+/* Arrumar as margins direto pelo html
+    Ver se o nav ta colocar em cima quando der scroll na pagina
+*/
+
+.container-header img{
+    width: 75px;
+}
+
+.container-header ul li{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin-right: 24px
+}
+
+.container-header ul li a{
+    color: #070607 ;
+}
+
+.container-header ul li.active{
+    font-weight: bold;
+    border-bottom: 2px solid #070607;
+}
+
+/* ===================================================
+                        LOGIN:
+======================================================*/
+
+html, body{
+    background-image: url(../img/company/bg.png);
+    height: 90%;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #070607;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+    background-color: #ffcd07af !important;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    background-color: #fffff5b0;
+    color: #ED1C24;
+    border: 0 !important;
+}
+
+.login-info{
+    margin: 5px 0 20px 0 !important;
+}
+
+.remember{
+    color: #070607;
+    margin-bottom: 10px;
+}
+
+.remember input{
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.login-btn{
+    color: #FFFFF5 !important;
+    background-color: #ED1C24 !important;
+    font-weight: bold !important;
+    width: 100px;
+}
+
+.login-btn:hover{
+    color: #070607 !important;
+    background-color: #FCD9DA !important;
+}
+
+.links{
+    color: #070607;
+}
+
+.links a{
+    margin-left: 4px;
+    color: #ED1C24;
+}
+
+.links a:hover{
+    color: #070607;
+}
+
+/* ===================================================
+                        FOOTER:
+======================================================*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.footer {
+    color: #070607;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
+    line-height: 50px; /* Vertically center the text there */
+    background-color: #fcd9da;
+    text-align: center;
+}
+
+.footer h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer li{
+    line-height: 18px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: #070607;
+}
+.footer a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+} 
+
+/* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
+}
+
+/* Media Query: */
+
+@media only screen and (max-width: 900px) {
+    .card{
+        width: 90% !important;
+    }
+}
