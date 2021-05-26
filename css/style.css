@@ -68,10 +68,25 @@
 .botao_modal_confirma:focus,.botao_modal_confirma:active,
 .botao_modal_cancelar:focus,.botao_modal_cancelar:active,
 .adicionar a:focus, .adicionar a:active {
-    
+
     outline: none !important;
     box-shadow: none !important;
  }
+.imagem_modal {
+    text-align: center;
+    margin-bottom: 2%;
+}
+.imagem_modal img{
+    width: 40%;
+    height: 40%;
+
+}
+.dados_visualizar td{
+    font-size: 100%;
+    line-height: 500%;
+    
+}
+
 @media (max-width: 1000px) {
     
     .view_adm{
@@ -93,9 +108,9 @@
 }
 
 /**
-    Users
+    Add Users and Edit User
 **/
-.addUsuario{
+.addUsuario, .edit_user_adm{
     background-image: url("../img/bg50.png");
     color: #070607;
     font-family: 'Bentham';
@@ -104,7 +119,7 @@
 .users_div1{
     padding-top: 2%;
 }
-.users_adm{
+.users_adm, .form_edit{
     background-color: #fefff5;
 }
 .button_users{
@@ -122,7 +137,11 @@
     box-shadow: none;
  }
 @media (max-width: 1000px) {
-    .addUsuario{
+    .addUsuario, .edit_user_adm{
          background-image: none;
     }
 }
+
+/**
+    final view adm
+    */
