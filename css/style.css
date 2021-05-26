@@ -28,6 +28,7 @@
     background-color: #ffce07;
     border-color: #ffce07;
     color: #fefff5;
+    font-size: 110%;
 
 }
 .adicionar a:hover{
@@ -56,7 +57,21 @@
 .botao_editar{
     color: green;
 }
-
+.botao_modal_confirma{
+    background-color: #ed1c24 !important;
+    border-color: #ed1c24;
+}
+.botao_modal_confirma:hover{
+    background-color: #c2030a;
+    border-color: #c2030a ;
+}
+.botao_modal_confirma:focus,.botao_modal_confirma:active,
+.botao_modal_cancelar:focus,.botao_modal_cancelar:active,
+.adicionar a:focus, .adicionar a:active {
+    
+    outline: none !important;
+    box-shadow: none !important;
+ }
 @media (max-width: 1000px) {
     
     .view_adm{
