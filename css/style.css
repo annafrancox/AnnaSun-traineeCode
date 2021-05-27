@@ -3,7 +3,7 @@
 **/
 
 .view_adm{
-    background-image: url("../img/bg50.png");
+    background-image: url("../img/bg50_adm.png");
 }
 .principal_adm{
     background-color: #fefff5;
@@ -111,7 +111,7 @@
     Add Users and Edit User
 **/
 .addUsuario, .edit_user_adm{
-    background-image: url("../img/bg50.png");
+    background-image: url("../img/bg50_adm.png");
     color: #070607;
     font-family: 'Bentham';
     background-color: #fefff5;
