@@ -466,6 +466,95 @@ body {
 .footer-annasun {
     color: #070607;
     position: absolute;
+}
+/* Contato
+-------------------------------------------------- */
+  
+.contatofront {
+    background-image: url(../img/70.png);
+    font-family: 'Bentham', serif;
+    padding-bottom: 4%;
+}
+.contatofront h1{
+    text-align: center;
+    padding-bottom: 5%;
+    font-family: myFirstFont;
+
+}
+.contatoImage {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0px;
+}
+.contatoImage img{
+    width: 15%;
+    background-color: #FEFFF5;
+}
+
+
+.mapaContato{
+  
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+}
+.botaoContato{
+    background-color: #FFCE07;
+    color: #070607;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.boxContact{
+    padding-bottom: 5%;
+    
+}
+.borda-contato{
+    border: 1px solid #FCD9DA;
+    border-radius: 30px;
+    background-color: #FCD9DA;
+    
+}
+
+
+
+.text-form{
+    font-size: 20px;
+}
+
+
+.borda-contato label input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.borda-contato h2{
+    text-align: center;
+    font-family: myFirstFont;
+}
+.contact-info h2{
+    text-align: center;
+    font-family: myFirstFont;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(adam_Script.otf);
+  }
+
+@media (max-width:768px){
+    .mapaContato{
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+
+.footer {
+    color: #070607;
+    margin-bottom: 0;
     width: 100%;
     height: auto; /* Set the fixed height of the footer here */
     line-height: 50px; /* Vertically center the text there */
@@ -478,7 +567,9 @@ body {
     margin-top: 10%;
 }
 
-.footer-annasun h6{
+
+
+.footer h6{
     margin-top: 30px;
     font-size: 30px;
     margin-bottom: 10px;
@@ -491,6 +582,15 @@ body {
     margin-left: -40px;
     margin-top: 5px;
     display: block;
+}
+.footer ul{
+    list-style: none;
+}
+
+.footer li{
+    line-height: 18px;
+    margin-left: -40px;
+    margin-top: 5px;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -506,6 +606,16 @@ body {
 /* Custom page CSS
   -------------------------------------------------- */
   /* Not required for template or sticky footer method. */
+
+
+.footer-img img{
+    width: 175px;
+    height: 175px;
+}
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
 
 .copyright {
     display: block;
@@ -844,6 +954,11 @@ html, body{
 }
 
 /* NavBar */
+/* Arrumar as margins direto pelo html
+    Ver se o nav ta colocar em cima quando der scroll na pagina
+*/
+
+
 .container-header img{
     width: 75px;
 }
@@ -934,3 +1049,4 @@ html, body{
     margin: 8px;
     line-height: 15px;
 }
+
