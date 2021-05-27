@@ -661,3 +661,150 @@ html, body{
         width: 90% !important;
     }
 }
+/**
+    View adm
+**/
+
+.view_adm{
+    background-image: url("../img/bg50_adm.png");
+}
+.principal_adm{
+    background-color: #fefff5;
+    color: #070607;
+    font-family: 'Bentham';
+
+}
+.principal_adm div, th,td{
+    background-color: #fefff5;
+}
+
+.topicos th{
+    background-color: #fefff5 !important;
+    font-size: 120%;
+    color:#070607;
+}
+.perfil-pic{
+    width: 120px;
+    height: 120px;
+}
+.adicionar a{
+    background-color: #ffce07;
+    border-color: #ffce07;
+    color: #fefff5;
+    font-size: 110%;
+
+}
+.adicionar a:hover{
+    background-color: #f3ae2e;
+    border-color: #f3ae2e ;
+    
+}
+.adicionar{
+    width: 73.3%;
+    height: auto;
+    text-align: right;
+}
+.dados{
+    font-family: "Montserrat";
+    
+}
+.dados td{
+    font-size: 130%;
+    line-height: 520%;
+    
+}
+.botao_excluir{
+    color:#ed1c24;
+
+}
+.botao_editar{
+    color: green;
+}
+.botao_modal_confirma{
+    background-color: #ed1c24 !important;
+    border-color: #ed1c24;
+}
+.botao_modal_confirma:hover{
+    background-color: #c2030a;
+    border-color: #c2030a ;
+}
+.botao_modal_confirma:focus,.botao_modal_confirma:active,
+.botao_modal_cancelar:focus,.botao_modal_cancelar:active,
+.adicionar a:focus, .adicionar a:active {
+
+    outline: none !important;
+    box-shadow: none !important;
+ }
+.imagem_modal {
+    text-align: center;
+    margin-bottom: 2%;
+}
+.imagem_modal img{
+    width: 40%;
+    height: 40%;
+
+}
+.dados_visualizar td{
+    font-size: 100%;
+    line-height: 500%;
+    
+}
+
+@media (max-width: 1000px) {
+    
+    .view_adm{
+        background-image: none !important;
+    }
+    .dados td{
+        font-size: 100%;
+        line-height: 1;
+    }
+    .perfil-pic{
+        width: 50px;
+        height: 50px;
+    }
+    .myrow_adm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/**
+    Add Users and Edit User
+**/
+.addUsuario, .edit_user_adm{
+    background-image: url("../img/bg50_adm.png");
+    color: #070607;
+    font-family: 'Bentham';
+    background-color: #fefff5;
+}
+.users_div1{
+    padding-top: 2%;
+}
+.users_adm, .form_edit{
+    background-color: #fefff5;
+}
+.button_users{
+    font-weight: 1;
+    background-color: #ffce07 ;
+    border-color: #ffce07 solid 6px;
+}
+.button_users:hover{
+    background-color: #f3ae2e;
+    border-color: #f3ae2e solid 6px;
+    
+}
+.button_users:focus,.button_users:active, .digita_adm:focus, .digita_adm:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+@media (max-width: 1000px) {
+    .addUsuario, .edit_user_adm{
+         background-image: none;
+    }
+}
+
+/**
+    final view adm
+    */
