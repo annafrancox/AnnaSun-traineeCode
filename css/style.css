@@ -2,32 +2,16 @@
                         NAVBAR:
 ======================================================*/
 
-.container-header{
-    background-color: #fcd9da;
-    width: 100%;
+.nav-icons{
+    font-size: x-large;
 }
 
-/* Arrumar as margins direto pelo html
-    Ver se o nav ta colocar em cima quando der scroll na pagina
-*/
-
-.container-header img{
-    width: 75px;
+.nav-icons a{
+    color: #ED1C24;
 }
 
-.container-header ul li{
-    font-family: 'Montserrat';
-    font-size: 18px;
-    margin-right: 24px
-}
-
-.container-header ul li a{
-    color: #070607 ;
-}
-
-.container-header ul li.active{
-    font-weight: bold;
-    border-bottom: 2px solid #070607;
+.nav-icons a:hover{
+    color: #FCD9DA;
 }
 
 /* ===================================================
@@ -65,18 +49,6 @@ html, body{
     margin: 5px 0 20px 0 !important;
 }
 
-.remember{
-    color: #070607;
-    margin-bottom: 10px;
-}
-
-.remember input{
-    width: 15px;
-    height: 15px;
-    margin-left: 20px;
-    margin-right: 10px;
-}
-
 .login-btn{
     color: #FFFFF5 !important;
     background-color: #ED1C24 !important;
@@ -103,80 +75,8 @@ html, body{
 }
 
 /* ===================================================
-                        FOOTER:
+                        MEDIA QUERY:
 ======================================================*/
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-}
-
-.footer {
-    color: #070607;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: auto; /* Set the fixed height of the footer here */
-    line-height: 50px; /* Vertically center the text there */
-    background-color: #fcd9da;
-    text-align: center;
-}
-
-.footer h6{
-    margin-top: 30px;
-    font-size: 30px;
-    margin-bottom: 10px;
-    font-family: 'Bentham', serif;
-}
-
-.footer ul{
-    list-style: none;
-}
-
-.footer li{
-    line-height: 18px;
-    margin-left: -40px;
-    margin-top: 5px;
-    display: block;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.footer a{
-    color: #070607;
-}
-.footer a:hover {
-    color: #ed1c24;
-    text-decoration: none;
-} 
-
-/* Custom page CSS
-  -------------------------------------------------- */
-  /* Not required for template or sticky footer method. */
-
-.copyright {
-    display: block;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-}
-
-.copyright span {
-    color: #ed1c24;
-}
-
-.copyright p {
-    margin: 8px;
-    line-height: 15px;
-}
-
-/* Media Query: */
 
 @media only screen and (max-width: 900px) {
     .card{
