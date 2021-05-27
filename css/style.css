@@ -1,5 +1,542 @@
 /* View Administrativa produtos
 -------------------------------------------------- */
+/* NAVBAR */
+
+/* quem somos */
+.logo{
+    margin-top: -2%;
+}
+.container-header {
+  background-color: #fcd9da;
+  width: 100%;
+}
+
+.container-header img {
+  width: 75px;
+}
+
+.container-header ul li {
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin-right: 24px;
+}
+
+.container-header ul li a {
+  color: #070607;
+}
+
+.container-header ul li.active {
+  font-weight: bold;
+  border-bottom: 2px solid #070607;
+}
+
+@media (max-width: 1000px) {
+  .container-header img {
+    width: 64px;
+  }
+}
+
+/* FOOTER */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+  color: #070607;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto; /* Set the fixed height of the footer here */
+  line-height: 50px; /* Vertically center the text there */
+  background-color: #fcd9da;
+  text-align: center;
+}
+
+.footer h6 {
+  margin-top: 30px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Bentham", serif;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  line-height: 18px;
+  margin-left: -40px;
+  margin-top: 5px;
+  display: block;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer a {
+  color: #070607;
+}
+
+.footer a:hover {
+  color: #ed1c24;
+  text-decoration: none;
+}
+/* Custom page CSS
+  -------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.copyright {
+  display: block;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+}
+
+.copyright span {
+  color: #ed1c24;
+}
+
+.copyright p {
+  margin: 8px;
+  line-height: 15px;
+}
+
+/* PRODUTOS */
+
+body {
+  font-family: "Montserrat";
+  background-image: url("../img/bg.jpeg");
+  background-size: contain;
+}
+
+.container-products {
+  margin-top: 120px;
+  margin-bottom: 250px;
+}
+
+.card-deck-products {
+  margin-top: 30px;
+}
+
+.card-product {
+  padding: 20px;
+  border-radius: 30px;
+  background-color: white;
+  border: none;
+}
+
+.card-product:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.card-product img {
+  width: 250px;
+  height: 200px;
+  border-radius: 30px;
+}
+.card .card-img-container {
+  text-align: center;
+}
+.card-product .card-text {
+  height: 60%;
+}
+
+.card-product .card-body .card-title {
+  font-weight: bold;
+}
+
+.card-product .card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-product .card-info .card-price {
+  font-weight: bold;
+}
+
+.card-product .card-body .btn {
+  background-color: #ffce07;
+  color: black;
+}
+
+.card-product .card-body .btn:hover {
+  background-color: #cea606;
+  border: 1px solid black;
+}
+
+/* Products Details */
+.products-wrapper {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-details {
+  background-color: #fefff5;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product-details img {
+  width: 400px;
+  border-radius: 25px;
+}
+
+.product-details .product-body {
+  width: 500px;
+  margin-left: 80px;
+}
+
+.product-details .product-body h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.product-details .product-body p {
+  font-size: 24px;
+}
+
+.product-details .product-body .product-price {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffce07;
+  border-radius: 35px;
+  padding: 15px;
+}
+.cards-a p{
+    font-family: "Montserrat";
+    background-color: #fdeced;
+}
+
+@media (max-width: 1050px) {
+  .product-wrapper {
+    height: 100vh;
+    width: 100vw;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .product-details img {
+    width: 70vw;
+    max-width: 400px;
+  }
+
+  .product-details .image-container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .product-details .product-body {
+    width: 95%;
+    margin: 0;
+  }
+
+  .product-details .product-body h1 {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .product-details .product-body p {
+    font-size: 20px;
+  }
+}
+/* ===================================================
+                        NAVBAR:
+======================================================
+*/
+
+.container-header{
+    background-color: #fcd9da;
+    width: 100%;
+}
+
+/* Arrumar as margins direto pelo html
+    Ver se o nav ta colocar em cima quando der scroll na pagina
+*/
+
+.container-header img{
+    width: 75px;
+}
+
+.container-header ul li{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin-right: 24px
+}
+
+.container-header ul li a{
+    color: #070607 ;
+}
+
+.container-header ul li.active{
+    font-weight: bold;
+    border-bottom: 2px solid #070607;
+}
+
+/* =====================================================
+                        HOME:
+========================================================
+*/
+
+/* Standard + Body: */
+
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+body{
+    background-color: #FFFFF5;
+    background-image: url(../img/company/bg.png);
+    font-family: 'Bentham', serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #070607;
+}
+
+.space{
+    margin: 150px auto 275px auto;
+}
+
+/* Carousel: */
+
+.carousel{
+    max-width: 70%;
+    margin: auto;
+}
+
+.fas{
+    color: #ED1C24;
+    font-size: 2rem;
+}
+
+div#carouselText{
+    background-color: #ED1C24;
+    opacity: 85%;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    color: #FFFFF5;
+    font-weight: bold;
+    box-shadow: 2px 2px 7px black;
+    text-shadow: #070607 2px 1px 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* Main: */
+
+hr{
+    background-color: #FCD9DA;
+    margin: 50px 0 30px 0;
+}
+
+a#noStyle{
+    text-decoration: none;
+    color: #070607;
+}
+
+/* About Us: */
+
+.info{
+    background-color: #ffce07;
+    border-radius: 8px;
+    opacity: 90%;
+    height: 70%;
+    margin: 25px 0 30px 0;
+    padding: 10px 20px 10px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.info img{
+    display: block;
+    max-width: 50%;
+    height: auto;
+}
+
+.info-inside h4{
+    text-align: center;
+    font-family: 'Bentham';
+    color: #FFFFF5;
+    text-shadow: #070607 2px 1px 4px;
+    font-size: xx-large;
+}
+
+.info-inside p{
+    text-align: justify;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.info-inside a{
+    color: #FFFFF5;
+    background-color: #ED1C24;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.info-inside a:hover{
+    background-color: #FCD9DA;
+    color: #070607;
+}
+
+/* Product Page: */
+
+.productPage h1{
+    padding: 10px 0 20px 0;
+    font-family: 'Bentham';
+}
+
+.product{
+    margin: 30px 0 50px 0;
+}
+
+.product:hover{
+    background-color: #FCD9DA;
+}
+
+/* Contact Page: */
+
+.contactPage{
+    background-image: url(../img/company/bgpirulito.png);
+    width: 100%;
+    height: 200px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    margin: 40px 0 40px 0;
+    outline: #ffce07 double 5px;
+}
+
+.contactPage h4{
+    color: #070607;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.contactPage a{
+    color: #FFFFF5;
+    background-color: #ED1C24;
+    box-shadow: 2px 2px 7px #070607;
+    font-size: large;
+    font-weight: 550;
+}
+
+.contact a:hover{
+    background-color: #FCD9DA;
+    color: #070607;
+}
+
+/*
+====================================================
+                        FOOTER:
+====================================================
+*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+/*----------- Inicio codigo footer -----------*/
+
+.footer-annasun {
+    color: #070607;
+    position: absolute;
+}
+/* Contato
+-------------------------------------------------- */
+  
+.contatofront {
+    background-image: url(../img/70.png);
+    font-family: 'Bentham', serif;
+    padding-bottom: 4%;
+}
+.contatofront h1{
+    text-align: center;
+    padding-bottom: 5%;
+    font-family: myFirstFont;
+
+}
+.contatoImage {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0px;
+}
+.contatoImage img{
+    width: 15%;
+    background-color: #FEFFF5;
+}
+
+
+.mapaContato{
+  
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+}
+.botaoContato{
+    background-color: #FFCE07;
+    color: #070607;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.boxContact{
+    padding-bottom: 5%;
+    
+}
+.borda-contato{
+    border: 1px solid #FCD9DA;
+    border-radius: 30px;
+    background-color: #FCD9DA;
+    
+}
+
+
+
+.text-form{
+    font-size: 20px;
+}
+
+
+.borda-contato label input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.borda-contato h2{
+    text-align: center;
+    font-family: myFirstFont;
+}
+.contact-info h2{
+    text-align: center;
+    font-family: myFirstFont;
+}
 @font-face {
     font-family: myFirstFont;
     src: url(adam_Script.otf);
@@ -59,3 +596,514 @@
 }
 /* View Administrativa produtos
 -------------------------------------------------- */
+
+@media (max-width:768px){
+    .mapaContato{
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+
+.footer {
+    color: #070607;
+    margin-bottom: 0;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
+    line-height: 50px; /* Vertically center the text there */
+    background-color: #fcd9da;
+    text-align: center;
+}
+
+.footer-annasun img {
+    width: 150px;
+    margin-top: 10%;
+}
+
+
+
+.footer h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer-annasun ul{
+    list-style: none;
+    line-height: 22px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+}
+.footer ul{
+    list-style: none;
+}
+
+.footer li{
+    line-height: 18px;
+    margin-left: -40px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: #070607;
+}
+.footer a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+}
+
+/* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+
+.footer-img img{
+    width: 175px;
+    height: 175px;
+}
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.footer-annasun a{
+    color: #070607 !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.footer-annasun a:hover {
+    color: #ed1c24 !important;
+    text-decoration: none;
+} 
+
+.copyright {
+    display: block;
+    width: auto;
+    max-width: 680px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-top: -15px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
+}
+/*----------- Fim codigo footer -----------*/
+
+/*
+====================================================
+                        MEDIA QUERY:
+====================================================
+*/
+
+@media screen and (max-width: 900px){
+    body{
+        background-image: none;
+    }
+
+    .container-header img{
+        width: 64px;
+    }
+
+    .carousel{
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .info{
+        height: 40%;
+    }
+
+    .info img{
+        max-width: 30%;
+    }
+
+    .info-inside h4{
+        font-size: 1.5rem;
+    }
+
+    .info-inside p{
+        font-size: 0.9rem;
+    }
+
+    .info-inside a{
+        font-size: medium;
+    }
+}
+/* ===================================================
+                        NAVBAR:
+======================================================*/
+
+.nav-icons{
+    font-size: x-large;
+}
+
+.nav-icons a{
+    color: #ED1C24;
+}
+
+.nav-icons a:hover{
+    color: #FCD9DA;
+}
+
+/* ===================================================
+                        LOGIN:
+======================================================*/
+
+html, body{
+    background-image: url(../img/company/bg.png);
+    height: 90%;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #070607;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+    background-color: #ffcd07af !important;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    background-color: #fffff5b0;
+    color: #ED1C24;
+    border: 0 !important;
+}
+
+.login-info{
+    margin: 5px 0 20px 0 !important;
+}
+
+.login-btn{
+    color: #FFFFF5 !important;
+    background-color: #ED1C24 !important;
+    font-weight: bold !important;
+    width: 100px;
+}
+
+.login-btn:hover{
+    color: #070607 !important;
+    background-color: #FCD9DA !important;
+}
+
+.links{
+    color: #070607;
+}
+
+.links a{
+    margin-left: 4px;
+    color: #ED1C24;
+}
+
+.links a:hover{
+    color: #070607;
+}
+
+/* ===================================================
+                        MEDIA QUERY:
+======================================================*/
+
+@media only screen and (max-width: 900px) {
+    .card{
+        width: 90% !important;
+    }
+}
+/**
+    View adm
+**/
+
+.view_adm{
+    background-image: url("../img/bg50_adm.png");
+}
+.principal_adm{
+    background-color: #fefff5;
+    color: #070607;
+    font-family: 'Bentham';
+
+}
+.principal_adm div, th,td{
+    background-color: #fefff5;
+}
+
+.topicos th{
+    background-color: #fefff5 !important;
+    font-size: 120%;
+    color:#070607;
+}
+.perfil-pic{
+    width: 120px;
+    height: 120px;
+}
+.adicionar a{
+    background-color: #ffce07;
+    border-color: #ffce07;
+    color: #fefff5;
+    font-size: 110%;
+
+}
+.adicionar a:hover{
+    background-color: #f3ae2e;
+    border-color: #f3ae2e ;
+    
+    font-size: 200%;
+    background-color: #fdeced;
+}
+.mvv{
+    display: inline-block;
+    border: #fcd9d4 double 6px;
+    background-color: #fdeced;
+}
+.adicionar{
+    width: 73.3%;
+    height: auto;
+    text-align: right;
+}
+.dados{
+    font-family: "Montserrat";
+    
+}
+.dados td{
+    font-size: 130%;
+    line-height: 520%;
+}  
+.quem_somos{
+    margin-top: 6%;
+    margin-bottom: 6%;
+    background-image: url("../img/bg50.png");
+}
+.botao_excluir{
+    color:#ed1c24;
+
+}
+.botao_editar{
+    color: green;
+}
+.botao_modal_confirma{
+    background-color: #ed1c24 !important;
+    border-color: #ed1c24;
+}
+.botao_modal_confirma:hover{
+    background-color: #c2030a;
+    border-color: #c2030a ;
+}
+.botao_modal_confirma:focus,.botao_modal_confirma:active,
+.botao_modal_cancelar:focus,.botao_modal_cancelar:active,
+.adicionar a:focus, .adicionar a:active {
+
+    outline: none !important;
+    box-shadow: none !important;
+ }
+.imagem_modal {
+    text-align: center;
+    margin-bottom: 2%;
+}
+.imagem_modal img{
+    width: 40%;
+    height: 40%;
+
+}
+.dados_visualizar td{
+    font-size: 100%;
+    line-height: 500%;
+    
+}
+
+@media (max-width: 1000px) {
+    
+    .view_adm{
+        background-image: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo{
+        justify-content: center;
+        display: block;    
+    }
+    .dados td{
+        font-size: 100%;
+        line-height: 1;
+    }
+    .perfil-pic{
+        width: 50px;
+        height: 50px;
+    }
+    .myrow_adm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/**
+    Add Users and Edit User
+**/
+.addUsuario, .edit_user_adm{
+    background-image: url("../img/bg50_adm.png");
+    color: #070607;
+    font-family: 'Bentham';
+    background-color: #fefff5;
+}
+.users_div1{
+    padding-top: 2%;
+}
+.users_adm, .form_edit{
+    background-color: #fefff5;
+}
+.button_users{
+    font-weight: 1;
+    background-color: #ffce07 ;
+    border-color: #ffce07 solid 6px;
+}
+.button_users:hover{
+    background-color: #f3ae2e;
+    border-color: #f3ae2e solid 6px;
+    
+}
+.button_users:focus,.button_users:active, .digita_adm:focus, .digita_adm:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+@media (max-width: 1000px) {
+    .addUsuario, .edit_user_adm{
+         background-image: none;
+    }
+}
+
+/**
+    final view adm
+    */
+.quem_somos{
+    background-image: none;
+}
+
+.container-header{
+    background-color: #fcd9da;
+    width: 100%;
+}
+
+/* NavBar */
+/* Arrumar as margins direto pelo html
+    Ver se o nav ta colocar em cima quando der scroll na pagina
+*/
+
+
+.container-header img{
+    width: 75px;
+}
+
+.container-header ul li{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin-right: 24px
+}
+
+.container-header ul li a{
+    color: #070607 ;
+}
+
+.container-header ul li.active{
+    font-weight: bold;
+    border-bottom: 2px solid #070607;
+}
+
+@media(max-width: 1000px){
+    .container-header img{
+        width: 64px;
+    }
+}
+
+/* footer */
+.footer-annasun {
+    color: #070607 !important;
+    position: absolute; 
+    width: 100%;
+    height: auto; /*Set the fixed height of the footer here*/ 
+    background-color: #fcd9da;
+    text-align: center;
+ }
+ .footer-annasun img{
+     width: 150px;
+     margin-top: 10%;
+ }
+
+.footer-annasun h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer-annasun ul{
+    list-style: none;
+    line-height: 22px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-annasun a{
+    color: #070607;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.footer-annasun a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+}
+
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+.copyright {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
+}
+
