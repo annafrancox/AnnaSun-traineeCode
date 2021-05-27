@@ -189,6 +189,112 @@ a#noStyle{
     color: #070607;
 }
 
+/*
+====================================================
+                        FOOTER:
+====================================================
+*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+/*----------- Inicio codigo footer -----------*/
+
+.footer-annasun {
+    color: #070607;
+    position: absolute;
+    width: 100%;
+    height: auto; /* Set the fixed height of the footer here */
+    line-height: 50px; /* Vertically center the text there */
+    background-color: #fcd9da;
+    text-align: center;
+}
+
+.footer-annasun img {
+    width: 150px;
+    margin-top: 10%;
+}
+
+.footer-annasun h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer-annasun ul{
+    list-style: none;
+    line-height: 22px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: #070607;
+}
+.footer a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+}
+
+/* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.footer-annasun a{
+    color: #070607 !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.footer-annasun a:hover {
+    color: #ed1c24 !important;
+    text-decoration: none;
+} 
+
+.copyright {
+    display: block;
+    width: auto;
+    max-width: 680px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-top: -15px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
+}
+/*----------- Fim codigo footer -----------*/
+
+/*
+====================================================
+                        MEDIA QUERY:
+====================================================
+*/
+
 @media screen and (max-width: 900px){
     body{
         background-image: none;
@@ -222,86 +328,4 @@ a#noStyle{
     .info-inside a{
         font-size: medium;
     }
-    
-}
-
-/*
-====================================================
-                        FOOTER:
-====================================================
-*/
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-}
-
-.footer {
-    color: #070607;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto; /* Set the fixed height of the footer here */
-    line-height: 50px; /* Vertically center the text there */
-    background-color: #fcd9da;
-    text-align: center;
-}
-
-.footer h6{
-    margin-top: 30px;
-    font-size: 30px;
-    margin-bottom: 10px;
-    font-family: 'Bentham', serif;
-}
-
-.footer ul{
-    list-style: none;
-}
-
-.footer li{
-    line-height: 18px;
-    margin-left: -40px;
-    margin-top: 5px;
-    display: block;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.footer a{
-    color: #070607;
-}
-.footer a:hover {
-    color: #ed1c24;
-    text-decoration: none;
-} 
-/* Custom page CSS
-  -------------------------------------------------- */
-  /* Not required for template or sticky footer method. */
-
-/*.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
-}*/
-
-.copyright {
-    display: block;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-}
-
-.copyright span {
-    color: #ed1c24;
-}
-
-.copyright p {
-    margin: 8px;
-    line-height: 15px;
 }
