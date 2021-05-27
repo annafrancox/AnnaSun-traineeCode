@@ -1,5 +1,9 @@
 /* NAVBAR */
 
+/* quem somos */
+.logo{
+    margin-top: -2%;
+}
 .container-header {
   background-color: #fcd9da;
   width: 100%;
@@ -208,6 +212,10 @@ body {
   background-color: #ffce07;
   border-radius: 35px;
   padding: 15px;
+}
+.cards-a p{
+    font-family: "Montserrat";
+    background-color: #fdeced;
 }
 
 @media (max-width: 1050px) {
@@ -698,6 +706,13 @@ html, body{
     background-color: #f3ae2e;
     border-color: #f3ae2e ;
     
+    font-size: 200%;
+    background-color: #fdeced;
+}
+.mvv{
+    display: inline-block;
+    border: #fcd9d4 double 6px;
+    background-color: #fdeced;
 }
 .adicionar{
     width: 73.3%;
@@ -711,7 +726,11 @@ html, body{
 .dados td{
     font-size: 130%;
     line-height: 520%;
-    
+}  
+.quem_somos{
+    margin-top: 6%;
+    margin-bottom: 6%;
+    background-image: url("../img/bg50.png");
 }
 .botao_excluir{
     color:#ed1c24;
@@ -754,6 +773,13 @@ html, body{
     
     .view_adm{
         background-image: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo{
+        justify-content: center;
+        display: block;    
     }
     .dados td{
         font-size: 100%;
@@ -808,3 +834,103 @@ html, body{
 /**
     final view adm
     */
+    .quem_somos{
+        background-image: none;
+    }
+
+.container-header{
+    background-color: #fcd9da;
+    width: 100%;
+}
+
+/* NavBar */
+.container-header img{
+    width: 75px;
+}
+
+.container-header ul li{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin-right: 24px
+}
+
+.container-header ul li a{
+    color: #070607 ;
+}
+
+.container-header ul li.active{
+    font-weight: bold;
+    border-bottom: 2px solid #070607;
+}
+
+@media(max-width: 1000px){
+    .container-header img{
+        width: 64px;
+    }
+}
+
+/* footer */
+.footer-annasun {
+    color: #070607 !important;
+    position: absolute; 
+    width: 100%;
+    height: auto; /*Set the fixed height of the footer here*/ 
+    background-color: #fcd9da;
+    text-align: center;
+ }
+ .footer-annasun img{
+     width: 150px;
+     margin-top: 10%;
+ }
+
+.footer-annasun h6{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Bentham', serif;
+}
+
+.footer-annasun ul{
+    list-style: none;
+    line-height: 22px;
+    margin-left: -40px;
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-annasun a{
+    color: #070607;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.footer-annasun a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+}
+
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+.copyright {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.copyright {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.copyright span {
+    color: #ed1c24;
+}
+
+.copyright p {
+    margin: 8px;
+    line-height: 15px;
+}
