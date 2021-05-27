@@ -537,6 +537,12 @@ body {
     text-align: center;
     font-family: myFirstFont;
 }
+/* Inicio código pag view_categorias / criar_categorias / editar_categorias */
+body {
+    background-size: 100%;
+    background-image: url(../img/flowers.png);
+}
+
 @font-face {
     font-family: myFirstFont;
     src: url(adam_Script.otf);
@@ -566,6 +572,7 @@ body {
 .buttonAdminProd{
     display: flex;
     justify-content: flex-end;
+    justify-content: space-between;
 }
 .buttonCreate {
     display: flex;
@@ -1107,3 +1114,31 @@ html, body{
     line-height: 15px;
 }
 
+
+.ver {
+    background-color: #070607 !important;
+    border-color: #070607 !important;
+}
+
+.titulo5 h5 {
+    font-family: 'Bentham';
+    color: #070607;
+    font-size: 25px;
+}
+
+.card-bckg {
+    background-color: #fffff5 !important;
+}
+
+.card p {
+    font-family: 'Montserrat';
+}
+
+.modalcentro{
+    text-align: center;
+}
+
+.modalcentro p{
+    margin-top: 10px;
+}
+/* Fim código pag view_categorias / criar_categorias / editar_categorias */
