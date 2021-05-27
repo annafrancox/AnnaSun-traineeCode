@@ -834,9 +834,9 @@ html, body{
 /**
     final view adm
     */
-    .quem_somos{
-        background-image: none;
-    }
+.quem_somos{
+    background-image: none;
+}
 
 .container-header{
     background-color: #fcd9da;
