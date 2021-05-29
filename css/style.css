@@ -269,7 +269,7 @@ body {
 }
 
 .space {
-  margin: 150px auto 275px auto;
+  margin: 100px auto 100px auto;
 }
 
 /* Carousel: */
@@ -367,11 +367,11 @@ a#noStyle {
 }
 
 .product {
-  margin: 30px 0 50px 0;
+  margin: 30px 15px 20px 15px !important;
 }
 
 .product:hover {
-  background-color: #fcd9da;
+  background-color: #fcd9da !important;
 }
 
 /* Contact Page: */
@@ -559,15 +559,19 @@ body {
                         LOGIN:
 ======================================================*/
 
-html,
-body {
+html, body {
   background-image: url(../img/company/bg.png);
   height: 90%;
   font-family: "Montserrat", sans-serif !important;
   color: #070607;
 }
 
-.card {
+.login-container{
+  height: 100%;
+  align-items: center;
+}
+
+.card-login {
   height: auto;
   margin-top: auto;
   margin-bottom: auto;
@@ -575,11 +579,15 @@ body {
   background-color: #ffcd07af !important;
 }
 
-.input-group-prepend span {
-  width: 50px;
+.ic-login span {
+  width: 100% !important;
   background-color: #fffff5b0;
   color: #ed1c24;
   border: 0 !important;
+}
+
+.ic-login i{
+  font-size: larger;
 }
 
 .login-info {
@@ -609,6 +617,10 @@ body {
 
 .links a:hover {
   color: #070607;
+}
+
+.nav-icons i:hover{
+  color: #fcd9da;
 }
 
 /*====================================================
