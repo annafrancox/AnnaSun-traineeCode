@@ -27,7 +27,7 @@ class QueryBuilder
       
     }
 
-    public function insert()
+    public function insert($table, $parameters)
     {
       
          
@@ -37,7 +37,7 @@ class QueryBuilder
       
          
     }
-    public function delete()
+    public function delete($table)
     {
       
          

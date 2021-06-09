@@ -1,1 +1,9 @@
-Dentro dessa pasta vai um controller de cada 1
+<?php
+
+class Controller
+{
+    public function home()
+    {
+        return view('index');
+    }
+}
