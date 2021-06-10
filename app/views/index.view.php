@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
+<head>
     <!-- Title: -->
     <title>Anna Sun | Home</title>
 
@@ -22,7 +22,6 @@
 
 
 
-<body>
 
     <!-- Navbar -->  
         <nav class="navbar fixed-top navbar-expand-md container-header navbar-light">
@@ -56,8 +55,9 @@
                 </div>
             </div>
         </nav>
-    
+    </head>
     <!-- Container: -->
+<body>
     <div class="container space">
 
         <!-- Carousel: -->
