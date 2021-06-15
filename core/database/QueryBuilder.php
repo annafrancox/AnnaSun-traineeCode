@@ -3,6 +3,7 @@
 namespace App\Core\Database;
 
 use PDO;
+use Exception;
 
 class QueryBuilder
 {
@@ -10,9 +11,9 @@ class QueryBuilder
     protected $pdo;
 
 
-    public function __construct()
+    public function __construct($pdo)
     {
-    
+        $this->pdo = $pdo;
     }
 
 

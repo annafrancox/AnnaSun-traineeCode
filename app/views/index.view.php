@@ -3,7 +3,7 @@
 <html>
 
     <!-- Title: -->
-    <title>Anna Sun | Home</title>
+    <title>Anna Sun - Home</title>
 
     <!-- Metas: -->
     <meta charset="utf-8">
