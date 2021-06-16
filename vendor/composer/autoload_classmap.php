@@ -12,5 +12,8 @@ return array(
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
+    'ComposerAutoloaderInitb192c3758124c8452abc0f8976edf406' => $vendorDir . '/composer/autoload_real.php',
+    'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\ComposerStaticInitb192c3758124c8452abc0f8976edf406' => $vendorDir . '/composer/autoload_static.php',
     'Router' => $baseDir . '/app/Router.php',
 );

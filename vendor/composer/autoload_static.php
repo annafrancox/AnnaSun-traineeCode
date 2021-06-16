@@ -17,6 +17,9 @@ class ComposerStaticInitb192c3758124c8452abc0f8976edf406
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'ComposerAutoloaderInitb192c3758124c8452abc0f8976edf406' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInitb192c3758124c8452abc0f8976edf406' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Router' => __DIR__ . '/../..' . '/app/Router.php',
     );
 
