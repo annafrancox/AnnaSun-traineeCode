@@ -20,7 +20,7 @@
 
         <div  class = " container pt-5 formBorder form_edit">
             <?php foreach ($visual as $view) : ?>
-            <form>
+            <form action = "adminUser" method = "GET">
                 <div  class = " form-group ">
                     <label label  for = " exampleFormControlInput1 " > Nome </label>
                     <input type = " email " value =" <?= $view->nome?>"  class = " form-control digita_adm " id = " exampleFormControlInput1 "readonly>
@@ -38,12 +38,12 @@
                       <label for="exampleFormControlFile1">Foto</label>
                       <img src ="public/img/<?= $view->imagem?>"> 
                     </div>
-           
-            <div  class = " buttonSubmit ">
-                <button  type = " button " class = " btn mt-3 button_users " > <b> voltar    </b> </button>
-            </div>
-            </form>
-        <?php endforeach; ?>
+                    
+                    <div  class = " buttonSubmit ">
+                        <button  type = " button " class = " btn mt-3 button_users "><b> Voltar</b></button>
+                    </div>
+                </form>
+                <?php endforeach; ?>
 
         </div>
     </div>
