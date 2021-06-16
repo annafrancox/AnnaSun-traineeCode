@@ -41,18 +41,18 @@
                                     <?php foreach ($usuarios as $usuario) :?>
                                         <tr class="dados">
                                             <td >
-                                                <img class="rounded-circle perfil-pic" src="<?= $usuario->foto?>" alt="">
+                                                <img class="rounded-circle perfil-pic" src="public/img/<?= $usuario->imagem?>" alt="">
                                             </td>  
                                             <td><small><?= $usuario->nome;?></small></td>
                                             <td><small><?= $usuario->email;?></small></td>
                                             <td>
                                             
-                                            
+                                            <div class = "formUser">
                                                 <form method = "POST" action = "view_user">
                                                 <input type = "hidden" name = "id" value=<?= $usuario->id?>>
                                                 <button type="submit" class="btn btn-light"><i class="fa fa-eye"></i>
                                                 </form>
-                                            
+                                            </div>
                                                 <form method = "POST" action = "deleteUser">
                                                 <input type = "hidden" name="id" value = <?= $usuario->id ?>>
                                                 <button type="submit" class="btn btn-light"><i class="botao_excluir fa fa-trash"></i>

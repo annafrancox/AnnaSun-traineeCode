@@ -670,6 +670,10 @@ html, body {
                         VIEW ADMINISTRATIVA DE ALGO:
 ====================================================*/
 
+
+.formUser{
+  max-width: 100%;
+}
 .view_adm {
   background-image: url("../img/bg50_adm.png");
 }

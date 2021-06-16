@@ -8,8 +8,7 @@ class UserController
 
     public function adm()
     {
-        $usuarios = App::get('database')->selectAll('users');
-        //die(var_dump($usuarios));
+        $usuarios = App::get('database')->selectAll('usuarios');
         return view ('view_adm', compact('usuarios'));
     }
 
@@ -26,9 +25,28 @@ class UserController
 
     public function edit()
     {
-        $visual = App::get('database')->read('users',  $_POST['id']);
+        $visual = App::get('database')->read('usuarios',  $_POST['id']);
         return view('edit_users', compact('visual')); 
     }
+
+
+    public function editar()
+    {
+        App::get('database')->edit('usuarios',[
+            'id'=>$_POST['id'],
+            'nome'=>$_POST['nome'],
+            'email'=>$_POST['email'],
+            'senha'=>$_POST['senha'],
+            'imagem'=> $_POST['imagem']
+        ] );
+        return redirect('');
+    }
+
+
+
+
+
+
 
 
 
@@ -38,11 +56,11 @@ class UserController
     public function create()
     {   
         
-        App::get('database')->insert('users', [
+        App::get('database')->insert('usuarios', [
             'nome'=>$_POST['nome'],
             'email'=>$_POST['email'],
             'senha'=>$_POST['senha'],
-            'foto'=> $_POST['foto']
+            'imagem'=> $_POST['imagem']
         ]);
         return redirect('');
     }
@@ -53,7 +71,7 @@ class UserController
 
     public function delete()
     {
-        App::get('database')->delete('users', $_POST['id']);
+        App::get('database')->delete('usuarios', $_POST['id']);
         return redirect('');
     }
 
@@ -62,7 +80,7 @@ class UserController
 
     public function view()
     {
-       $visual = App::get('database')->read('users',  $_POST['id']);
+       $visual = App::get('database')->read('usuarios',  $_POST['id']);
         return view ('view_users', compact('visual'));
     }
 

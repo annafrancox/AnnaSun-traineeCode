@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                     <label for="exampleFormControlFile1">Adicionar Foto de Perfil</label>
-                    <input name = "foto" type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input name = "imagem" type="file" class="form-control-file" id="exampleFormControlFile1">
                 
                     </div>
                     <div  class = " buttonSubmit ">

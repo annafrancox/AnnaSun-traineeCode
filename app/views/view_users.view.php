@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlFile1">Foto</label>
-                      <img src =" <?= $view->foto?>"> 
+                      <img src ="public/img/<?= $view->imagem?>"> 
                     </div>
            
             <div  class = " buttonSubmit ">
