@@ -38,7 +38,7 @@ class QueryBuilder
       try{
           $stmt = $this->pdo->prepare($sql);
           $stmt->execute($parameters);
-      }catch(\Exception $e)
+        }catch(\Exception $e)
       {
 
       }

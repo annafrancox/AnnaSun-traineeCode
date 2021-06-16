@@ -4,12 +4,17 @@ use App\Core\App;
 
 class UserController
 {
+
+    public function index()
+    {
+        return view ('site/index');
+    }
  
 
     public function adm()
     {
         $usuarios = App::get('database')->selectAll('usuarios');
-        return view ('view_adm', compact('usuarios'));
+        return view ('admin/usuarios/view_adm', compact('usuarios'));
     }
 
 
@@ -17,7 +22,7 @@ class UserController
 
     public function add()
     {
-        return view('add_users'); 
+        return view('admin/usuarios/add_users'); 
     }
 
 
@@ -26,7 +31,7 @@ class UserController
     public function edit()
     {
         $visual = App::get('database')->read('usuarios',  $_POST['id']);
-        return view('edit_users', compact('visual')); 
+        return view('admin/usuarios/edit_users', compact('visual')); 
     }
 
 
@@ -39,7 +44,7 @@ class UserController
             'senha'=>$_POST['senha'],
             'imagem'=> $_POST['imagem']
         ] );
-        return redirect('');
+        return redirect('adminUser');
     }
 
 
@@ -62,7 +67,7 @@ class UserController
             'senha'=>$_POST['senha'],
             'imagem'=> $_POST['imagem']
         ]);
-        return redirect('');
+        return redirect('adminUser');
     }
 
 
@@ -72,7 +77,7 @@ class UserController
     public function delete()
     {
         App::get('database')->delete('usuarios', $_POST['id']);
-        return redirect('');
+        return redirect('adminUser');
     }
 
 
@@ -81,7 +86,7 @@ class UserController
     public function view()
     {
        $visual = App::get('database')->read('usuarios',  $_POST['id']);
-        return view ('view_users', compact('visual'));
+        return view ('admin/usuarios/view_users', compact('visual'));
     }
 
 

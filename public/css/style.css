@@ -672,7 +672,11 @@ html, body {
 
 
 .formUser{
-  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.formUser button{
+  background-color: #fefff5;
 }
 .view_adm {
   background-image: url("../img/bg50_adm.png");

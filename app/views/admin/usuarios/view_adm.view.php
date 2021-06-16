@@ -47,22 +47,22 @@
                                             <td><small><?= $usuario->email;?></small></td>
                                             <td>
                                             
-                                            <div class = "formUser">
+                                            <div class = "formUser container">
                                                 <form method = "POST" action = "view_user">
                                                 <input type = "hidden" name = "id" value=<?= $usuario->id?>>
-                                                <button type="submit" class="btn btn-light"><i class="fa fa-eye"></i>
+                                                <button type="submit" class="btn"><i class="fa fa-eye"></i>
                                                 </form>
-                                            </div>
+                                            
                                                 <form method = "POST" action = "deleteUser">
                                                 <input type = "hidden" name="id" value = <?= $usuario->id ?>>
-                                                <button type="submit" class="btn btn-light"><i class="botao_excluir fa fa-trash"></i>
+                                                <button type="submit" class="btn"><i class="botao_excluir fa fa-trash"></i>
                                                 </form>
 
                                                 <form method = "POST" action = "edit_user">
                                                 <input type = "hidden" name = "id" value=<?= $usuario->id?>>
-                                                <button type="submit" class="btn btn-light"><i class="botao_editar fa fa-pencil-square-o"></i>
+                                                <button type="submit" class="btn"><i class="botao_editar fa fa-pencil-square-o"></i>
                                                 </form>
-                                            
+                                            </div>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
