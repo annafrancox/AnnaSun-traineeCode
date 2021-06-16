@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Anna Sun - Contato</title>
-  <link rel="stylesheet" href="../../../public/css/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,7 +19,7 @@
   <nav class="navbar navbar-expand-md container-header navbar-light">
     <div class="container">
       <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-        <img class="logo" src="../../../public/img/logo_trainee.png" width="90" class="d-inline-block align-top" alt="Logotipo Da Lã.">
+        <img class="logo" src="public/img/logo_trainee.png" width="90" class="d-inline-block align-top" alt="Logotipo Da Lã.">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
@@ -34,7 +34,7 @@
             <a class="nav-link" href="#">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
+            <a class="nav-link" href="contato">Contato</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Quem somos</a>
@@ -49,7 +49,7 @@
   <!--navbar-->
   <div class="contatofront ">
     <div class="contatoImage">
-      <img src="../../../public/img/logo_sun-removebg-preview.png" alt="logo Anna Sun">
+      <img src="public/img/logo_sun-removebg-preview.png" alt="logo Anna Sun">
     </div>
     <h1>Contato</h1>
   <div class="container container-Contact">
@@ -98,7 +98,7 @@
 
     <div class="row">
       <div class="col-sm">
-        <img src="../../../public/img/logo_trainee.png" alt="Logo Anna_Sun">
+        <img src="public/img/logo_trainee.png" alt="Logo Anna_Sun">
       </div>
 
       <div class="col-sm-6">
