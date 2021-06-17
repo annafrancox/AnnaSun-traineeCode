@@ -21,22 +21,27 @@
 
     <!--viewprodutos-->
     <div class="container pt-5 formBorder">
-        <form action="/produtos/admin/editAction">
+        <form action="/produtos/admin/editAction" method="POST">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nome do produto</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do produto" value="<?= $produto['nome'] ?>">
+                <input name="nome" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do produto" value="<?= $produto['nome'] ?>" required>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Preço do produto</label>
-                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $produto['preco'] ?>">
+                <input name="preco" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $produto['preco'] ?>" required>
             </div>
-            <form>
-                <div class=" form-group">
-                    <label for="exampleFormControlFile1">Foto do produto</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-            </form>
+
             <div class="form-group">
+                <label for="exampleFormControlInput1">Quantidade</label>
+                <input name="qtdade" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $produto['qtdade'] ?>" required>
+            </div>
+
+            <div class=" form-group">
+                <label for="exampleFormControlFile1">Foto do produto</label>
+                <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1">
+                <img src="../../public/img/<?= $produto['imagem'] ?>">
+            </div>
+            <div class=" form-group">
                 <label for="exampleFormControlSelect1">Categoria do produto</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                     <option>1</option>
@@ -48,13 +53,14 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Descrição do produto</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value=""><?= $produto['descricao'] ?></textarea>
+                <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" rows="3" value="" required><?= $produto['descricao'] ?></textarea>
             </div>
 
+            <div class="buttonSubmit">
+                <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                <button type="submit" class="btn btn-warning"><b>Editar produto</b></button>
+            </div>
         </form>
-        <div class="buttonSubmit">
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><b>Editar produto</b></button>
-        </div>
     </div>
     <!--viewprodutos-->
 

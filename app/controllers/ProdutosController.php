@@ -75,7 +75,32 @@ class ProdutosController
 
     public function updateAction()
     {
-        $idProduto = $_POST['id'];
+
+        $params = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome'],
+            'imagem' => '',
+            'preco' => $_POST['preco'],
+            'qtdade' => $_POST['qtdade'],
+            'descricao' => $_POST['descricao']
+        ];
+
+
+        if ($_POST['imagem'] == "") {
+            $produto = App::get('database')->selectOne($_POST['id'], 'Produtos');
+
+            $params['imagem'] = $produto['imagem'];
+
+            App::get('database')->edit($params, 'Produtos');
+            header('Location: /produtos/admin');
+            exit();
+        }
+
+
+        $params['imagem'] = $_POST['imagem'];
+
+        $params = App::get('database')->edit($params, 'Produtos');
+        header('Location: /produtos/admin');
     }
 
     public function delete()

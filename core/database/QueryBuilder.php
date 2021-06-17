@@ -58,9 +58,24 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    public function edit()
+
+    public function edit($params, $tabela)
     {
+        $sql = "UPDATE {$tabela} SET ";
+        foreach ($params as $key => $parameter) {
+            $sql = $sql . "{$key} = '{$parameter}', ";
+        }
+        $sql = rtrim($sql, " " . ",");
+        $sql = $sql . " WHERE id = {$params['id']}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
+
     public function delete($id, $tabela)
     {
         $sql = "delete from {$tabela} where id = {$id}";
