@@ -47,17 +47,6 @@ class UserController
         return redirect('adminUser');
     }
 
-
-
-
-
-
-
-
-
-
-
-
     public function create()
     {   
         
