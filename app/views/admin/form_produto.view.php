@@ -19,9 +19,7 @@
 
 </head>
 
-<body>
-
-    <body class="addProduct">
+<body class="addProduct">
         <!--viewprodutos-->
         <div>
             <div class="container pt-5 pb-5 formBorder">
@@ -40,7 +38,7 @@
                         <div class="form-group foto-view">
                             <label for="exampleFormControlFile1">Foto do produto</label>
                             <br>
-                            <img src="../../public/img/cafe-gelado-com-chantilly-31228.jpg">
+                            <img src="/public/img/cafe-gelado-com-chantilly-31228.jpg">
                         </div>
                     </form>
                     <div class="form-group">
@@ -54,7 +52,7 @@
                     </div>
                 </form>
                 <div class="buttonSubmit">
-                    <a href="admin-produtos.html"><button type="button" class="btn btn-addProduct mt-3"><b>Voltar</b></button></a>
+                    <a href="/admin_produtos"><button type="button" class="btn btn-addProduct mt-3"><b>Voltar</b></button></a>
                 </div>
 
             </div>
@@ -71,6 +69,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-    </body>
+    </>
 
 </html>

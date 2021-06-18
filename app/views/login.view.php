@@ -83,7 +83,7 @@
                     <div class="card-footer">
 
                         <div class="d-flex justify-content-center links">
-                            Não tem uma conta? <a href="#">Crie uma!</a>
+                            Não tem uma conta? <a href="/view_adm">Crie uma!</a>
                         </div>
                         
                     </div>
