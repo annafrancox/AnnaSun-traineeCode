@@ -125,45 +125,43 @@ body {
 /* ===================================================
                         QUEM SOMOS:
 ======================================================*/
-.logo{
+.logo {
   margin-top: -2%;
-
 }
-.texto-a{
-  margin: 6% ;
+.texto-a {
+  margin: 6%;
   font-size: 120%;
   line-height: 200%;
 }
-.image-a img{
+.image-a img {
   width: 120% !important;
   margin-top: 32%;
 }
-.cards-a{
+.cards-a {
   margin-top: 0%;
   padding-bottom: 2%;
-
 }
-.cards-a p{
+.cards-a p {
   font-family: "Montserrat";
   background-color: #fdeced;
 }
-.cards-a h5{
-  text-align: center; 
-  font-family: 'Bentham'; 
+.cards-a h5 {
+  text-align: center;
+  font-family: "Bentham";
   color: #070607;
   font-size: 200%;
   background-color: #fdeced;
 }
-.mvv{
+.mvv {
   display: inline-block;
   border: #fcd9d4 double 6px;
   background-color: #fdeced;
 }
-.principal{
+.principal {
   background-color: #fefff5 !important;
   min-height: 100%;
 }
-.quem_somos{
+.quem_somos {
   margin-top: 6%;
   margin-bottom: 6%;
   background-image: url("../img/bg50.png");
@@ -284,6 +282,16 @@ body {
   background-color: #ffce07;
   border-radius: 35px;
   padding: 15px;
+}
+
+.product-details .product-body .product-body-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-details .product-body .product-body-container .product-estoque {
+  margin-top: 8px;
 }
 
 .cards-a p {
@@ -602,14 +610,15 @@ body {
                         LOGIN:
 ======================================================*/
 
-html, body {
+html,
+body {
   background-image: url(../img/company/bg.png);
   height: 90%;
   font-family: "Montserrat", sans-serif !important;
   color: #070607;
 }
 
-.login-container{
+.login-container {
   height: 100%;
   align-items: center;
 }
@@ -629,7 +638,7 @@ html, body {
   border: 0 !important;
 }
 
-.ic-login i{
+.ic-login i {
   font-size: larger;
 }
 
@@ -662,7 +671,7 @@ html, body {
   color: #070607;
 }
 
-.nav-icons i:hover{
+.nav-icons i:hover {
   color: #fcd9da;
 }
 
@@ -950,26 +959,24 @@ td {
     width: 64px;
   }
 
-    .logo{
-        justify-content: center;
-        display: block;    
-    }
-    .image-a {
-        width: 68%;
-        margin-top: 6%;
-        margin-left: 8%;
-        
-    }
-    .texto-a{
-        margin-left: 16%;
-    }
-    .cards-a{
-        margin-top: 5%;
-    }
-    .quem_somos{
-        background-image: none;
-    }
-
+  .logo {
+    justify-content: center;
+    display: block;
+  }
+  .image-a {
+    width: 68%;
+    margin-top: 6%;
+    margin-left: 8%;
+  }
+  .texto-a {
+    margin-left: 16%;
+  }
+  .cards-a {
+    margin-top: 5%;
+  }
+  .quem_somos {
+    background-image: none;
+  }
 }
 
 @media (max-width: 768px) {

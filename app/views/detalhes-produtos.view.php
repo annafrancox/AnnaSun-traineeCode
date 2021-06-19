@@ -15,6 +15,8 @@
     <title>Produtos</title>
 </head>
 
+
+
 <body>
     <div class="products-wrapper">
         <div class="product-details">
@@ -24,9 +26,13 @@
             <div class="product-body">
                 <h1 class="product-title"><?= $produto['nome'] ?></h1>
                 <p class="product-description"><?= $produto['descricao'] ?> </p>
+                <p class="product-description">Categoria: <?= $categoria['nome'] ?> </p>
 
-                <button class="btn product-price"> <?= $produto['preco'] ?></button>
-                <p class="product-estoque"><?= $produto['qtdade'] ?> unidades restantes</p>
+
+                <div class="product-body-container">
+                    <button class="btn product-price"> <?= $produto['preco'] ?></button>
+                    <p class="product-estoque"><?= $produto['qtdade'] ?> unidades restantes</p>
+                </div>
             </div>
         </div>
     </div>

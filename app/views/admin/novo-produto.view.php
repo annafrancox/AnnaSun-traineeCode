@@ -18,7 +18,6 @@
 
 
 <body class="addProduct">
-
     <!--viewprodutos-->
     <div>
         <div class="container pt-5 formBorder">
@@ -43,13 +42,11 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Categoria do produto</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="exampleFormControlSelect1" name="categoria">
                         <option></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <?php foreach ($categorias as $categoria) : ?>
+                            <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">

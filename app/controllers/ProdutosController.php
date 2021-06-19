@@ -23,8 +23,10 @@ class ProdutosController
         $idProduto = $_GET['id'];
         $produto = App::get('database')->selectOne($idProduto, 'Produtos');
 
+        $categoria = App::get('database')->selectOne($produto['categoria'], 'Categorias');
         $tables = [
-            'produto' => $produto
+            'produto' => $produto,
+            'categoria' => $categoria
         ];
 
         return view('detalhes-produtos', $tables);
@@ -42,7 +44,13 @@ class ProdutosController
 
     public function create()
     {
-        return view('admin/novo-produto');
+        $categorias = App::get('database')->selectAll('Categorias');
+
+        $params = [
+            'categorias' => $categorias
+        ];
+
+        return view('admin/novo-produto', $params);
     }
 
     public function createAction()
@@ -53,7 +61,8 @@ class ProdutosController
             'preco' => $_POST['preco'],
             'imagem' => $_POST['imagem'],
             'qtdade' => $_POST['qtdade'],
-            'descricao' => $_POST['descricao']
+            'descricao' => $_POST['descricao'],
+            'categoria' => $_POST['categoria']
         ];
 
         App::get('database')->insert('Produtos', $params);
@@ -86,6 +95,7 @@ class ProdutosController
         ];
 
 
+        //Verificação se a imagem foi atualizada ou não
         if ($_POST['imagem'] == "") {
             $produto = App::get('database')->selectOne($_POST['id'], 'Produtos');
 
