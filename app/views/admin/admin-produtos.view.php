@@ -12,41 +12,39 @@
 <body class="addProduct">
     <!--viewprodutos-->
     <div class="container  ">
-        <div class="contAdminProd">
-            <div class="card-deck mt-5">
+        <div class="card-deck mt-5 ">
+            <?php foreach ($produtos as $produto) : ?>
+                <div class="col-md col-xl-4 ">
+                    <div class="card   cardAdminProd mb-5">
+                        <img class="card-img-top" src="../../public/img/<?= $produto->imagem ?>" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title"><b><?= $produto->nome ?></b></h5>
+                            <div class="container buttonAdminProd">
+                                <form action="/produtos/detalhes" method="GET">
+                                    <input type="hidden" value="<?= $produto->id ?>" name="id">
+                                    <button type="submit" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
+                                </form>
 
-                <?php foreach ($produtos as $produto) : ?>
-                    <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card   cardAdminProd">
-                            <img class="card-img-top" src="../../public/img/<?= $produto->imagem ?>" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title"><b><?= $produto->nome ?></b></h5>
-                                <div class="container buttonAdminProd">
-                                    <form action="/produtos/detalhes" method="GET">
-                                        <input type="hidden" value="<?= $produto->id ?>" name="id">
-                                        <button type="submit" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
-                                    </form>
+                                <form action="/produtos/admin/edit" method="POST">
+                                    <input type="hidden" value="<?= $produto->id ?>" name="id">
+                                    <button href="#" class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-edit"></i></button>
 
-                                    <form action="/produtos/admin/edit" method="POST">
-                                        <input type="hidden" value="<?= $produto->id ?>" name="id">
-                                        <button href="#" class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-edit"></i></button>
-
-                                    </form>
-                                    <form action="/produtos/admin/delete" method="POST">
-                                        <input type="hidden" value="<?= $produto->id ?>" name="id">
-                                        <button type="submit" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
-                                    </form>
-                                </div>
+                                </form>
+                                <form action="/produtos/admin/delete" method="POST">
+                                    <input type="hidden" value="<?= $produto->id ?>" name="id">
+                                    <button type="submit" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                </div>
+            <?php endforeach; ?>
         </div>
+    </div>
 
-        <div class="buttonCreate">
-            <a type="button" class="btn btn-warning mt-5 buttonCreate mb-5" href="/produtos/admin/create"><b>Adicionar novo produto</b></a>
-        </div>
+    <div class="buttonCreate">
+        <a type="button" class="btn btn-warning mt-5 buttonCreate mb-5" href="/produtos/admin/create"><b>Adicionar novo produto</b></a>
+    </div>
     </div>
     <!--viewprodutos-->
 

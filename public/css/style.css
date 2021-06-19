@@ -577,11 +577,6 @@ body {
   background-color: #ffce07;
 }
 
-.contAdminProd {
-  display: flex;
-  justify-content: center;
-}
-
 .buttonAdminProd button {
   max-width: 100%;
 }
