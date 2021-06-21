@@ -16,5 +16,6 @@ $router->get('editar_produtos','PagesController@editar_produtos');
 $router->get('new_product','PagesController@new_product');
 $router->get('criar_categorias','PagesController@criar_categorias');
 $router->get('editar_categorias','PagesController@editar_categorias');
+$router->post('logar','PagesController@logar');
 
 ?>

@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS: -->
-        <link rel="stylesheet" href="../../public/css/style.css">
+        <link rel="stylesheet" href="/public/css/style.css">
         
         <!-- Bootstrap: -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -50,42 +50,34 @@
 
                     <div class="card-body">
 
-                        <form>
-
-                            <div class="input-group form-group login-info">
+                        <form method="POST" action="/logar" id="formlogin" name="formlogin">
+                            <fieldset>
+                                <div class="input-group form-group login-info">
 
                                 <div class="input-group-prepend ic-login">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
 
-                                <input type="email" class="form-control" placeholder="nome@provedor.com">
-                            
-                            </div>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="nome@provedor.com">
 
-                            <div class="input-group form-group login-info">
+                                </div>
+
+                                <div class="input-group form-group login-info">
 
                                 <div class="input-group-prepend ic-login">
                                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                 </div>
 
-                                <input type="password" class="form-control" placeholder="**********">
-                            
-                            </div>
+                                <input name="senha" type="password" class="form-control" id="senha" placeholder="**********">
 
-                            <div class="form-group">
+                                </div>
+
+                                <div class="form-group">
                                 <input type="submit" value="Login" class="btn float-right login-btn">
-                            </div>
-
+                                </div>
+                            </fieldset>
                         </form>
 
-                    </div>
-
-                    <div class="card-footer">
-
-                        <div class="d-flex justify-content-center links">
-                            Não tem uma conta? <a href="/view_adm">Crie uma!</a>
-                        </div>
-                        
                     </div>
 
                 </div>
