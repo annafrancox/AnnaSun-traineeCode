@@ -79,6 +79,16 @@ class UserController
     }
 
 
+    public function contact()
+   {
+       return view('site/contato');
+   }
+
+   public function enviarEmail()
+   {
+       return view('site/enviar') ;
+   }
+
 
 
 

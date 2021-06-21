@@ -6,6 +6,6 @@
     $router->post('view_user' , 'UserController@view');
     $router->post('edit_user' , 'UserController@edit');
     $router->post('editarUsuario', 'UserController@editar');
-    $router->get('contato' , 'Controller@contact');
-    $router->post('enviar', 'Controller@enviarEmail');
+    $router->get('contato' , 'UserController@contact');
+    $router->post('enviar', 'UserController@enviarEmail');
 ?>
