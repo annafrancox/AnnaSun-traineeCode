@@ -4,8 +4,6 @@ namespace App\Core\Database;
 
 use Exception;
 use PDO;
-use Exception;
-
 
 class QueryBuilder
 {
