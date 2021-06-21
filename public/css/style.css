@@ -674,6 +674,14 @@ body {
                         VIEW ADMINISTRATIVA DE ALGO:
 ====================================================*/
 
+
+.formUser{
+  display: flex;
+  justify-content: space-around;
+}
+.formUser button{
+  background-color: #fefff5;
+}
 .view_adm {
   background-image: url("../img/bg50_adm.png");
 }
@@ -772,6 +780,7 @@ td {
   font-size: 100%;
   line-height: 500%;
 }
+
 
 /*====================================================
                         ADD USERS & EDIT USERS:

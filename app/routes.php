@@ -23,3 +23,14 @@ $router->post('produtos/admin/editAction', 'ProdutosController@updateAction');
 
 $router->get('produtos/admin/create', 'ProdutosController@create');
 $router->post('produtos/admin/createAction', 'ProdutosController@createAction');
+
+    $router->get('adminUser', 'UserController@adm');
+    $router->get('addUse', 'UserController@add');
+    $router->post('adicionarUsuario', 'UserController@create');
+    $router->post('deleteUser', 'UserController@delete');
+    $router->post('view_user' , 'UserController@view');
+    $router->post('edit_user' , 'UserController@edit');
+    $router->post('editarUsuario', 'UserController@editar');
+    $router->get('contato' , 'UserController@contact');
+    $router->post('enviar', 'UserController@enviarEmail');
+?>
