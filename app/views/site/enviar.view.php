@@ -3,11 +3,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-$nome = utf8_encode($_POST['nome']);
-$telefone = utf8_encode($_POST['telefone']);
-$email = utf8_encode($_POST['email']);
-$assunto = utf8_encode($_POST['assunto']);
-$mensagem = utf8_encode($_POST['mensagem']);
+$nome = $_POST['nome'];
+$telefone = $_POST['telefone'];
+$email = $_POST['email'];
+$assunto = $_POST['assunto'];
+$mensagem = $_POST['mensagem'];
 
 $mail = new PHPMailer;
 $mail->isSMTP();
@@ -36,7 +36,7 @@ $mail->IsHTML(true);
 $mail->Body = $conteudo_email;
 
 if($mail->send()){
-    return view('site/contato');
+    return view('contato');
 }
 else{
     echo "Falha ao enviar" . $mail->ErrorInfo;

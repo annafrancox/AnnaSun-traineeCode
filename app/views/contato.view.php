@@ -35,7 +35,7 @@
             </div>
             <div class="form-group text-form">
               <label for="exampleFormControlInput1">Telefone</label>
-              <input type="name" class="form-control" name = "telefone" id="exampleFormControlInput1" placeholder="Telefone" required>
+              <input type="phone" class="form-control" name = "telefone" id="exampleFormControlInput1" placeholder="Telefone" required>
             </div>
             <div class="form-group text-form">
               <label for="exampleFormControlInput1">Endereço de email</label>
@@ -51,7 +51,6 @@
             </div>
             <button type="submit" class="btn botaoContato"><b>Enviar</b></button>
           </form>
-          <button type="button" class="btn botaoContato"><b>Enviar</b></button>
         </div>
       </div>
       <div class="col">
