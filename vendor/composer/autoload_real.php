@@ -26,7 +26,7 @@ class ComposerAutoloaderInitf5e613e64b5c0d3d0dd0b9eefbe0324a
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(\dirname(__FILE__)));
         spl_autoload_unregister(array('ComposerAutoloaderInitf5e613e64b5c0d3d0dd0b9eefbe0324a', 'loadClassLoader'));
 
-        $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!function_exists('zend_loader_file_encoded') || !zend_loader_file_encoded());
+        $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!function_exists('zend_loader_file_encoded') || (!zend_loader_file_encoded()));
         if ($useStaticLoader) {
             require __DIR__ . '/autoload_static.php';
 

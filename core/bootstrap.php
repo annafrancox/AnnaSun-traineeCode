@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\Controller;
 use App\Core\App;
 use App\Core\Database\{QueryBuilder, Connection};
 

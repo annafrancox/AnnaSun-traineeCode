@@ -12,14 +12,22 @@ class ComposerStaticInitf5e613e64b5c0d3d0dd0b9eefbe0324a
 
     public static $classMap = array (
         'App\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/controllers/CategoriesController.php',
+        'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'ComposerAutoloaderInit29d5aa7df1d4e85b28f91ed57a0e7f09' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'ComposerAutoloaderInitf5e613e64b5c0d3d0dd0b9eefbe0324a' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInit29d5aa7df1d4e85b28f91ed57a0e7f09' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\Autoload\\ComposerStaticInitf5e613e64b5c0d3d0dd0b9eefbe0324a' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Composer\\Autoload\\does' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\is' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\map' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\name' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\or' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

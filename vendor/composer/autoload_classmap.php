@@ -7,13 +7,21 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controllers\\CategoriesController' => $baseDir . '/app/controllers/CategoriesController.php',
+    'App\\Controllers\\ProdutosController' => $baseDir . '/app/controllers/ProdutosController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
+    'ComposerAutoloaderInit29d5aa7df1d4e85b28f91ed57a0e7f09' => $vendorDir . '/composer/autoload_real.php',
     'ComposerAutoloaderInitf5e613e64b5c0d3d0dd0b9eefbe0324a' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\ComposerStaticInit29d5aa7df1d4e85b28f91ed57a0e7f09' => $vendorDir . '/composer/autoload_static.php',
     'Composer\\Autoload\\ComposerStaticInitf5e613e64b5c0d3d0dd0b9eefbe0324a' => $vendorDir . '/composer/autoload_static.php',
+    'Composer\\Autoload\\does' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\is' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\map' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\name' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\or' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
