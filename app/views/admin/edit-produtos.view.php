@@ -20,7 +20,7 @@
 <body class="addProduct">
 
     <!--viewprodutos-->
-    <div class="container pt-5 formBorder">
+    <div class="container pt-5 formBorder mb-5">
         <form action="/produtos/admin/editAction" method="POST">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nome do produto</label>
@@ -43,12 +43,11 @@
             </div>
             <div class=" form-group">
                 <label for="exampleFormControlSelect1">Categoria do produto</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                <select class="form-control" id="exampleFormControlSelect1" name="categoria">
+                    <option></option>
+                    <?php foreach ($categorias as $categoria) : ?>
+                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <div class="form-group">
@@ -56,7 +55,7 @@
                 <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" rows="3" value="" required><?= $produto['descricao'] ?></textarea>
             </div>
 
-            <div class="buttonSubmit">
+            <div class="buttonSubmit ">
                 <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                 <button type="submit" class="btn btn-warning"><b>Editar produto</b></button>
             </div>

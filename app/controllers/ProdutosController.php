@@ -75,9 +75,12 @@ class ProdutosController
     {
         $idProduto = $_POST['id'];
         $produto = App::get('database')->selectOne($idProduto, 'Produtos');
+        $categorias = App::get('database')->selectAll('Categorias');
 
         $tables = [
-            'produto' => $produto
+            'produto' => $produto,
+            'categorias' => $categorias
+
         ];
         return view('admin/edit-produtos', $tables);
     }
@@ -91,7 +94,9 @@ class ProdutosController
             'imagem' => '',
             'preco' => $_POST['preco'],
             'qtdade' => $_POST['qtdade'],
-            'descricao' => $_POST['descricao']
+            'descricao' => $_POST['descricao'],
+            'categoria' => $_POST['categoria']
+
         ];
 
 
