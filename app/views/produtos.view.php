@@ -16,35 +16,6 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-md container-header navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-                <img class="logo" src="../img/logo_trainee.png" width="90" class="d-inline-block align-top" alt="Logotipo Da Lã.">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Quem somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Entrar</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <div class="container container-products">
         <div class="card-deck card-deck-products">
@@ -76,37 +47,6 @@
         </div>
 
     </div>
-
-    <footer class="footer-annasun">
-        <div class="container-fluid">
-
-            <div class="row">
-                <div class="col-sm">
-                    <img src="../img/logo_trainee.png" alt="Logo Anna_Sun">
-                </div>
-
-                <div class="col-sm-6">
-                    <h6>Entre em Contato</h6>
-                    <ul>
-                        <li>+55 (32) 94002-8922</li>
-                        <li>annasun@gmail.com</li>
-                        <li><a href="#">Rua José Lourenço Kelmer, São Pedro, Campus Universitário,<br> Juiz de Fora, MG.36036-900</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm">
-                    <h6>Redes Sociais</h6>
-                    <ul>
-                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class=" copyright container">
-                <p>Copyright <span>&copy;</span> 2021 All Rights Reserved by <span>Anna Sun</span>.</p>
-            </div>
-        </div>
-    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

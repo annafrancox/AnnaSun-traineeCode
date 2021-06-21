@@ -26,6 +26,7 @@ class ComposerStaticInitf5e613e64b5c0d3d0dd0b9eefbe0324a
 
     public static $classMap = array (
         'App\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/controllers/CategoriesController.php',
+        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
         'App\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
@@ -33,20 +34,16 @@ class ComposerStaticInitf5e613e64b5c0d3d0dd0b9eefbe0324a
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'ComposerAutoloaderInit0912b9e5309ae2403430f99e80280be2' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'ComposerAutoloaderInitf5e613e64b5c0d3d0dd0b9eefbe0324a' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInit0912b9e5309ae2403430f99e80280be2' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Composer\\Autoload\\does' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\is' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\map' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\name' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\or' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInitf5e613e64b5c0d3d0dd0b9eefbe0324a' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
         'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
         'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
         'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
         'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
+        'Router' => __DIR__ . '/../..' . '/app/Router.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
