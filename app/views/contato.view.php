@@ -28,27 +28,28 @@
         <div class="col borda-contato pt-2 pb-2">
           <h2>Envie uma mensagem</h2>
           <hr>
-          <form>
+          <form method = "POST" action = "enviar">
             <div class="form-group text-form">
               <label for="exampleFormControlInput1">Nome</label>
-              <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome">
+              <input type="name" class="form-control" name = "nome" id="exampleFormControlInput1" placeholder="Seu nome" required>
             </div>
             <div class="form-group text-form">
               <label for="exampleFormControlInput1">Telefone</label>
-              <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Telefone">
+              <input type="name" class="form-control" name = "telefone" id="exampleFormControlInput1" placeholder="Telefone" required>
             </div>
             <div class="form-group text-form">
               <label for="exampleFormControlInput1">Endereço de email</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+              <input type="email" class="form-control" name = "email" id="exampleFormControlInput1" placeholder="nome@exemplo.com" required>
             </div>
             <div class="form-group text-form">
               <label for="exampleFormControlInput1">Assunto</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Assunto">
+              <input type="text" class="form-control" name = "assunto" id="exampleFormControlInput1" placeholder="Assunto" required>
             </div>
             <div class="form-group text-form">
               <label for="exampleFormControlTextarea1">Mensagem</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea class="form-control" name = "mensagem" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
+            <button type="submit" class="btn botaoContato"><b>Enviar</b></button>
           </form>
           <button type="button" class="btn botaoContato"><b>Enviar</b></button>
         </div>
