@@ -1,3 +1,11 @@
+body {
+  background-size: 100%;
+  background-image: url(../img/company/bg.png);
+  height: 90%;
+  font-family: "Montserrat", sans-serif !important;
+  color: #808080;
+}
+
 /* ===================================================
                         NAVBAR:
 ======================================================*/
@@ -96,10 +104,6 @@
                     NAVBAR ADMINISTRATIVA:
 ======================================================*/
 
-body {
-  font-family: "Bentham", serif;
-}
-
 .nav-bg {
   background-color: #ed1c23f1 !important;
 }
@@ -118,6 +122,11 @@ body {
   padding: 0 3px 0 15px !important;
 }
 
+.homeadm-logout{
+  float: right !important;
+  position: absolute;
+  right: 15px;
+}
 /* ===================================================
                     VIEW ADMINISTRATTIVA DE PRODUTOS:
 ====================================================== */
@@ -170,12 +179,6 @@ body {
 /* ===================================================
                         PRODUTOS:
 ======================================================*/
-
-body {
-  font-family: "Montserrat";
-  background-image: url("../img/bg.jpeg");
-  background-size: contain;
-}
 
 .container-products {
   margin-top: 120px;
@@ -309,14 +312,6 @@ body {
 * {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-}
-
-body {
-  /* background-color: #fffff5;aaaaaaaaaaaaa */
-  background-image: url(../img/company/bg.png);
-  font-family: "Bentham", serif;
-  font-family: "Montserrat", sans-serif;
-  color: #070607;
 }
 
 .space {
@@ -525,11 +520,6 @@ a#noStyle {
         VIEW_CATEGORIAS / CRIAR CATEGORIAS / EDITAR CATEGORIAS:
 ====================================================*/
 
-body {
-  background-size: 100%;
-  background-image: url(../img/flowers.png);
-}
-
 @font-face {
   font-family: myFirstFont;
   src: url(adam_Script.otf);
@@ -605,17 +595,8 @@ body {
 /*===================================================
                         LOGIN:
 ======================================================*/
-
-html,
-body {
-  background-image: url(../img/company/bg.png);
-  height: 90%;
-  font-family: "Montserrat", sans-serif !important;
-  color: #070607;
-}
-
-.login-container {
-  height: 100%;
+.login-container{
+  padding: 200px;
   align-items: center;
 }
 
@@ -888,10 +869,6 @@ td {
   }
 
   /*  HOME: */
-
-  body {
-    background-image: none;
-  }
 
   .container-header img {
     width: 64px;

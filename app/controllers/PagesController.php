@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\App;
+use mysqli;
 
 class PagesController 
 {
@@ -102,8 +103,6 @@ class PagesController
 
 		return view('admin/editar_categorias');
 	}
-
-	
 }
 
 

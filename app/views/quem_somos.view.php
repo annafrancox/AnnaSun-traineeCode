@@ -13,54 +13,57 @@
         <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
 
-    <body class="quem_somos">
+    <body>
         <?php require('include/nav.php'); ?>
 
-        <!--Inicio quem somos-->
-        <div class="container principal">
+        <div class="quem_somos">
+            <!--Inicio quem somos-->
+            <div class="container principal">
 
-          <div class="row logo">
-            <div class="col image-a">
-                <img class="w-50 img-responsive mx-auto d-block" src="../../public/img/logo_trainee.png" alt="Logo Anna Sun, Brigaderia e Café">
-            </div>
-            <!---Coments-->
-            <div class="col-8 texto-a">
-                <h1 style="text-align: center; font-family: 'Bentham'; color: #070607; border-top: #fcd9d4 solid; border-bottom: #fcd9d4 solid;">Quem Somos</h1>
-                <p style="text-align: justify; color: #070607;font-family: 'Montserrat';">A Anna Sun - Brigadeiria e Café foi fundada em 2021 com o principal objetivo de exibir nossas deliciosas receitas repletas de
-                    amor e também mostrar que é possível se sentir acolhido em uma aconchegante cafeteria.</p>
-                <p style="text-align: justify; color: #070607;font-family: 'Montserrat';">Espalhando amor, carinho, respeito e sabor por meio de nossos produtos, buscando sempre manter nossos valores, abrimos nossas
-                    portas para uma nova experiência para toda família.</p>
-            </div>
-          </div>
-
-            <!--Cards missao visão e valores-->
-
-          <div class="card-deck cards-a">
-
-            <div class="card">
-              <div class="card-body mvv">
-                <h5 class="card-title" >Missão</h5>
-                <p class="card-text">Oferecer doces, serviços e atendimento de qualidade para todos</p>
+            <div class="row logo">
+              <div class="col image-a">
+                  <img class="w-50 img-responsive mx-auto d-block" src="../../public/img/logo_trainee.png" alt="Logo Anna Sun, Brigaderia e Café">
+              </div>
+              <!---Coments-->
+              <div class="col-8 texto-a">
+                  <h1 style="text-align: center; font-family: 'Bentham'; color: #070607; border-top: #fcd9d4 solid; border-bottom: #fcd9d4 solid;">Quem Somos</h1>
+                  <p style="text-align: justify; color: #070607;font-family: 'Montserrat';">A Anna Sun - Brigadeiria e Café foi fundada em 2021 com o principal objetivo de exibir nossas deliciosas receitas repletas de
+                      amor e também mostrar que é possível se sentir acolhido em uma aconchegante cafeteria.</p>
+                  <p style="text-align: justify; color: #070607;font-family: 'Montserrat';">Espalhando amor, carinho, respeito e sabor por meio de nossos produtos, buscando sempre manter nossos valores, abrimos nossas
+                      portas para uma nova experiência para toda família.</p>
               </div>
             </div>
 
-            <div class="card">
-              <div class="card-body mvv">
-                <h5 class="card-title">Visão</h5>
-                <p class="card-text">Ser referência pela qualidade, beleza e sabores de nossos produtos e atendimentos</p>
+              <!--Cards missao visão e valores-->
+
+            <div class="card-deck cards-a">
+
+              <div class="card">
+                <div class="card-body mvv">
+                  <h5 class="card-title" >Missão</h5>
+                  <p class="card-text">Oferecer doces, serviços e atendimento de qualidade para todos</p>
+                </div>
               </div>
+
+              <div class="card">
+                <div class="card-body mvv">
+                  <h5 class="card-title">Visão</h5>
+                  <p class="card-text">Ser referência pela qualidade, beleza e sabores de nossos produtos e atendimentos</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body mvv">
+                  <h5 class="card-title">Valores</h5>
+                  <p class="card-text">Qualidade, respeito e dedicação</p>
+                </div>
+              </div>
+              
             </div>
 
-            <div class="card">
-              <div class="card-body mvv">
-                <h5 class="card-title">Valores</h5>
-                <p class="card-text">Qualidade, respeito e dedicação</p>
-              </div>
             </div>
-            
-          </div>
-
         </div>
+        
 
         <?php require('include/footer.php'); ?>
         
