@@ -18,7 +18,8 @@
 
 </head>
 
-<body class="addProduct">
+<body>
+
     <!--viewprodutos-->
     <div>
         <div class="container pt-5 formBorder">

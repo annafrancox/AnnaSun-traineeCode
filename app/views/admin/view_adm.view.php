@@ -31,7 +31,7 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg justify-content-center">
+        <nav class="nav-bg navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
 
         <!-- Brand: -->
         <a class="navbar-brand brand-style" href="/view_adm">
@@ -78,15 +78,14 @@
         <div class="view_adm">
             <div class=" container principal_adm">
                 <div class="card mt-2">
-                    <div class="card-body sub_principal">
-                        <div class="row myrow_adm">
-                            <div class="col-md-3 ">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
                                 <h4>Contas</h4>
                             </div>
-                            <div class="col-md-19 adicionar" >
-                                <a href="/add_users" type="button" class="btn btn-sm btn-allert " >Adicionar</a>
-                            </div>
-                            
+                            <div class="col-auto adicionar">
+                                <a href="/add_users" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
+                            </div>   
                         </div>
                         <div class="row ">
                             <div class="col-md-12">

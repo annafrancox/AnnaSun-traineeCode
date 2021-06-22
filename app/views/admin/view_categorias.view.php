@@ -57,10 +57,10 @@
             <div class="card-body titulo5">
               <h5 class="card-title">Bem casados</h5>
               <p class="card-text">Quem resiste a um delicioso bem-casado? O docinho tradicional é a melhor lembrança de uma festa de casamento para todos os convidados!</p>
-              <div style="text-align: right;">
+              <div class="cardCategorias">
                 <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal_bemcasados" data-placement="bottom" title="Ver"><i class="far fa-eye"></i></button>
                 <!-- Modal para vizualização -->
-                <div id="modal_bemcasados" class="modal" tabindex="-1" role="dialog">
+                <div id="modal_bemcasados" class="modal modalcentro" tabindex="-1" role="dialog">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -108,7 +108,7 @@
               <div class="card-body titulo5">
                 <h5 class="card-title">Bolos de Pote</h5>
                 <p class="card-text">Essas delícias são muito populares em todo o Brasil porque não tem como resistir a esses maravilhosos bolinhos vendidos em porção individual dentro de um potinho.</p>
-                <div style="text-align:right;">
+                <div class="cardCategorias">
                   <a><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal_bolosdepote" data-placement="bottom" title="Ver"><i class="far fa-eye"></i></button></a>
                   <!-- Modal para vizualização -->
                   <div id="modal_bolosdepote" class="modal" tabindex="-1" role="dialog">
@@ -141,7 +141,7 @@
               <div class="card-body">
                 <h5 class="card-title">Bolos</h5>
                 <p class="card-text">Um bom bolo de chocolate fofinho aquece o coraçãozinho, né? Os bolos são um dos componentes principais das festas, como as de aniversário e casamento.</p>
-                <div style="text-align: right;">
+                <div class="cardCategorias">
                   <a><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal_bolos" data-placement="bottom" title="Ver"><i class="far fa-eye"></i></button></a>
                   <!-- Modal para vizualização -->
                   <div id="modal_bolos" class="modal" tabindex="-1" role="dialog">
@@ -174,7 +174,7 @@
               <div class="card-body titulo5">
                 <h5 class="card-title">Brownies</h5>
                 <p class="card-text">Brownie é uma sobremesa de chocolate típico da culinária dos Estados Unidos e pode considerar-se um bolo de tabuleiro partido em pequenos quadrados.</p>
-                <div style="text-align: right;">
+                <div class="cardCategorias">
                   <a><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal_brownies" data-placement="bottom" title="Ver"><i class="far fa-eye"></i></button></a>
                   <!-- Modal para vizualização -->
                   <div id="modal_brownies" class="modal" tabindex="-1" role="dialog">
@@ -207,7 +207,7 @@
             <div class="card-body titulo5">
               <h5 class="card-title">Cheseecakes</h5>
               <p class="card-text">Traduzido do inglês-Cheesecake é um doce composto por uma ou mais camadas. A camada principal consiste em uma mistura de queijo, ovos e açúcar. </p>
-              <div style="text-align: right;">
+              <div class="cardCategorias">
                 <a><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal_cheseecakes" data-placement="bottom" title="Ver"><i class="far fa-eye"></i></button></a>
                 <!-- Modal para vizualização -->
                 <div id="modal_cheseecakes" class="modal" tabindex="-1" role="dialog">
@@ -240,7 +240,7 @@
               <div class="card-body titulo5">
                 <h5 class="card-title">Brigadeiros</h5>
                 <p class="card-text">O brigadeiro com origem no Sudeste do país, que rapidamente se difundiu pelo Brasil, tornando-se comum em todo o país a sua presença em festas de aniversário</p>
-                <div style="text-align: right;">
+                <div class="cardCategorias">
                   <a><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal_brigadeiros" data-placement="bottom" title="Ver"><i class="far fa-eye"></i></button></a>
                   <!-- Modal para vizualização -->
                   <div id="modal_brigadeiros" class="modal" tabindex="-1" role="dialog">
@@ -268,7 +268,7 @@
         </div>
 
       </div>
-      <div class="buttonSubmit">
+      <div class="buttonSubmit" style="padding-bottom: 20px;">
         <a href="/criar_categorias"><button type="button" class="btn btn-addProduct mt-1"><b>Adicionar Categoria </b></button></a>
       </div>
     </div>

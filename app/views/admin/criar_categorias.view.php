@@ -13,27 +13,28 @@
     <title>Criação</title>
 </head>
 <body>
-        <div class=" container pt-5 formBorder">
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Nome da categoria</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Nome do produto">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">Foto da categoria</label>
-                    <input type="file" class="form-control-file" id="arquivo_categoria">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descrição da categoria</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div> 
-            </form>
-            <div class="buttonSubmit">
-                <button type="button" class="btn btn-addProduct mt-3"><b>Adicionar categoria</b></button>
+    
+    <div class=" container pt-5 formBorder">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Nome da categoria</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Nome do produto">
             </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Foto da categoria</label>
+                <input type="file" class="form-control-file" id="arquivo_categoria">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Descrição da categoria</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div> 
+        </form>
+        <div class="buttonSubmit">
+            <button type="button" class="btn btn-addProduct mt-3"><b>Adicionar categoria</b></button>
         </div>
+    </div>
 </body>
 </html>

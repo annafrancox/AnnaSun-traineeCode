@@ -18,7 +18,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg justify-content-center">
+    <nav class="nav-bg navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
         <!-- Brand: -->
         <a class="navbar-brand brand-style" href="/view_adm">
             <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
@@ -31,74 +31,82 @@
         <!-- Navbar Menu: -->
         <div class="collapse navbar-collapse menu-styling" id="navbarNav">
             <ul class="navbar-nav">
+
                 <li class="nav-item active">
                     <a class="nav-link" href="/view_adm"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/admin_produtos"><i class="fas fa-shopping-cart"></i> Produtos</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/view_categorias"><i class="fas fa-tags"></i> Categorias</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/view_adm"><i class="fas fa-users"></i> Usuários</a>
                 </li>
+
             </ul>
+            <!-- Botao logout -->
+            <form method='POST' action='/logout' class= "homeadm-logout">
+                <button type="submit" class="btn btn-warning">Logout</button>
+            </form>
+
         </div>
     </nav>
     
     <div class="addProduct">
         <!--viewprodutos-->
-        <div class="container  ">
-            <div class="contAdminProd">
-                <div class="card-deck mt-5">
-                    <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card   cardAdminProd">
-                            <img class="card-img-top" src="/public/img/da2b024ff6c21ea7ea0ddcd0a4511dad.jpg"
-                                alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Produto 1</b></h5>
-                                <div class="container buttonAdminProd">
-                                    <a href="/form_produto" class="btn btn-outline-dark"><i class="fas fa-eye"></i></a>
-                                    <a href="/editar_produtos" class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-edit"></i></a>
-                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal"
-                                        data-target="#myModal"><i class="fas fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card   cardAdminProd">
-                            <img class="card-img-top" src="/public/img/da2b024ff6c21ea7ea0ddcd0a4511dad.jpg"
-                                alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Produto 1</b></h5>
-                                <div class="container buttonAdminProd">
-                                    <a href="/form_produto" class="btn btn-outline-dark"><i class="fas fa-eye"></i></a>
-                                    <a href="/editar_produtos" class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-edit"></i></a>
-                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal"
-                                        data-target="#myModal"><i class="fas fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="card   cardAdminProd">
-                            <img class="card-img-top" src="/public/img/da2b024ff6c21ea7ea0ddcd0a4511dad.jpg"
-                                alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Produto 1</b></h5>
-                                <div class="container buttonAdminProd">
-                                    <a href="/form_produto" class="btn btn-outline-dark"><i class="fas fa-eye"></i></a>
-                                    <a href="/editar_produtos" class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-edit"></i></a>
-                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal"
-                                        data-target="#myModal"><i class="fas fa-trash"></i></button>
-                                </div>
+        <div class="container">
+            <div class="card-deck mt-5">
+                <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="card cardAdminProd">
+                        <img class="card-img-top" src="/public/img/da2b024ff6c21ea7ea0ddcd0a4511dad.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Produto 1</b></h5>
+                            <div class="buttonAdminProd">
+                                <a href="/form_produto"><button class="btn btn-outline-dark"><i class="fas fa-eye"></i></button></a>
+                                <a href="/editar_produtos"><button class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-pen"></i></button></a>
+                                <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#myModal"><i class="fas fa-trash"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="card cardAdminProd">
+                        <img class="card-img-top" src="/public/img/da2b024ff6c21ea7ea0ddcd0a4511dad.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Produto 1</b></h5>
+                            <div class="buttonAdminProd">
+                                <a href="/form_produto"><button class="btn btn-outline-dark"><i class="fas fa-eye"></i></button></a>
+                                <a href="/editar_produtos"><button class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-pen"></i></button></a>
+                                <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#myModal"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="card  cardAdminProd">
+                        <img class="card-img-top" src="/public/img/da2b024ff6c21ea7ea0ddcd0a4511dad.jpg"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Produto 1</b></h5>
+                            <div class="buttonAdminProd">
+                                <a href="/form_produto"><button class="btn btn-outline-dark"><i class="fas fa-eye"></i></button></a>
+                                <a href="/editar_produtos"><button class="btn btn-outline-warning mr-2 ml-2"><i class="fas fa-pen"></i></button></a>
+                                <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                                    data-target="#myModal"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
 
             <div class="buttonCreate">
                 <a href="/new_product"><button type="button" class="btn btn-warning mt-5 buttonCreate mb-5"><b>Adicionar novo produto</b></button></a>

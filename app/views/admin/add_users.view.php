@@ -29,14 +29,10 @@
     </head>
 
 
-    <body class ="addUsuario">
-        <header>
-            <nav class="navbar nav-icons justify-content-center">
-                <a class="navbar-brand login-nav" href="/view_adm"> <i class="bi bi-arrow-return-left"></i>    <i class="fas fa-home"></i> </a>
-            </nav>
-        </header>
-
-     <div class= "users_div1" >
+    <body>
+    
+    <div>
+        <div class= "users_div1" >
 
         <div  class = "users_adm container pt-5 formBorder ">
             <formulário>
@@ -56,20 +52,21 @@
                         <input  type = " email " class = " form-control digita_adm" id = " exampleFormControlInput1 "
                         placeholder = "senha@">
                     </div>
-            <form>
                 <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlFile1">Adicionar Foto de Perfil</label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                  </form>
-            </form>
-            <div  class = " buttonSubmit ">
-                <button  type = " button " class = " btn mt-3 button_users " > <b> Cadastrar </b> </button>
-            </div>
-
+                    <form>
+                        <div class="form-group">
+                        <label for="exampleFormControlFile1">Adicionar Foto de Perfil</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+                </form>
+                <div  class = " buttonSubmit ">
+                    <button  type = " button " class = " btn mt-3 button_users " > <b> Cadastrar </b> </button>
+                </div>
+             </div>
         </div>
     </div>
+     
 
 
 
