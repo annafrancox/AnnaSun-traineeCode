@@ -1,17 +1,23 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
 use App\Core\App;
 use mysqli;
 
-class PagesController 
+class PagesController
 {
 
 	public function index()
 	{
+		$produtos = App::get('database')->selectAll('produtos');
 
-		return view('index');
+		$tables = [
+			'produtos' => $produtos
+		];
+
+
+		return view('index', $tables);
 	}
 
 	public function contato()
@@ -37,5 +43,4 @@ class PagesController
 
 		return view('admin/view_adm');
 	}
-
 }
