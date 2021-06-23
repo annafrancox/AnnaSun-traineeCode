@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="addUsuario">
+<body >
 
     <div class="users_div1">
 
@@ -44,11 +44,11 @@
 
                 </div>
                 <div class=" buttonSubmit ">
-                    <button type="submit " class=" btn mt-3 button_users "> <b> Cadastrar </b> </button>
+                <a href="adminUser"><button class="btn mt-3 button_users">Voltar</button></a>
+                    <button type="submit " class=" btn mt-3 button_users">Cadastrar</button>
                 </div>
             </form>
-            <a class="btn btn-warning button_users" href="adminUser" role="button">Voltar</a>
-
+            
         </div>
         
     </div>

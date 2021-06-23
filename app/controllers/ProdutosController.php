@@ -29,7 +29,7 @@ class ProdutosController
             'categoria' => $categoria
         ];
 
-        return view('detalhes-produtos', $tables);
+        return view('admin/produtos/detalhes-produtos', $tables);
     }
 
     public function admin()
@@ -39,7 +39,7 @@ class ProdutosController
         $tables = [
             'produtos' => $produtos
         ];
-        return view('admin/admin-produtos', $tables);
+        return view('admin/produtos/admin-produtos', $tables);
     }
 
     public function create()
@@ -82,7 +82,7 @@ class ProdutosController
             'categorias' => $categorias
 
         ];
-        return view('admin/edit-produtos', $tables);
+        return view('admin/produtos/edit-produtos', $tables);
     }
 
     public function updateAction()

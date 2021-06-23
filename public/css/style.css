@@ -1,3 +1,11 @@
+html, body {
+  background-size: 100%;
+  background-image: url(../img/company/bg.png);
+  height: 90%;
+  font-family: "Montserrat", sans-serif !important;
+  color: #808080;
+}
+
 /* ===================================================
                         NAVBAR:
 ======================================================*/
@@ -25,6 +33,14 @@
 .container-header ul li.active {
   font-weight: bold;
   border-bottom: 2px solid #070607;
+}
+
+.nav-icons {
+  font-size: x-large;
+}
+
+.nav-icons a:hover {
+  color: #fcd9da;
 }
 
 /* ===================================================
@@ -96,10 +112,6 @@
                     NAVBAR ADMINISTRATIVA:
 ======================================================*/
 
-body {
-  font-family: "Bentham", serif;
-}
-
 .nav-bg {
   background-color: #ed1c23f1 !important;
 }
@@ -118,6 +130,11 @@ body {
   padding: 0 3px 0 15px !important;
 }
 
+.homeadm-logout{
+  float: right !important;
+  position: absolute;
+  right: 15px;
+}
 /* ===================================================
                     VIEW ADMINISTRATTIVA DE PRODUTOS:
 ====================================================== */
@@ -157,29 +174,24 @@ body {
   border: #fcd9d4 double 6px;
   background-color: #fdeced;
 }
+
 .principal {
   background-color: #fefff5 !important;
   min-height: 100%;
 }
+
 .quem_somos {
-  margin-top: 6%;
-  margin-bottom: 6%;
-  background-image: url("../img/bg50.png");
-  background: transparent;
+  margin-top: 4%;
+  margin-bottom: 1.4%;
 }
 /* ===================================================
                         PRODUTOS:
 ======================================================*/
 
-body {
-  font-family: "Montserrat";
-  background-image: url("../img/bg.jpeg");
-  background-size: contain;
-}
-
 .container-products {
-  margin-top: 120px;
-  margin-bottom: 80px;
+  height: 100%;
+  margin-top: 130px;
+  margin-top: 80px;
 }
 
 .card-deck-products {
@@ -309,14 +321,6 @@ body {
 * {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-}
-
-body {
-  /* background-color: #fffff5;aaaaaaaaaaaaa */
-  background-image: url(../img/company/bg.png);
-  font-family: "Bentham", serif;
-  font-family: "Montserrat", sans-serif;
-  color: #070607;
 }
 
 .space {
@@ -462,19 +466,16 @@ a#noStyle {
 ====================================================*/
 
 .contatofront {
-  background-image: url(../img/70.png);
   font-family: "Bentham", serif;
-  padding-bottom: 4%;
 }
 .contatofront h1 {
+  height: auto;
   text-align: center;
-  padding-bottom: 5%;
   font-family: myFirstFont;
 }
 .contatoImage {
   display: flex;
   justify-content: center;
-  padding-bottom: 0px;
 }
 .contatoImage img {
   width: 15%;
@@ -520,24 +521,24 @@ a#noStyle {
   font-family: myFirstFont;
 }
 
-/* Inicio código pag view_categorias / criar_categorias / editar_categorias */
 /*====================================================
         VIEW_CATEGORIAS / CRIAR CATEGORIAS / EDITAR CATEGORIAS:
 ====================================================*/
-
-body {
-  background-size: 100%;
-  background-image: url(../img/flowers.png);
+.cardCategorias{
+  text-align: right;
 }
+
+.modalcentro{
+ text-align: center;
+}
+
+/*====================================================
+                        ADM PRODUTOS:
+====================================================*/
 
 @font-face {
   font-family: myFirstFont;
   src: url(adam_Script.otf);
-}
-
-.addProduct {
-  background-image: url(../img/70.png);
-  font-family: "Montserrat", sans-serif;
 }
 
 .btn-addProduct {
@@ -561,12 +562,6 @@ body {
   width: 15%;
 }
 
-.buttonAdminProd {
-  display: flex;
-  justify-content: flex-end;
-  justify-content: space-between;
-}
-
 .buttonCreate {
   display: flex;
   justify-content: center;
@@ -577,45 +572,19 @@ body {
   background-color: #ffce07;
 }
 
-.buttonAdminProd button {
-  max-width: 100%;
+.buttonAdminProd{
+  text-align: right !important;
 }
 
-
-/*====================================================
-                        ADM PRODUTOS:
-====================================================*/
-
-/* ===================================================
-                        NAVBAR ???:
-======================================================*/
-
-.nav-icons {
-  font-size: x-large;
-}
-
-.nav-icons a {
-  color: #ed1c24;
-}
-
-.nav-icons a:hover {
-  color: #fcd9da;
+.buttonAdminProd button{
+  margin: 0 !important;
 }
 
 /*===================================================
                         LOGIN:
 ======================================================*/
-
-html,
-body {
-  background-image: url(../img/company/bg.png);
-  height: 90%;
-  font-family: "Montserrat", sans-serif !important;
-  color: #070607;
-}
-
-.login-container {
-  height: 100%;
+.login-container{
+  padding: 200px;
   align-items: center;
 }
 
@@ -675,16 +644,12 @@ body {
                         VIEW ADMINISTRATIVA DE ALGO:
 ====================================================*/
 
-
 .formUser{
   display: flex;
   justify-content: space-around;
 }
 .formUser button{
   background-color: #fefff5;
-}
-.view_adm {
-  background-image: url("../img/bg50_adm.png");
 }
 
 .principal_adm {
@@ -693,9 +658,7 @@ body {
   font-family: "Bentham";
 }
 
-.principal_adm div,
-th,
-td {
+.principal_adm div,th,td {
   background-color: #fefff5;
 }
 
@@ -715,6 +678,7 @@ td {
   border-color: #ffce07;
   color: #fefff5;
   font-size: 110%;
+  font-family: "Montserrat";
 }
 
 .adicionar a:hover {
@@ -725,9 +689,7 @@ td {
 }
 
 .adicionar {
-  width: 73.3%;
-  height: auto;
-  text-align: right;
+  padding-bottom: 1%;
 }
 
 .dados {
@@ -787,7 +749,6 @@ td {
                         ADD USERS & EDIT USERS:
 ====================================================*/
 
-.addUsuario,
 .edit_user_adm {
   background-image: url("../img/bg50_adm.png");
   color: #070607;
@@ -805,9 +766,10 @@ td {
 }
 
 .button_users {
-  font-weight: 1;
   background-color: #ffce07;
   border-color: #ffce07 solid 6px;
+  margin-left: 10px;
+  color: #070607 !important;
 }
 
 .button_users:hover {
@@ -822,16 +784,6 @@ td {
   outline: none !important;
   box-shadow: none;
 }
-
-/**
-    final view adm
-    */
-
-.quem_somos {
-  background-image: none;
-}
-
-/* Fim código pag view_categorias / criar_categorias / editar_categorias */
 
 /* ===================================================
                         MEDIA QUERY:
@@ -889,10 +841,6 @@ td {
 
   /*  HOME: */
 
-  body {
-    background-image: none;
-  }
-
   .container-header img {
     width: 64px;
   }
@@ -922,14 +870,6 @@ td {
     font-size: medium;
   }
 
-  /* NOME DA PÁGINA: */
-
-  .view_adm {
-    background-image: none !important;
-  }
-
-  /* NOME DA PÁGINA: */
-
   .logo {
     justify-content: center;
     display: block;
@@ -953,10 +893,6 @@ td {
 
   /* NOME DA PÁGINA: */
 
-  .addUsuario,
-  .edit_user_adm {
-    background-image: none;
-  }
 
   /* NOME DA PÁGINA: */
 
@@ -978,9 +914,6 @@ td {
   }
   .cards-a {
     margin-top: 5%;
-  }
-  .quem_somos {
-    background-image: none;
   }
 }
 

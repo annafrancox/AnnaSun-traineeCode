@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg justify-content-center">
+<nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
     <!-- Brand: -->
     <a class="navbar-brand brand-style" href="/view_adm">
@@ -21,11 +21,11 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin_produtos"><i class="fas fa-shopping-cart"></i> Produtos</a>
+                <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/view_categorias"><i class="fas fa-tags"></i> Categorias</a>
+                <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
             </li>
 
             <li class="nav-item">
@@ -34,6 +34,10 @@
 
         </ul>
 
+        <form method='POST' action='/logout' class= "homeadm-logout">
+            <button type="submit" class="btn btn-warning">Logout</button>
+        </form>
+
     </div>
-    
+
 </nav>

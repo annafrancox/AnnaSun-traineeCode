@@ -17,15 +17,15 @@
 <body>
   <?php require('include/nav.php'); ?>  
 
-  <div class="contatofront ">
+  <div class="contatofront pb-5 pt-5">
     <div class="contatoImage">
       <img src="public/img/logo_sun-removebg-preview.png" alt="logo Anna Sun">
     </div>
     <h1>Contato</h1>
-  <div class="container container-Contact">
+  <div class="container container-Contact pt-4">
     <div class="row">
       <div class="col">
-        <div class="col borda-contato pt-2 pb-2">
+        <div class="col borda-contato pt-1 pb-1">
           <h2>Envie uma mensagem</h2>
           <hr>
           <form method = "POST" action = "enviar">
