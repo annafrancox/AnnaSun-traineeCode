@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 </head>
 
@@ -22,25 +23,7 @@
 
     <div class="container container-products">
 
-    <form method="POST" action="/produtos/searchCategory">
-
-        <select class="form-control" id="exampleFormControlSelect1" name="cat_id">
-        
-            <option selected>Todas as categorias</option>
-
-            <?php foreach ($categorias as $categoria) : ?>
-
-                <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
-
-
-            <?php endforeach; ?> 
-        </select>
-
-
-        <button class="btn" type="submit">Selecionar</button>
-
-
-    </form>
+    <center><a class="navbar-brand login-nav" href="/produtos"> <i class="bi bi-arrow-bar-left"></i></a></center>
 
         <div class="card-deck card-deck-products">
 

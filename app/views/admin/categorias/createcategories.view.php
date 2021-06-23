@@ -23,12 +23,6 @@
                         placeholder="Nome do produto">
                 </div>
 
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descrição da categoria</label>
-                    <input type="text" name="categoryDescription" class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
-                </div> 
-            
-
             <div class="buttonSubmit">
                 <button type="submit" class="btn btn-addProduct mt-3"><b>Adicionar categoria</b></button>
             </div>

@@ -10,12 +10,13 @@ class CategoriesController{
 
         $categorias = App::get('database')->selectAll('categorias');
 
-        return view('admin/categorias', compact('categorias'));
+        return view('admin/categorias/categorias', compact('categorias'));
     }
 
 
     public function cat_create(){
-        return view('admin/createcategories');
+        
+        return view('admin/categorias/createcategories');
     }
 
 
@@ -23,7 +24,7 @@ class CategoriesController{
 
         $categorias = App::get('database')->read('categorias', $_POST['id']);
 
-        return view('admin/editcategory', compact('categorias'));
+        return view('admin/categorias/editcategory', compact('categorias'));
     }
 
 
@@ -31,13 +32,11 @@ class CategoriesController{
 
         $parametros = [
             'nome' => $_POST['categoryName'],
-            'descricao' => $_POST['categoryDescription']
         ];
 
         App::get('database')->insert('categorias', $parametros);
 
         header('Location: /categorias');
-
     }
 
 
@@ -53,8 +52,7 @@ class CategoriesController{
 
         $parametros = [
             'id' => $_POST['id'],
-            'nome' => $_POST['nome'],
-            'descricao' => $_POST['descricao']
+            'nome' => $_POST['nome']
         ];
 
         App::get('database')->edit('categorias', $parametros);

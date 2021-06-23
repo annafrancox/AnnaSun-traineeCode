@@ -1,8 +1,8 @@
 
     <nav class="navbar fixed-top navbar-expand-md container-header navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="/" alt="Logotipo da Da Lã">
-                <img class="logo" src="public/img/logo_trainee.png" width="90" class="d-inline-block align-top"
+            <a class="navbar-brand" href="/" alt="Logotipo Anna Sun">
+                <img class="logo" src="/public/img/logo_trainee.png" width="90" class="d-inline-block align-top"
                 alt="Logotipo Da Lã.">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

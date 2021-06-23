@@ -22,22 +22,25 @@
 
       <?php foreach($categorias as $categoria) : ?>
 
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
-          <div class="card card-bckg" style="width: 18rem;">
+        <div class="col-sm-12 col-md-6 d-flex justify-content-center mb-3">
+          <div class="card" style="width: 18rem;">
             <div class="card-body titulo5">
               <h5 class="card-title"><?= $categoria->nome ?></h5>
-              <p class="card-text"><?= $categoria->descricao ?></p>
               <div style="text-align: right;">
 
+            <div class="category_buttons_ed">
+            
               <form action="/categorias/editar" method="POST">
                 <input type="hidden" name="id" value="<?= $categoria->id ?>">
-                <button type="submit" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fas fa-pen"></i></button>
+                <button type="submit" class="btn-inline btn btn-outline-warning" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fas fa-pen"></i></button>
               </form>
 
                 <form action="/categorias/delete" method="POST">
                 <input type="hidden" value="<?= $categoria->id ?>" name="id">
-                  <button type="submit" class="btn btn-outline-danger" data-toggle="modal" data-placement="bottom" title="Excluir"><i class="fas fa-trash"></i></button>
+                  <button type="submit" class="btn-inline btn btn-outline-danger" data-toggle="modal" data-placement="bottom" title="Excluir"><i class="fas fa-trash"></i></button>
                 </form>
+
+            </div>
 
               </div>
             </div>
@@ -45,11 +48,11 @@
         </div>    
         <?php endforeach; ?>
 
-
       </div>
       <div class="buttonSubmit">
-        <a href="categorias/criar"><button type="submit" class="btn btn-addProduct mt-1"><b>Adicionar Categoria </b></button></a>
+        <a href="/categorias/criar"><button type="submit" class="btn btn-addProduct mt-1"><b>Adicionar Categoria </b></button></a>
       </div>
+
     </div>
   <!-- Fim listagem de categorias -->
   

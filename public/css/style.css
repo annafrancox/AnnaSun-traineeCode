@@ -192,6 +192,7 @@ html, body {
   height: 100%;
   margin-top: 130px;
   margin-top: 80px;
+  margin-bottom: 400px; /* GAMBIARRA PRO FOOTER by isa */
 }
 
 .card-deck-products {
@@ -528,8 +529,12 @@ a#noStyle {
   text-align: right;
 }
 
-.modalcentro{
- text-align: center;
+.category_buttons_ed{
+  display: inline !important;
+}
+
+.btn-inline{
+  display: inline-block !important;
 }
 
 /*====================================================

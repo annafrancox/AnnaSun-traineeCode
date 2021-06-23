@@ -8,15 +8,21 @@ use App\Core\App;
 class ProdutosController
 {
 
+
     public function index()
     {
         $produtos = App::get('database')->selectAll('Produtos');
+        $categorias = App::get('database')->selectAll('categorias');
+
 
         $tables = [
-            'produtos' => $produtos
+            'produtos' => $produtos,
+            'categorias' => $categorias
         ];
-        return view('produtos', $tables);
+        return view ('produtos', $tables);
     }
+
+
 
     public function details()
     {
@@ -24,6 +30,7 @@ class ProdutosController
         $produto = App::get('database')->selectOne($idProduto, 'Produtos');
 
         $categoria = App::get('database')->selectOne($produto['categoria'], 'Categorias');
+        
         $tables = [
             'produto' => $produto,
             'categoria' => $categoria
@@ -31,6 +38,8 @@ class ProdutosController
 
         return view('admin/produtos/detalhes-produtos', $tables);
     }
+
+
 
     public function admin()
     {
@@ -42,6 +51,8 @@ class ProdutosController
         return view('admin/produtos/admin-produtos', $tables);
     }
 
+
+
     public function create()
     {
         $categorias = App::get('database')->selectAll('Categorias');
@@ -52,6 +63,8 @@ class ProdutosController
 
         return view('admin/novo-produto', $params);
     }
+
+
 
     public function createAction()
     {
@@ -84,6 +97,8 @@ class ProdutosController
         ];
         return view('admin/produtos/edit-produtos', $tables);
     }
+
+
 
     public function updateAction()
     {
@@ -118,6 +133,8 @@ class ProdutosController
         header('Location: /produtos/admin');
     }
 
+
+
     public function delete()
     {
         $idProduto = $_POST['id'];
@@ -125,4 +142,23 @@ class ProdutosController
 
         header('Location: /produtos/admin');
     }
+
+
+
+    public function searchCategory(){
+
+        $idCategoria = $_POST['cat_id'];
+
+        $productView = App::get('database')->readCat('produtos', 'categoria', $idCategoria);
+
+        $tables = [
+            'produtos' => $productView,
+            'categorias' => $idCategoria
+        ];
+
+        return view('prod-per-cat', $tables);
+    }
+
+
+
 }

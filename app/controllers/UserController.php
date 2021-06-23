@@ -9,7 +9,7 @@ class UserController
     {
         return view ('site/index');
     }
- 
+
 
     public function adm()
     {
@@ -74,20 +74,20 @@ class UserController
 
     public function view()
     {
-       $visual = App::get('database')->read('usuarios',  $_POST['id']);
+        $visual = App::get('database')->read('usuarios', $_POST['id']);
         return view ('admin/usuarios/view_users', compact('visual'));
     }
 
 
     public function contact()
-   {
-       return view('site/contato');
-   }
+    {
+        return view('site/contato');
+    }
 
-   public function enviarEmail()
-   {
-       return view('site/enviar') ;
-   }
+    public function enviarEmail()
+    {
+        return view('site/enviar') ;
+    }
 
 
 
