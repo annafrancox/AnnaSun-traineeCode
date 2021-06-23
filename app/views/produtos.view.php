@@ -22,25 +22,26 @@
 
     <div class="container container-products">
 
-    <form method="POST" action="/produtos/searchCategory">
+    <div class="form-inline form-selector-prod">
+        <form method="POST" action="/produtos/searchCategory">
 
-        <select class="form-control" id="exampleFormControlSelect1" name="cat_id">
-        
-            <option selected>Todas as categorias</option>
+            <select class="form-control selector" id="exampleFormControlSelect1" name="cat_id">
 
-            <?php foreach ($categorias as $categoria) : ?>
+                <option readonly disabled value="0" selected>Todas as categorias</option>
 
-                <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                <?php foreach ($categorias as $categoria) : ?>
 
+                    <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
 
-            <?php endforeach; ?> 
-        </select>
+                <?php endforeach; ?>
 
+            </select>
 
-        <button class="btn" type="submit">Selecionar</button>
+                <button class="btn btn_select" type="submit">Selecionar</button>
 
+        </form>
 
-    </form>
+    </div>
 
         <div class="card-deck card-deck-products">
 

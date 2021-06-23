@@ -249,6 +249,25 @@ html, body {
   border: 1px solid black;
 }
 
+.btn_select{
+  margin-top: 7px;
+  background-color: #ffce07;
+  color: black;
+}
+
+.btn_select:hover{
+  background-color: #cea606;
+  border: 1px solid black;
+}
+
+.form-selector-prod{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right !important;
+  margin-left: auto;
+  margin-right: 0;
+}
+
 /* ===================================================
                     DETALHES DE PRODUTOS:
 ======================================================*/
