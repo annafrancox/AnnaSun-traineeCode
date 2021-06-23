@@ -1,19 +1,18 @@
+<?php
+    session_start();
+
+    if((isset ($_SESSION['email']) == true) and (isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('location: /login');
+    }
+?>
 <!DOCTYPE html>
 
 <html class="administrativa">
 
     <head>
-
-        <?php
-            session_start();
-
-            if((isset ($_SESSION['email']) == true) and (isset($_SESSION['senha']) == true))
-            {
-                unset($_SESSION['email']);
-                unset($_SESSION['senha']);
-                header('location: /login');
-            }
-        ?>
 
         <title> Usuarios - Administrador </title>
 
@@ -31,7 +30,7 @@
 
     <body>
 
-        <nav class="nav-bg navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
         <!-- Brand: -->
         <a class="navbar-brand brand-style" href="/view_adm">
@@ -54,11 +53,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin_produtos"><i class="fas fa-shopping-cart"></i> Produtos</a>
+                    <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/view_categorias"><i class="fas fa-tags"></i> Categorias</a>
+                    <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
                 </li>
 
                 <li class="nav-item">
@@ -75,7 +74,7 @@
 
     </nav>
         
-        <div class="view_adm">
+        <div>
             <div class=" container principal_adm">
                 <div class="card mt-2">
                     <div class="card-body">
@@ -84,7 +83,7 @@
                                 <h4>Contas</h4>
                             </div>
                             <div class="col-auto adicionar">
-                                <a href="/add_users" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
+                                <a href="/addUse" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
                             </div>   
                         </div>
                         <div class="row ">
@@ -106,9 +105,9 @@
                                         <td><small>Castiel Santos de Paula</small></td>
                                         <td><small>Caca@ice.ufjf.br</small></td>
                                         <td>
-                                            <a href="/edit_users"><i class="botao_editar fa fa-pencil-square-o" ></i></a>
-                                            <a href="#"><i class="fa fa-eye"  data-toggle="modal" data-target="#modal_users"></i></a>
-                                            <a href="#"><i class="botao_excluir fa fa-trash"data-toggle="modal" data-target="#excluir"> </i></a>
+                                            <a href="/edit_user"><i class="botao_editar fa fa-pencil-square-o" ></i></a>
+                                            <a href="/view_user"><i class="fa fa-eye"></i></a>
+                                            <a href="/deleteUser"><i class="botao_excluir fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                     <tr class="dados">
@@ -118,9 +117,9 @@
                                         <td><small>Dean Pereira Lopes</small></td>
                                         <td><small>DPL@ice.ufjf.br</small></td>
                                         <td>
-                                            <a href="/edit_users"><i class="botao_editar fa fa-pencil-square-o"></i></a>
-                                            <a href="#"><i class="fa fa-eye"  data-toggle="modal" data-target="#modal_users"></i></a>
-                                            <a href="#"><i class="botao_excluir fa fa-trash"data-toggle="modal" data-target="#excluir"></i></a>
+                                            <a href="/edit_user"><i class="botao_editar fa fa-pencil-square-o"></i></a>
+                                            <a href="/view_user"><i class="fa fa-eye"></i></a>
+                                            <a href="/deleteUser"><i class="botao_excluir fa fa-trash"></i></a>
                                         </td>
                                     </tr> 
                                     <tr class="dados">
@@ -130,9 +129,9 @@
                                         <td><small>Jhon Pereira Lopes</small></td>
                                         <td><small>JhonPL@ice.ufjf.br</small></td>
                                         <td>
-                                            <a href="/edit_users"><i class="botao_editar fa fa-pencil-square-o"></i></a>
-                                            <a href="#"><i class="fa fa-eye"  data-toggle="modal" data-target="#modal_users"></i></a>
-                                            <a href="#"><i class="botao_excluir fa fa-trash" data-toggle="modal" data-target="#excluir"></i></a>
+                                            <a href="/edit"><i class="botao_editar fa fa-pencil-square-o"></i></a>
+                                            <a href="/view_user"><i class="fa fa-eye"></i></a>
+                                            <a href="/deleteUser"><i class="botao_excluir fa fa-trash"></i></a>
                                         </td>
                                     </tr> 
                                     <tr class="dados">
@@ -142,9 +141,9 @@
                                         <td><small>Sam Pereira Lopes</small></td>
                                         <td><small>Sammy@ice.ufjf.br</small></td>
                                         <td>
-                                            <a href="/edit_users"><i class="botao_editar fa fa-pencil-square-o"></i></a>
-                                            <a href="#"><i class="fa fa-eye"  data-toggle="modal" data-target="#modal_users"></i></a>
-                                            <a href="#"><i class="botao_excluir fa fa-trash"data-toggle="modal" data-target="#excluir"></i></a>
+                                            <a href="/edit_user"><i class="botao_editar fa fa-pencil-square-o"></i></a>
+                                            <a href="/view_user"><i class="fa fa-eye" ></i></a>
+                                            <a href="/deleteUser"><i class="botao_excluir fa fa-trash" ></i></a>
                                         </td>
                                     </tr>
                                     
@@ -156,7 +155,7 @@
                 </div>
             </div>
             <!---Modal excluir-->
-
+<!--             
             <div class="modal confirmar_excluir" tabindex="-1" id="excluir" role="dialog">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -177,9 +176,9 @@
                 </div>
             </div>
 
-            <!---Modal excluir--->
+            Modal excluir
 
-            <!-- Modal para vizualização -->
+            Modal para vizualização 
             <div id="modal_users" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -219,7 +218,7 @@
                     </div>
                 </div>
                 </div>
-            </div>
+            </div> -->
         <!-- Fim modal de vizualização -->       
 
         </div>

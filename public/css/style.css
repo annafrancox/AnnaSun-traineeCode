@@ -190,8 +190,8 @@ html, body {
 
 .container-products {
   height: 100%;
-  margin-top: 120px;
-  margin-bottom: 80px;
+  margin-top: 130px;
+  margin-top: 80px;
 }
 
 .card-deck-products {
@@ -678,6 +678,7 @@ a#noStyle {
   border-color: #ffce07;
   color: #fefff5;
   font-size: 110%;
+  font-family: "Montserrat";
 }
 
 .adicionar a:hover {
@@ -765,9 +766,10 @@ a#noStyle {
 }
 
 .button_users {
-  font-weight: 1;
   background-color: #ffce07;
   border-color: #ffce07 solid 6px;
+  margin-left: 10px;
+  color: #070607 !important;
 }
 
 .button_users:hover {
@@ -891,10 +893,6 @@ a#noStyle {
 
   /* NOME DA PÁGINA: */
 
-  .addUsuario,
-  .edit_user_adm {
-    background-image: none;
-  }
 
   /* NOME DA PÁGINA: */
 
