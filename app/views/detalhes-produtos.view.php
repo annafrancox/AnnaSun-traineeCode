@@ -27,8 +27,10 @@
                 <div class="product-body">
                     <h1 class="product-title"><?= $prod->nome ?></h1>
                     <p class="product-description"><?= $prod->descricao ?> </p>
-                    <p class="product-description">Categoria: <?= $categoria['nome'] ?> </p>
 
+                    <?php foreach ($categoria as $cat) : ?>
+                        <p class="product-description">Categoria: <?= $cat->nome ?> </p>
+                    <?php endforeach; ?>
 
                     <div class="product-body-container">
                         <button class="btn product-price"> <?= $prod->preco ?></button>
