@@ -49,7 +49,7 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/view_adm"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/adminUser"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
@@ -61,7 +61,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/view_adm"><i class="fas fa-users"></i> Usuários</a>
+                    <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
                 </li>
 
             </ul>

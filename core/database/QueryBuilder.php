@@ -17,10 +17,29 @@ class QueryBuilder
     }
 
 
+
     public function selectAll($table)
     {
 
-        $sql = "SELECT * FROM {$table}";
+        $sql = "SELECT COUNT(*) FROM {$table} ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchColumn();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+
+
+
+    public function selectAllPagination($table, $inicio, $total_reg)
+    {
+
+        $sql = "SELECT * FROM {$table} LIMIT {$inicio}, {$total_reg}";
 
         try {
             $stmt = $this->pdo->prepare($sql);

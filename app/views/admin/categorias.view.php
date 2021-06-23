@@ -26,7 +26,6 @@
           <div class="card card-bckg" style="width: 18rem;">
             <div class="card-body titulo5">
               <h5 class="card-title"><?= $categoria->nome ?></h5>
-              <p class="card-text"><?= $categoria->descricao ?></p>
               <div style="text-align: right;">
 
               <form action="/categorias/editar" method="POST">

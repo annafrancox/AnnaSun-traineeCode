@@ -10,13 +10,38 @@ class ProdutosController
 
     public function index()
     {
-        $produtos = App::get('database')->selectAll('Produtos');
+        $total_reg = "9";
+
+        $pagina= $_GET['pagina'];
+        if (!$pagina) {
+        $pc = "1";
+        } else {
+        $pc = $pagina;
+        }
+
+        $inicio = $pc - 1;
+        $inicio = $inicio * $total_reg;
+
+        $num = App::get('database')->SelectAll('Produtos');
+        $num = ceil($num/$total_reg);
+        $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
 
         $tables = [
-            'produtos' => $produtos
+            'produtos' => $produtos,
+            'num'=> $num
         ];
         return view('produtos', $tables);
+
+
     }
+
+
+
+
+
+
+
+
 
     public function details()
     {
@@ -36,6 +61,8 @@ class ProdutosController
 
     public function admin()
     {
+        
+
         $produtos = App::get('database')->selectAll('Produtos');
 
         $tables = [
@@ -52,7 +79,7 @@ class ProdutosController
             'categorias' => $categorias
         ];
 
-        return view('admin/novo-produto', $params);
+        return view('admin/produtos/novo-produto', $params);
     }
 
     public function createAction()

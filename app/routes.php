@@ -51,4 +51,5 @@ $router->get('quem_somos', 'PagesController@quem_somos');
 $router->get('login', 'PagesController@login');
 $router->post('logar', 'LoginController@logar');
 $router->post('logout', 'LoginController@logout');
+$router->get('view_adm', 'UserController@adm');
 //PAGES

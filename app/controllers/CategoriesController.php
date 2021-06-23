@@ -31,7 +31,6 @@ class CategoriesController{
 
         $parametros = [
             'nome' => $_POST['categoryName'],
-            'descricao' => $_POST['categoryDescription']
         ];
 
         App::get('database')->insert('categorias', $parametros);
@@ -54,7 +53,6 @@ class CategoriesController{
         $parametros = [
             'id' => $_POST['id'],
             'nome' => $_POST['nome'],
-            'descricao' => $_POST['descricao']
         ];
 
         App::get('database')->edit('categorias', $parametros);

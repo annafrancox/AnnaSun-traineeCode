@@ -25,10 +25,6 @@
                         placeholder="Nome da categoria">
                 </div>
 
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descrição da categoria</label>
-                    <input type="text" name="descricao" value="<?= $categoria->descricao ?>" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descrição da categoria"></input>
-                </div>
 
                 <div class="buttonSubmit">
                     <input type="hidden" value="<?= $categoria->id ?>" name="id">
