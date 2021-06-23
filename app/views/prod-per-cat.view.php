@@ -23,8 +23,9 @@
 
     <div class="container container-products">
 
-    <center><a class="navbar-brand login-nav" href="/produtos"> <i class="bi bi-arrow-bar-left"></i></a></center>
+    <center><a class="navbar-brand login-nav" href="/produtos"> <i class="bi bi-arrow-bar-left"></i>   Voltar</a></center>
 
+    <?php if (!empty($produtos)) : ?>
         <div class="card-deck card-deck-products">
 
             <?php foreach ($produtos as $produto) : ?>
@@ -53,6 +54,12 @@
             <?php endforeach; ?>
 
         </div>
+    <?php else : ?>
+
+        <center><h1>Não há produtos aqui   <i class="bi bi-emoji-frown-fill"></i></h1></center>
+
+    <?php endif; ?>
+
 
     </div>
 
