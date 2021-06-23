@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if((isset ($_SESSION['email']) == true) and (isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('location: /login');
+    }
+?>
 <!DOCTYPE html>
 
 <html class="administrativa">
@@ -12,8 +22,52 @@
         <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="#" crossorigin="anonymous">
     </head>
+    
 
     <body class="view_adm">
+    <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
+
+        <!-- Brand: -->
+        <a class="navbar-brand brand-style" href="/adminUser">
+            <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            Anna Sun
+        </a>
+
+        <!-- Toggler: -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu: -->
+        <div class="collapse navbar-collapse menu-styling" id="navbarNav">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/adminUser"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
+                </li>
+
+            </ul>
+
+            <form method='POST' action='/logout' class= "homeadm-logout">
+                <button type="submit" class="btn btn-warning">Logout</button>
+            </form>
+
+        </div>
+
+    </nav>
         <div class=" container principal_adm">
                     <div class="card mt-2">
                         <div class="card-body sub_principal">

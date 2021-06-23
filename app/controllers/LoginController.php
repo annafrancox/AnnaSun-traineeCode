@@ -30,7 +30,7 @@ class LoginController
 				$_SESSION['loginErro'] = "Email ou senha inválido";
 				header('Location: /login');
 			}elseif(isset($resultado)){
-				header('Location: /view_adm');
+				header('Location: /adminUser');
 			}else{
 				$_SESSION['loginErro'] = "Email ou senha inválido";
 				header('Location: /login');

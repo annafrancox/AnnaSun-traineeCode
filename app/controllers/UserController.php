@@ -81,7 +81,7 @@ class UserController
 
     public function contact()
    {
-       return view('site/contato');
+       return view('contato');
    }
 
    public function enviarEmail()

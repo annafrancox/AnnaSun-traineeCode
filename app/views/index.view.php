@@ -227,7 +227,7 @@
             <div class="contactPage">
                 <div class="contact">
                     <h4>Precisa falar com a gente?</h4>
-                    <a href="/quem_somos" class="btn btn-lg active mx-auto" role="button" aria-pressed="true">Saiba Mais!</a>
+                    <a href="/contato" class="btn btn-lg active mx-auto" role="button" aria-pressed="true">Saiba Mais!</a>
                 </div>
             </div>
 

@@ -19,22 +19,25 @@
 
 <body>
     <div class="products-wrapper">
+    <?php foreach ($produto as $prod) : ?>
         <div class="product-details">
             <div class="image-container">
-                <img src="../../public/img/<?= $produto['imagem'] ?>" alt="">
+                <img src="../../public/img/<?= $prod->imagem ?>" alt="">
             </div>
             <div class="product-body">
-                <h1 class="product-title"><?= $produto['nome'] ?></h1>
-                <p class="product-description"><?= $produto['descricao'] ?> </p>
-                <p class="product-description">Categoria: <?= $categoria['nome'] ?> </p>
+                <h1 class="product-title"><?= $prod->nome ?></h1>
+                <p class="product-description"><?= $prod->descricao ?> </p>
+            <?php foreach ($categoria as $cat) : ?>
+                <p class="product-description">Categoria: <?= $cat->nome ?> </p>
 
-
+            <?php endforeach; ?>
                 <div class="product-body-container">
-                    <button class="btn product-price"> <?= $produto['preco'] ?></button>
-                    <p class="product-estoque"><?= $produto['qtdade'] ?> unidades restantes</p>
+                    <button class="btn product-price"> <?= $prod->preco ?></button>
+                    <p class="product-estoque"><?= $prod->qtdade ?> unidades restantes</p>
                 </div>
             </div>
         </div>
+    <?php endforeach; ?>
     </div>
 
     

@@ -21,15 +21,17 @@ class ProdutosController
     public function details()
     {
         $idProduto = $_GET['id'];
-        $produto = App::get('database')->selectOne($idProduto, 'Produtos');
+        $produto = App::get('database')->read('produtos', $idProduto);
 
-        $categoria = App::get('database')->selectOne($produto['categoria'], 'Categorias');
+        foreach ($produto as $prod) {
+            $categoria = App::get('database')->read('categorias', $prod->categoria);
+        }
         $tables = [
             'produto' => $produto,
             'categoria' => $categoria
         ];
 
-        return view('admin/produtos/detalhes-produtos', $tables);
+        return view('detalhes-produtos', $tables);
     }
 
     public function admin()
