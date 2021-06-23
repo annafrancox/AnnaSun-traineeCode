@@ -21,9 +21,7 @@
     <?php require('include/nav.php'); ?>
 
     <div class="container container-products">
-        <form action="/produtos/search" method="GET">
-            <input type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
-        </form>
+
         <div class="card-deck card-deck-products">
 
             <?php foreach ($produtos as $produto) : ?>

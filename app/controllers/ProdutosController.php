@@ -49,11 +49,12 @@ class ProdutosController
     {
         $categorias = App::get('database')->selectAll('categorias');
 
+
         $params = [
             'categorias' => $categorias
         ];
 
-        return view('admin/novo-produto', $params);
+        return view('admin/produtos/novo-produto', $params);
     }
 
     public function createAction()
@@ -121,5 +122,19 @@ class ProdutosController
         App::get('database')->delete('produtos', $idProduto);
 
         header('Location: /produtos/admin');
+    }
+
+    public function search()
+    {
+        $searchq = htmlspecialchars($_GET['q']);
+
+        $result = App::get('database')->search('produtos', $searchq);
+
+
+        $tables = [
+            'produtos' => $result,
+        ];
+
+        return view('resultado-produtos', $tables);
     }
 }

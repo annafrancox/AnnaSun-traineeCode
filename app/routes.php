@@ -24,6 +24,8 @@ $router->post('produtos/admin/editAction', 'ProdutosController@updateAction');
 $router->get('produtos/admin/create', 'ProdutosController@create');
 $router->post('produtos/admin/createAction', 'ProdutosController@createAction');
 
+$router->get('produtos/search', 'ProdutosController@search');
+
 $router->get('adminUser', 'UserController@adm');
 $router->get('addUse', 'UserController@add');
 $router->post('adicionarUsuario', 'UserController@create');
