@@ -36,7 +36,7 @@ $mail->IsHTML(true);
 $mail->Body = $conteudo_email;
 
 if($mail->send()){
-    return view('contato');
+    header('Location: /contato');
 }
 else{
     echo "Falha ao enviar" . $mail->ErrorInfo;

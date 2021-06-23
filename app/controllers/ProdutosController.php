@@ -121,7 +121,7 @@ class ProdutosController
     public function delete()
     {
         $idProduto = $_POST['id'];
-        App::get('database')->delete($idProduto, 'Produtos');
+        App::get('database')->delete('Produtos', $idProduto );
 
         header('Location: /produtos/admin');
     }

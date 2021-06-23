@@ -34,11 +34,16 @@ class QueryBuilder
     public function insert($table, $parametros)
     {
 
-        $sql = "INSERT INTO `{$table}`(`nome`, `descricao`) VALUES ('{$parametros['nome']}','{$parametros['descricao']}')";
-
+        $sql= sprintf('INSERT INTO %s (%s) VALUES (%s)', 
+        $table, 
+        implode(', ', array_keys($parametros)),
+        ':'.implode(', :', array_keys($parametros))
+        
+    
+        );
         try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parametros);
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -85,11 +90,13 @@ class QueryBuilder
     {
 
         $sql = "SELECT * FROM {$table} WHERE id = {$id}";
-
-        $stmt = $this->pdo->prepare($sql);
-
-        $stmt->execute();
-
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-}
+
+    }

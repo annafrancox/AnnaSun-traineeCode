@@ -1,18 +1,18 @@
 <?php
-
+//CRUD CATEGORIAS
 $router->get('categorias', 'CategoriesController@index');
-
 $router->get('categorias/criar', 'CategoriesController@cat_create');
-
 $router->post('categorias/editar', 'CategoriesController@cat_edit');
-
-
 $router->post('categorias/create', 'CategoriesController@create');
-
 $router->post('categorias/update', 'CategoriesController@update');
-
 $router->post('categorias/delete', 'CategoriesController@delete');
+//CRUD CATEGORIAS
 
+
+
+
+
+//CRUD PRODUTOS
 $router->get('produtos', 'ProdutosController@index');
 $router->get('produtos/detalhes', 'ProdutosController@details');;
 $router->get('produtos/admin', 'ProdutosController@admin');;
@@ -23,7 +23,12 @@ $router->post('produtos/admin/editAction', 'ProdutosController@updateAction');
 
 $router->get('produtos/admin/create', 'ProdutosController@create');
 $router->post('produtos/admin/createAction', 'ProdutosController@createAction');
+//CRUD PRODUTOS
 
+
+
+
+//CRUD USUARIOS
 $router->get('adminUser', 'UserController@adm');
 $router->get('addUse', 'UserController@add');
 $router->post('adicionarUsuario', 'UserController@create');
@@ -33,7 +38,13 @@ $router->post('edit_user' , 'UserController@edit');
 $router->post('editarUsuario', 'UserController@editar');
 $router->get('contato' , 'UserController@contact');
 $router->post('enviar', 'UserController@enviarEmail');
+//CRUD USUARIOS
 
+
+
+
+
+//PAGES
 $router->get('','PagesController@index');
 $router->get('produtos','PagesController@produtos');
 $router->get('contato','PagesController@contato');
@@ -50,5 +61,10 @@ $router->get('editar_produtos','PagesController@editar_produtos');
 $router->get('new_product','PagesController@new_product');
 $router->get('criar_categorias','PagesController@criar_categorias');
 $router->get('editar_categorias','PagesController@editar_categorias');
+//PAGES
+
+
+
+
 
 ?>
