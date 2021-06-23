@@ -25,7 +25,6 @@
             <input type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
         </form>
         <div class="card-deck card-deck-products">
-
             <?php foreach ($produtos as $produto) : ?>
                 <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
                     <form action="/produtos/detalhes" method="GET">

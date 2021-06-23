@@ -21,35 +21,37 @@
     <?php require('include/nav.php'); ?>
 
     <div class="container container-products">
+        <?php if (!empty($produtos)) : ?>
+            <div class="card-deck card-deck-products">
 
-        <div class="card-deck card-deck-products">
+                <?php foreach ($produtos as $produto) : ?>
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+                        <form action="/produtos/detalhes" method="GET">
+                            <div class="card card-product">
+                                <div class="card-img-container">
+                                    <img class="card-img-top" src="../../public/img/<?= $produto->imagem ?>" alt="Imagem de capa do card">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $produto->nome ?></h5>
+                                    <p class="card-text"><?= $produto->descricao ?></p>
+                                    <div class="card-info">
 
-            <?php foreach ($produtos as $produto) : ?>
-                <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
-                    <form action="/produtos/detalhes" method="GET">
-                        <div class="card card-product">
-                            <div class="card-img-container">
-                                <img class="card-img-top" src="../../public/img/<?= $produto->imagem ?>" alt="Imagem de capa do card">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $produto->nome ?></h5>
-                                <p class="card-text"><?= $produto->descricao ?></p>
-                                <div class="card-info">
+                                        <button href="produtos/detalhes" class="btn" type="submit">Detalhes</button>
 
-                                    <button href="produtos/detalhes" class="btn" type="submit">Detalhes</button>
+                                        <div class="card-price">R$ <?= $produto->preco ?></div>
 
-                                    <div class="card-price">R$ <?= $produto->preco ?></div>
+                                        <input type="hidden" name="id" value="<?= $produto->id ?>">
 
-                                    <input type="hidden" name="id" value="<?= $produto->id ?>">
-
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-            <?php endforeach; ?>
-
-        </div>
+                        </form>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else : ?>
+            <h1 style="margin-top: 120px;">Infelizmente não encontramos nenhum resultado para sua busca &#128532;</h1>
+        <?php endif; ?>
 
     </div>
 
