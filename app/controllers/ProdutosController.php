@@ -10,7 +10,7 @@ class ProdutosController
 
     public function index()
     {
-        $produtos = App::get('database')->selectAll('Produtos');
+        $produtos = App::get('database')->selectAll('produtos');
 
         $tables = [
             'produtos' => $produtos
@@ -20,21 +20,24 @@ class ProdutosController
 
     public function details()
     {
-        $idProduto = $_GET['id'];
-        $produto = App::get('database')->selectOne($idProduto, 'Produtos');
 
-        $categoria = App::get('database')->selectOne($produto['categoria'], 'Categorias');
+        $idProduto = $_GET['id'];
+        $produto = App::get('database')->read('produtos', $idProduto);
+
+        foreach ($produto as $prod) {
+            $categoria = App::get('database')->read('categorias', $prod->categoria);
+        }
         $tables = [
             'produto' => $produto,
             'categoria' => $categoria
         ];
 
-        return view('admin/produtos/detalhes-produtos', $tables);
+        return view('detalhes-produtos', $tables);
     }
 
     public function admin()
     {
-        $produtos = App::get('database')->selectAll('Produtos');
+        $produtos = App::get('database')->selectAll('produtos');
 
         $tables = [
             'produtos' => $produtos
@@ -44,7 +47,7 @@ class ProdutosController
 
     public function create()
     {
-        $categorias = App::get('database')->selectAll('Categorias');
+        $categorias = App::get('database')->selectAll('categorias');
 
         $params = [
             'categorias' => $categorias
@@ -65,7 +68,7 @@ class ProdutosController
             'categoria' => $_POST['categoria']
         ];
 
-        App::get('database')->insert('Produtos', $params);
+        App::get('database')->insert('produtos', $params);
         header('Location: /produtos/admin');
     }
 
@@ -74,8 +77,8 @@ class ProdutosController
     public function update()
     {
         $idProduto = $_POST['id'];
-        $produto = App::get('database')->selectOne($idProduto, 'Produtos');
-        $categorias = App::get('database')->selectAll('Categorias');
+        $produto = App::get('database')->read('produtos', $idProduto);
+        $categorias = App::get('database')->selectAll('categorias');
 
         $tables = [
             'produto' => $produto,
@@ -88,40 +91,34 @@ class ProdutosController
     public function updateAction()
     {
 
-        $params = [
+        //Verificação se a imagem foi atualizada ou não
+        // if ($_POST['imagem'] == "") {
+        //     $produto = App::get('database')->read('Produtos', $_POST['id']);
+
+
+        //     $params['imagem'] = $produto['imagem'];
+
+        //     App::get('database')->edit('Produtos', $params);
+        //     header('Location: /produtos/admin');
+        //     exit();/
+        // }
+
+        App::get('database')->edit('produtos',  [
             'id' => $_POST['id'],
             'nome' => $_POST['nome'],
-            'imagem' => '',
+            'descricao' => $_POST['descricao'],
+            'imagem' => $_POST['imagem'],
             'preco' => $_POST['preco'],
             'qtdade' => $_POST['qtdade'],
-            'descricao' => $_POST['descricao'],
-            'categoria' => $_POST['categoria']
-
-        ];
-
-
-        //Verificação se a imagem foi atualizada ou não
-        if ($_POST['imagem'] == "") {
-            $produto = App::get('database')->selectOne($_POST['id'], 'Produtos');
-
-            $params['imagem'] = $produto['imagem'];
-
-            App::get('database')->edit($params, 'Produtos');
-            header('Location: /produtos/admin');
-            exit();
-        }
-
-
-        $params['imagem'] = $_POST['imagem'];
-
-        $params = App::get('database')->edit($params, 'Produtos');
+            'categoria' => '2'
+        ]);
         header('Location: /produtos/admin');
     }
 
     public function delete()
     {
         $idProduto = $_POST['id'];
-        App::get('database')->delete($idProduto, 'Produtos');
+        App::get('database')->delete('produtos', $idProduto);
 
         header('Location: /produtos/admin');
     }
