@@ -8,6 +8,7 @@
         header('location: /login');
     }
 ?>
+
 <!DOCTYPE html>
 
 <html class="administrativa">

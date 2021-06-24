@@ -9,7 +9,7 @@ class UserController
     {
         return view ('site/index');
     }
- 
+
 
     public function adm()
     {
