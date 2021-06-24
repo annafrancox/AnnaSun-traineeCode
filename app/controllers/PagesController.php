@@ -10,7 +10,7 @@ class PagesController
 
 	public function index()
 	{
-		$produtos = App::get('database')->selectAll('produtos');
+		$produtos = App::get('database')->selectAllNoPag('produtos');
 
 		$tables = [
 			'produtos' => $produtos

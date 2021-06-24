@@ -11,22 +11,21 @@ class ProdutosController
 
     public function index()
     {
-        $total_reg = "9";
-
         $pagina= $_GET['pagina'];
         if (!$pagina) {
         $pc = "1";
         } else {
         $pc = $pagina;
         }
+        $total_reg = "9";
+
 
         $inicio = $pc - 1;
         $inicio = $inicio * $total_reg;
 
-        $num = App::get('database')->SelectAll('Produtos');
+        $num = App::get('database')->SelectAllCount('Produtos');
         $num = ceil($num/$total_reg);
         $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
-
         $tables = [
             'produtos' => $produtos,
             'num'=> $num

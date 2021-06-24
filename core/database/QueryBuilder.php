@@ -18,7 +18,7 @@ class QueryBuilder
 
 
 
-    public function selectAll($table)
+    public function selectAllCount($table)
     {
 
         $sql = "SELECT COUNT(*) FROM {$table} ";
@@ -151,6 +151,12 @@ class QueryBuilder
     public function search($table, $searchq)
     {
         $sql = "SELECT * from {$table} WHERE nome LIKE '%{$searchq}%'";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
 
     }
 }

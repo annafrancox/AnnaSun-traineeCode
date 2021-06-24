@@ -135,7 +135,7 @@
 
                 <!-- Card-deck - Product Page: -->
                 <div class="card-deck justify-content-center">
-                    <?php foreach ($produtos as $produto) : ?>
+                    <?php foreach (array_slice($produtos,0,4)as $produto) : ?>
                         <div class="card product">
                             <a id="noStyle" href="/produtos/detalhes/?id=<?= $produto->id ?>">
                                 <img class="card-img-top" src="public/img/<?= $produto->imagem ?>" alt="Produto 1">
