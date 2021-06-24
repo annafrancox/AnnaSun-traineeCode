@@ -21,7 +21,7 @@ class LoginController
 			$email= mysqli_real_escape_string($conn, $_POST['email']); //Escapar de caracteres especiais, prevenindo SQL injection
 			$senha = mysqli_real_escape_string($conn, $_POST['senha']);
 
-			$sql = "SELECT * FROM Usuarios WHERE email = '$email' && senha = '$senha' LIMIT 1"; //seleciona as informacoes quando for igual aos campos digitados 
+			$sql = "SELECT * FROM usuarios WHERE email = '$email' && senha = '$senha' LIMIT 1"; //seleciona as informacoes quando for igual aos campos digitados 
 			$result = mysqli_query($conn, $sql);
 			$resultado = mysqli_fetch_assoc($result); //caso encontre os valores o resultado > 0 senão resultado = 0
 

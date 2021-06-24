@@ -25,8 +25,31 @@
 
     <div class="container container-products">
 
-        <div class="card-deck card-deck-products">
+    <div class="form-inline form-selector-prod">
+        <form method="POST" action="/produtos/searchCategory">
 
+            <select class="form-control selector" id="exampleFormControlSelect1" name="cat_id">
+
+                <option readonly disabled value="0" selected>Todas as categorias</option>
+
+                <?php foreach ($categorias as $categoria) : ?>
+
+                    <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+
+                <?php endforeach; ?>
+
+            </select>
+
+                <button class="btn btn_select" type="submit">Selecionar</button>
+
+        </form>
+
+    </div>
+
+        <form action="/produtos/search" method="GET">
+            <input type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
+        </form>
+        <div class="card-deck card-deck-products">
             <?php foreach ($produtos as $produto) : ?>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
                 <form action="/produtos/detalhes" method="GET">

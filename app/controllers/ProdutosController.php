@@ -8,6 +8,7 @@ use App\Core\App;
 class ProdutosController
 {
 
+
     public function index()
     {
         $total_reg = "9";
@@ -37,14 +38,9 @@ class ProdutosController
 
 
 
-
-
-
-
-
-
     public function details()
     {
+
         $idProduto = $_GET['id'];
         $produto = App::get('database')->read('produtos', $idProduto);
 
@@ -92,13 +88,10 @@ class ProdutosController
 
 
 
-
-
-
-
     public function create()
     {
-        $categorias = App::get('database')->selectAll('Categorias');
+        $categorias = App::get('database')->selectAll('categorias');
+
 
         $params = [
             'categorias' => $categorias
@@ -106,6 +99,8 @@ class ProdutosController
 
         return view('admin/produtos/novo-produto', $params);
     }
+
+
 
     public function createAction()
     {
@@ -119,7 +114,7 @@ class ProdutosController
             'categoria' => $_POST['categoria']
         ];
 
-        App::get('database')->insert('Produtos', $params);
+        App::get('database')->insert('produtos', $params);
         header('Location: /produtos/admin');
     }
 
@@ -128,8 +123,8 @@ class ProdutosController
     public function update()
     {
         $idProduto = $_POST['id'];
-        $produto = App::get('database')->selectOne($idProduto, 'Produtos');
-        $categorias = App::get('database')->selectAll('Categorias');
+        $produto = App::get('database')->read('produtos', $idProduto);
+        $categorias = App::get('database')->selectAll('categorias');
 
         $tables = [
             'produto' => $produto,
@@ -139,44 +134,74 @@ class ProdutosController
         return view('admin/produtos/edit-produtos', $tables);
     }
 
+
+
     public function updateAction()
     {
 
-        $params = [
+        //Verificação se a imagem foi atualizada ou não
+        // if ($_POST['imagem'] == "") {
+        //     $produto = App::get('database')->read('Produtos', $_POST['id']);
+
+
+        //     $params['imagem'] = $produto['imagem'];
+
+        //     App::get('database')->edit('Produtos', $params);
+        //     header('Location: /produtos/admin');
+        //     exit();/
+        // }
+
+        App::get('database')->edit('produtos',  [
             'id' => $_POST['id'],
             'nome' => $_POST['nome'],
-            'imagem' => '',
+            'descricao' => $_POST['descricao'],
+            'imagem' => $_POST['imagem'],
             'preco' => $_POST['preco'],
             'qtdade' => $_POST['qtdade'],
-            'descricao' => $_POST['descricao'],
-            'categoria' => $_POST['categoria']
-
-        ];
-
-
-        //Verificação se a imagem foi atualizada ou não
-        if ($_POST['imagem'] == "") {
-            $produto = App::get('database')->selectOne($_POST['id'], 'Produtos');
-
-            $params['imagem'] = $produto['imagem'];
-
-            App::get('database')->edit($params, 'Produtos');
-            header('Location: /produtos/admin');
-            exit();
-        }
-
-
-        $params['imagem'] = $_POST['imagem'];
-
-        $params = App::get('database')->edit($params, 'Produtos');
+            'categoria' => '2'
+        ]);
         header('Location: /produtos/admin');
     }
+
+
 
     public function delete()
     {
         $idProduto = $_POST['id'];
-        App::get('database')->delete('Produtos', $idProduto );
+        App::get('database')->delete('produtos', $idProduto);
 
         header('Location: /produtos/admin');
+    }
+
+
+
+    public function searchCategory(){
+
+        $idCategoria = $_POST['cat_id'];
+
+        $productView = App::get('database')->readCat('produtos', 'categoria', $idCategoria);
+
+        $tables = [
+            'produtos' => $productView,
+            'categorias' => $idCategoria
+        ];
+
+        return view('prod-per-cat', $tables);
+    }
+
+
+
+    public function search()
+    {
+        $searchq = htmlspecialchars($_GET['q']);
+
+        $result = App::get('database')->search('produtos', $searchq);
+
+
+        $tables = [
+            'produtos' => $result,
+        ];
+
+        return view('resultado-produtos', $tables);
     }
 }

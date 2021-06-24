@@ -79,6 +79,8 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+
+
     }
 
 
@@ -118,10 +120,25 @@ class QueryBuilder
     }
 
 
-    public function read($table, $id)
+    public function read($table, $parameter)
     {
 
-        $sql = "SELECT * FROM {$table} WHERE id = {$id}";
+        $sql = "SELECT * FROM {$table} WHERE id = {$parameter}";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
+
+
+
+    public function readCat($table, $field, $parameter)
+    {
+
+        $sql = "SELECT * FROM `{$table}` WHERE `{$field}` = {$parameter}";
+
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -131,4 +148,9 @@ class QueryBuilder
         }
     }
 
+    public function search($table, $searchq)
+    {
+        $sql = "SELECT * from {$table} WHERE nome LIKE '%{$searchq}%'";
+
     }
+}

@@ -15,6 +15,49 @@
 </head>
 
 <body>
+    <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
+
+        <!-- Brand: -->
+        <a class="navbar-brand brand-style" href="/view_adm">
+            <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            Anna Sun
+        </a>
+
+        <!-- Toggler: -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu: -->
+        <div class="collapse navbar-collapse menu-styling" id="navbarNav">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/view_adm"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/view_adm"><i class="fas fa-users"></i> Usuários</a>
+                </li>
+
+            </ul>
+
+            <form method='POST' action='/logout' class= "homeadm-logout">
+                <button type="submit" class="btn btn-warning">Logout</button>
+            </form>
+
+        </div>
+
+    </nav>
   <!-- Inicio listagem de categorias -->
   <div class="container" style="margin-bottom: 15px;">
         
@@ -22,21 +65,25 @@
 
       <?php foreach($categorias as $categoria) : ?>
 
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-3">
-          <div class="card card-bckg" style="width: 18rem;">
+        <div class="col-sm-12 col-md-6 d-flex justify-content-center mb-3">
+          <div class="card" style="width: 18rem;">
             <div class="card-body titulo5">
               <h5 class="card-title"><?= $categoria->nome ?></h5>
               <div style="text-align: right;">
 
+            <div class="category_buttons_ed">
+            
               <form action="/categorias/editar" method="POST">
                 <input type="hidden" name="id" value="<?= $categoria->id ?>">
-                <button type="submit" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fas fa-pen"></i></button>
+                <button type="submit" class="btn-inline btn btn-outline-warning" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fas fa-pen"></i></button>
               </form>
 
                 <form action="/categorias/delete" method="POST">
                 <input type="hidden" value="<?= $categoria->id ?>" name="id">
-                  <button type="submit" class="btn btn-outline-danger" data-toggle="modal" data-placement="bottom" title="Excluir"><i class="fas fa-trash"></i></button>
+                  <button type="submit" class="btn-inline btn btn-outline-danger" data-toggle="modal" data-placement="bottom" title="Excluir"><i class="fas fa-trash"></i></button>
                 </form>
+
+            </div>
 
               </div>
             </div>
@@ -44,14 +91,13 @@
         </div>    
         <?php endforeach; ?>
 
-
       </div>
       <div class="buttonSubmit">
-        <a href="categorias/criar"><button type="submit" class="btn btn-addProduct mt-1"><b>Adicionar Categoria </b></button></a>
+        <a href="/categorias/criar"><button type="submit" class="btn btn-addProduct mt-1"><b>Adicionar Categoria </b></button></a>
       </div>
+
     </div>
   <!-- Fim listagem de categorias -->
-  
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

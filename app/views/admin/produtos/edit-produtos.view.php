@@ -19,46 +19,49 @@
 
 <body class="addProduct">
 
+
     <!--viewprodutos-->
     <div class="container pt-5 formBorder mb-5">
         <form action="/produtos/admin/editAction" method="POST">
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Nome do produto</label>
-                <input name="nome" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do produto" value="<?= $produto['nome'] ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Preço do produto</label>
-                <input name="preco" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $produto['preco'] ?>" required>
-            </div>
+            <?php foreach ($produto as $prod) : ?>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Nome do produto</label>
+                    <input name="nome" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome do produto" value="<?= $prod->nome ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Preço do produto</label>
+                    <input name="preco" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $prod->preco ?>" required>
+                </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Quantidade</label>
-                <input name="qtdade" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $produto['qtdade'] ?>" required>
-            </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Quantidade</label>
+                    <input name="qtdade" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Preço do produto" value="<?= $prod->qtdade ?>" required>
+                </div>
 
-            <div class=" form-group">
-                <label for="exampleFormControlFile1">Foto do produto</label>
-                <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1">
-                <img src="../../public/img/<?= $produto['imagem'] ?>">
-            </div>
-            <div class=" form-group">
-                <label for="exampleFormControlSelect1">Categoria do produto</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="categoria">
-                    <option></option>
-                    <?php foreach ($categorias as $categoria) : ?>
-                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Descrição do produto</label>
-                <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" rows="3" value="" required><?= $produto['descricao'] ?></textarea>
-            </div>
+                <div class=" form-group">
+                    <label for="exampleFormControlFile1">Foto do produto</label>
+                    <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <img src="../../public/img/<?= $prod->imagem ?>">
+                </div>
+                <div class=" form-group">
+                    <label for="exampleFormControlSelect1">Categoria do produto</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="categoria">
+                        <option></option>
+                        <?php foreach ($categorias as $categoria) : ?>
+                            <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descrição do produto</label>
+                    <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" rows="3" value="" required><?= $prod->descricao ?></textarea>
+                </div>
 
-            <div class="buttonSubmit ">
-                <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-                <button type="submit" class="btn btn-warning"><b>Editar produto</b></button>
-            </div>
+                <div class="buttonSubmit ">
+                    <input type="hidden" name="id" value="<?= $prod->id ?>">
+                    <button type="submit" class="btn btn-warning"><b>Editar produto</b></button>
+                </div>
+            <?php endforeach; ?>
         </form>
     </div>
     <!--viewprodutos-->
