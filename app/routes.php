@@ -26,12 +26,9 @@ $router->post('produtos/admin/createAction', 'ProdutosController@createAction');
 $router->post('produtos/searchCategory', 'ProdutosController@searchCategory');
 
 
-<<<<<<< HEAD
 //USUÁRIO - get:
-=======
 $router->get('produtos/search', 'ProdutosController@search');
 
->>>>>>> 3189c9fcf605218a53e0acbcda758c2a47901dc1
 $router->get('adminUser', 'UserController@adm');
 $router->get('addUse', 'UserController@add');
 $router->get('contato', 'UserController@contact');

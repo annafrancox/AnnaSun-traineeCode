@@ -11,13 +11,9 @@ class ProdutosController
 
     public function index()
     {
-<<<<<<< HEAD
         $produtos = App::get('database')->selectAll('Produtos');
         $categorias = App::get('database')->selectAll('categorias');
 
-=======
-        $produtos = App::get('database')->selectAll('produtos');
->>>>>>> 3189c9fcf605218a53e0acbcda758c2a47901dc1
 
         $tables = [
             'produtos' => $produtos,
@@ -34,14 +30,9 @@ class ProdutosController
         $idProduto = $_GET['id'];
         $produto = App::get('database')->read('produtos', $idProduto);
 
-<<<<<<< HEAD
-        $categoria = App::get('database')->selectOne($produto['categoria'], 'Categorias');
-        
-=======
         foreach ($produto as $prod) {
             $categoria = App::get('database')->read('categorias', $prod->categoria);
         }
->>>>>>> 3189c9fcf605218a53e0acbcda758c2a47901dc1
         $tables = [
             'produto' => $produto,
             'categoria' => $categoria
@@ -149,7 +140,6 @@ class ProdutosController
         header('Location: /produtos/admin');
     }
 
-<<<<<<< HEAD
 
 
     public function searchCategory(){
@@ -168,7 +158,6 @@ class ProdutosController
 
 
 
-=======
     public function search()
     {
         $searchq = htmlspecialchars($_GET['q']);
@@ -182,5 +171,4 @@ class ProdutosController
 
         return view('resultado-produtos', $tables);
     }
->>>>>>> 3189c9fcf605218a53e0acbcda758c2a47901dc1
 }
