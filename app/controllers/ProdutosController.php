@@ -11,7 +11,7 @@ class ProdutosController
 
     public function index()
     {
-        $produtos = App::get('database')->selectAll('Produtos');
+        $produtos = App::get('database')->selectAll('produtos');
         $categorias = App::get('database')->selectAll('categorias');
 
 
