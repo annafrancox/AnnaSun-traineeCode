@@ -13,26 +13,10 @@ class UserController
 
     public function adm()
     {
-        $total_reg = "9";
+       
 
-        $pagina= $_GET['pagina'];
-        if (!$pagina) {
-        $pc = "1";
-        } else {
-        $pc = $pagina;
-        }
+        $usuarios = App::get('database')->selectAllNoPag('usuarios');
 
-        $inicio = $pc - 1;
-        $inicio = $inicio * $total_reg;
-
-        $num = App::get('database')->SelectAll('usuarios');
-        $num = ceil($num/$total_reg);
-        $usuarios = App::get('database')->selectAllPagination('usuarios', $inicio, $total_reg);
-
-        $tables = [
-            'usuarios' => $usuarios,
-            'num'=> $num
-        ];
 
         return view ('admin/usuarios/view_adm', compact('usuarios'));
     }

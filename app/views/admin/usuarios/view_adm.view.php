@@ -1,6 +1,4 @@
-<?php
-die(var_dump($num)); 
-?>
+
 <!DOCTYPE html>
 
 <html class="administrativa">

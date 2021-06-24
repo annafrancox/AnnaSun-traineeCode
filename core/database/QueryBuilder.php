@@ -33,6 +33,19 @@ class QueryBuilder
     }
 
 
+    public function selectAllNoPag($table)
+    {
+
+        $sql = "SELECT * FROM {$table} ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
 
 

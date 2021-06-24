@@ -8,7 +8,7 @@ class CategoriesController{
 
     public function index(){
 
-        $categorias = App::get('database')->selectAll('categorias');
+        $categorias = App::get('database')->selectAllNoPag('categorias');
 
         return view('admin/categorias', compact('categorias'));
     }

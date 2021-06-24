@@ -59,17 +59,42 @@ class ProdutosController
         return view('detalhes-produtos', $tables);
     }
 
+
+
+
+    
+
     public function admin()
     {
-        
+        $total_reg = "9";
 
-        $produtos = App::get('database')->selectAll('Produtos');
+        $pagina= $_GET['pagina'];
+        if (!$pagina) {
+        $pc = "1";
+        } else {
+        $pc = $pagina;
+        }
+
+        $inicio = $pc - 1;
+        $inicio = $inicio * $total_reg;
+
+        $num = App::get('database')->SelectAll('Produtos');
+        $num = ceil($num/$total_reg);
+        $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
 
         $tables = [
-            'produtos' => $produtos
+            'produtos' => $produtos,
+            'num'=> $num
         ];
         return view('admin/produtos/admin-produtos', $tables);
+
     }
+
+
+
+
+
+
 
     public function create()
     {
