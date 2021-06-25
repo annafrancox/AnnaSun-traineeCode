@@ -58,23 +58,23 @@
             <ul class="pagination justify-content-center">
             <?php if ($pc>1) :?>
                 <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
+                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
                 </li>
             <?php else: ?>
             <li class="page-item disabled">
-                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
+                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
                 </li>
             <?php endif;?>
                 <?php for($i = 0 ; $i<$num; $i++): ?>
-                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
+                <li class="page-item"><a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
             <?php endfor; ?>
             <?php if ($pc<$num) :?>
                 <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
+                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
                 </li>
             <?php else: ?>
             <li class="page-item disabled">
-                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
+                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
                 </li>
             <?php endif;?>
             </ul>

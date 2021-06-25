@@ -57,23 +57,23 @@
             <ul class="pagination justify-content-center">
             <?php if ($pc>1) :?>
                 <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
+                    <a class="page-link" href="?cat_id=<?php echo $_GET['cat_id']?>&pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
                 </li>
             <?php else: ?>
             <li class="page-item disabled">
-                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
+                    <a class="page-link" href="?cat_id=<?php echo $_GET['cat_id']?>&pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
                 </li>
             <?php endif;?>
-                <?php for($i = 0 ; $i<$num; $i++): ?>
-                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
+                <?php for($i = 0 ; $i<$num; $i++): ?>       
+                <li class="page-item"><a class="page-link" href="?cat_id=<?php echo $_GET['cat_id']?>&pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
             <?php endfor; ?>
             <?php if ($pc<$num) :?>
                 <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
+                    <a class="page-link" href="?cat_id=<?php echo $_GET['cat_id']?>&pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
                 </li>
             <?php else: ?>
             <li class="page-item disabled">
-                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
+                    <a class="page-link" href="?cat_id=<?php echo $_GET['cat_id']?>&pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
                 </li>
             <?php endif;?>
             </ul>

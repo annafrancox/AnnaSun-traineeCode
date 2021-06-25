@@ -26,7 +26,7 @@
     <div class="container container-products">
 
     <div class="form-inline form-selector-prod">
-        <form method="POST" action="/produtos/searchCategory">
+        <form method="GET" action="/produtos/searchCategory">
 
             <select class="form-control selector" id="exampleFormControlSelect1" name="cat_id">
 
