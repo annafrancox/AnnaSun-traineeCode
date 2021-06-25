@@ -19,7 +19,7 @@ class ProdutosController
             'produtos' => $produtos,
             'categorias' => $categorias
         ];
-        return view ('produtos', $tables);
+        return view('produtos', $tables);
     }
 
 
@@ -47,10 +47,9 @@ class ProdutosController
     {
         session_start();
 
-        if(!isset($_SESSION['email']))
-		{
-		    header('location: /login');
-		}else{
+        if (!isset($_SESSION['email'])) {
+            header('location: /login');
+        } else {
             $produtos = App::get('database')->selectAll('produtos');
 
             $tables = [
@@ -113,17 +112,41 @@ class ProdutosController
     public function updateAction()
     {
 
+        $params = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao'],
+            'preco' => $_POST['preco'],
+            'qtdade' => $_POST['qtdade'],
+        ];
+
+
         //Verificação se a imagem foi atualizada ou não
-        // if ($_POST['imagem'] == "") {
-        //     $produto = App::get('database')->read('Produtos', $_POST['id']);
+        if ($_POST['imagem'] == "") {
+            $produto = App::get('database')->read('produtos', $_POST['id']);
+
+            foreach ($produto as $prod) {
+                $params['imagem'] = $prod->imagem;
+            }
+
+            App::get('database')->edit('produtos', $params);
+            header('Location: /produtos/admin');
+            exit();
+        }
+
+        if ($_POST['categoria'] == "") {
+            $produto = App::get('database')->read('produtos', $_POST['id']);
+
+            foreach ($produto as $prod) {
+                $params['categoria'] = $prod->categoria;
+            }
+
+            App::get('database')->edit('produtos', $params);
+            header('Location: /produtos/admin');
+            exit();
+        }
 
 
-        //     $params['imagem'] = $produto['imagem'];
-
-        //     App::get('database')->edit('Produtos', $params);
-        //     header('Location: /produtos/admin');
-        //     exit();/
-        // }
 
         App::get('database')->edit('produtos',  [
             'id' => $_POST['id'],
@@ -132,7 +155,7 @@ class ProdutosController
             'imagem' => $_POST['imagem'],
             'preco' => $_POST['preco'],
             'qtdade' => $_POST['qtdade'],
-            'categoria' => '2'
+            'categoria' => $_POST['categoria']
         ]);
         header('Location: /produtos/admin');
     }
@@ -149,7 +172,8 @@ class ProdutosController
 
 
 
-    public function searchCategory(){
+    public function searchCategory()
+    {
 
         $idCategoria = $_POST['cat_id'];
 
