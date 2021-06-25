@@ -53,13 +53,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
-    <?php else : ?>
-
-        <center><h1>Não há produtos aqui   <i class="bi bi-emoji-frown-fill"></i></h1></center>
-
-    <?php endif; ?>
-
-    <nav aria-label="Page navigation example">
+            <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
             <?php if ($pc>1) :?>
                 <li class="page-item">
@@ -84,6 +78,13 @@
             <?php endif;?>
             </ul>
         </nav>
+    <?php else : ?>
+
+        <center><h1>Não há produtos aqui   <i class="bi bi-emoji-frown-fill"></i></h1></center>
+
+    <?php endif; ?>
+
+    
     </div>
 
 

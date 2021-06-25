@@ -194,9 +194,7 @@ class ProdutosController
 
         $inicio = $pc - 1;
         $inicio = $inicio * $total_reg;
-        
         $idCategoria = $_POST['cat_id'];
-
 
         
         $num = App::get('database')->selectCatCount('produtos', 'categoria', $idCategoria);
@@ -242,7 +240,8 @@ class ProdutosController
         $tables = [
             'produtos' => $result,
             'num' => $num,
-            'pc' => $pc
+            'pc' => $pc,
+            'search'=>$searchq
         ];
 
         return view('resultado-produtos', $tables);
