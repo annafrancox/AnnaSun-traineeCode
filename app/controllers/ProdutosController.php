@@ -11,13 +11,14 @@ class ProdutosController
 
     public function index()
     {
+        error_reporting(E_ERROR | E_PARSE);
         $pagina= $_GET['pagina'];
         if (!$pagina) {
         $pc = "1";
         } else {
         $pc = $pagina;
         }
-        $total_reg = "6";
+        $total_reg = "9";
 
 
         $inicio = $pc - 1;
@@ -33,7 +34,8 @@ class ProdutosController
         $tables = [
             'produtos' => $produtos,
             'num'=> $num,
-            'categorias' =>$categorias
+            'categorias' =>$categorias,
+            'pc'=> $pc,
         ];
         return view('produtos', $tables);
 
@@ -70,6 +72,7 @@ class ProdutosController
         $pc = $pagina;
         }
         $total_reg = "9";
+        
 
 
         $inicio = $pc - 1;
@@ -81,7 +84,9 @@ class ProdutosController
 
         $tables = [
             'produtos' => $produtos,
-            'num'=> $num
+            'num'=> $num,
+            'pc'=> $pc,
+            
         ];
         return view('admin/produtos/admin-produtos', $tables);
 
@@ -159,7 +164,7 @@ class ProdutosController
             'imagem' => $_POST['imagem'],
             'preco' => $_POST['preco'],
             'qtdade' => $_POST['qtdade'],
-            'categoria' => '2'
+            'categoria' => $_POST['categoria']
         ]);
         header('Location: /produtos/admin');
     }
@@ -177,6 +182,7 @@ class ProdutosController
 
 
     public function searchCategory(){
+        error_reporting(E_ERROR | E_PARSE);
         $total_reg = "9";
 
         $pagina= $_GET['pagina'];
@@ -200,7 +206,8 @@ class ProdutosController
         $tables = [
             'produtos' => $productView,
             'categorias' => $idCategoria,
-            'num' => $num
+            'num' => $num,
+            'pc' => $pc
         ];
 
         return view('prod-per-cat', $tables);
@@ -210,14 +217,15 @@ class ProdutosController
 
     public function search()
     {
-        $total_reg = "6";
-
+        error_reporting(E_ERROR | E_PARSE);
         $pagina= $_GET['pagina'];
         if (!$pagina) {
         $pc = "1";
         } else {
         $pc = $pagina;
         }
+        $total_reg = "9";
+
 
         $inicio = $pc - 1;
         $inicio = $inicio * $total_reg;
@@ -233,7 +241,8 @@ class ProdutosController
 
         $tables = [
             'produtos' => $result,
-            'num' => $num
+            'num' => $num,
+            'pc' => $pc
         ];
 
         return view('resultado-produtos', $tables);
