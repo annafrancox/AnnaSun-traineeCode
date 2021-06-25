@@ -7,10 +7,18 @@ use App\Core\App;
 class CategoriesController{
 
     public function index(){
+        
+        session_start();
 
-        $categorias = App::get('database')->selectAll('categorias');
+        if(!isset($_SESSION['email']))
+		{
+		    header('location: /login');
+		}else{
 
-        return view('admin/categorias/categorias', compact('categorias'));
+            $categorias = App::get('database')->selectAll('categorias');
+
+            return view('admin/categorias/categorias', compact('categorias'));
+        }
     }
 
 

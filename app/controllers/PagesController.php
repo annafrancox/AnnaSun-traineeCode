@@ -38,9 +38,9 @@ class PagesController
 		return view('login');
 	}
 
-	public function view_adm()
-	{
-
-		return view('admin/view_adm');
-	}
+	// public function view_adm()
+	// {
+	// 	return view('admin/view_adm');
+		
+	// }
 }

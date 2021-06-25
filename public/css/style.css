@@ -139,6 +139,8 @@ html, body {
                     VIEW ADMINISTRATTIVA DE PRODUTOS:
 ====================================================== */
 
+
+
 /* ===================================================
                         QUEM SOMOS:
 ======================================================*/
@@ -578,6 +580,8 @@ a#noStyle {
   justify-content: center;
 }
 
+
+
 .formBorder {
   background-color: #fefff5;
 }
@@ -598,6 +602,7 @@ a#noStyle {
 
 .buttonAdminProd{
   text-align: right !important;
+  display: inline-block;
 }
 
 .buttonAdminProd button{
@@ -665,13 +670,20 @@ a#noStyle {
 }
 
 /*====================================================
-                        VIEW ADMINISTRATIVA DE ALGO:
+                        VIEW ADMINISTRATIVA USUARIOS
 ====================================================*/
 
 .formUser{
   display: flex;
   justify-content: space-around;
+  line-height: 520%;
+  padding-top: 5%;
 }
+
+.formUser i{
+  font-size: 25px;
+}
+
 .formUser button{
   background-color: #fefff5;
 }
@@ -708,7 +720,6 @@ a#noStyle {
 .adicionar a:hover {
   background-color: #f3ae2e;
   border-color: #f3ae2e;
-  font-size: 200%;
   background-color: #fdeced;
 }
 
@@ -718,10 +729,18 @@ a#noStyle {
 
 .dados {
   font-family: "Montserrat";
+  font-size: 130%;
+  line-height: 520%;
+  
 }
 
-.dados td {
+.dados-txt {
   font-size: 130%;
+  padding-top: 5%;
+  vertical-align: middle !important;
+}
+
+.dados-center {
   line-height: 520%;
 }
 

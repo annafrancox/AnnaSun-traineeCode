@@ -45,12 +45,19 @@ class ProdutosController
 
     public function admin()
     {
-        $produtos = App::get('database')->selectAll('produtos');
+        session_start();
 
-        $tables = [
-            'produtos' => $produtos
-        ];
-        return view('admin/produtos/admin-produtos', $tables);
+        if(!isset($_SESSION['email']))
+		{
+		    header('location: /login');
+		}else{
+            $produtos = App::get('database')->selectAll('produtos');
+
+            $tables = [
+                'produtos' => $produtos
+            ];
+            return view('admin/produtos/admin-produtos', $tables);
+        }
     }
 
 

@@ -57,7 +57,7 @@
                     <textarea name="descricao" class="form-control" id="exampleFormControlTextarea1" rows="3" value="" required><?= $prod->descricao ?></textarea>
                 </div>
 
-                <div class="buttonSubmit ">
+                <div class="buttonSubmit pb-3">
                     <input type="hidden" name="id" value="<?= $prod->id ?>">
                     <button type="submit" class="btn btn-warning"><b>Editar produto</b></button>
                 </div>
@@ -65,33 +65,6 @@
         </form>
     </div>
     <!--viewprodutos-->
-
-    <!--modal-->
-    <div class="modal" tabindex="-1" id="myModal" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Excluir produto</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Deseja relamente editar este produto?.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-
-                    <form action="produtos/admin/editAction" method="POST">
-                        <button type="button" class="btn btn-warning">Confirmar</button>
-                        <input type="hidden" value="<?= $produto['id'] ?>">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--modal-->
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

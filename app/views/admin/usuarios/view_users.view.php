@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="administrativa">
+<html>
 
 <head>
     <title> Visualizar Usuarios - Administrador </title>
@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="edit_user_adm">
+<body>
 
     <div>
 
@@ -45,7 +45,7 @@
                         <img src="public/img/<?= $view->imagem?>">
                     </div>
 
-                    <div class=" buttonSubmit ">
+                    <div class=" buttonSubmit pb-3">
                         <button type=" submit " class=" btn mt-3 button_users "><b> Voltar</b></button>
                     </div>
             </form>

@@ -1,9 +1,8 @@
 <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
     <!-- Brand: -->
-    <a class="navbar-brand brand-style" href="/view_adm">
+    <a class="navbar-brand brand-style" href="#">
         <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
-        Anna Sun
     </a>
 
     <!-- Toggler: -->
@@ -17,7 +16,7 @@
         <ul class="navbar-nav">
 
             <li class="nav-item active">
-                <a class="nav-link" href="/view_adm"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
@@ -29,7 +28,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/view_adm"><i class="fas fa-users"></i> Usuários</a>
+                <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
             </li>
 
         </ul>
