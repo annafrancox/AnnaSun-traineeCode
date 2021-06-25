@@ -50,11 +50,12 @@ html, body {
 .footer-annasun {
   color: #070607;
   position: absolute;
-  width: 100%;
+  width: 100% !important;
   height: auto; /* Set the fixed height of the footer here */
   line-height: 50px; /* Vertically center the text there */
-  background-color: #fcd9da;
+  background-color: #fcd9da !important;
   text-align: center;
+
 }
 
 .footer-annasun img {
@@ -191,14 +192,17 @@ html, body {
 ======================================================*/
 
 .container-products {
+  background-repeat: repeat;
   height: 100%;
   margin-top: 130px;
   margin-top: 80px;
-  margin-bottom: 400px; /* GAMBIARRA PRO FOOTER by isa */
 }
 
 .card-deck-products {
+  background-color: #fefff5;
   margin-top: 30px;
+  
+  padding-bottom: 200px !important;
 }
 
 .card-product {
@@ -253,6 +257,7 @@ html, body {
 
 .btn_select{
   margin-top: 7px;
+  margin-left: 2px;
   background-color: #ffce07;
   color: black;
 }
@@ -262,12 +267,25 @@ html, body {
   border: 1px solid black;
 }
 
+.form-search-prod{
+  display: flex;
+  justify-content: flex-start;
+  text-align: right !important;
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .form-selector-prod{
   display: flex;
   justify-content: flex-end;
   text-align: right !important;
   margin-left: auto;
   margin-right: 0;
+}
+
+.product-filters{
+  margin: 0 10% 0 10%;
+  top: 50%;
 }
 
 /* ===================================================

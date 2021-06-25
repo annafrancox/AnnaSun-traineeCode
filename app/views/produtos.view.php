@@ -22,30 +22,41 @@
 
     <div class="container container-products">
 
-    <div class="form-inline form-selector-prod">
-        <form method="POST" action="/produtos/searchCategory">
+<!-- Ferramentas de pesquisa -->
 
-            <select class="form-control selector" id="exampleFormControlSelect1" name="cat_id">
+    <div class="row product-filters">
 
-                <option readonly disabled value="0" selected>Todas as categorias</option>
+        <div class="form-inline form-search-prod col">
+            <form action="/produtos/search" method="GET">
+                    <input class="form-control" type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
+            </form>
+        </div>
 
-                <?php foreach ($categorias as $categoria) : ?>
+        <div class="form-inline form-selector-prod col">
 
-                    <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+            <form method="POST" action="/produtos/searchCategory">
 
-                <?php endforeach; ?>
+                <select class="form-control selector" name="cat_id">
 
-            </select>
+                    <option readonly disabled value="0" selected>Todas as categorias</option>
 
-                <button class="btn btn_select" type="submit">Selecionar</button>
+                    <?php foreach ($categorias as $categoria) : ?>
 
-        </form>
+                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+
+                    <?php endforeach; ?>
+
+                </select>
+
+                    <button class="btn btn_select" type="submit">Selecionar</button>
+
+            </form>
+
+        </div>
 
     </div>
 
-        <form action="/produtos/search" method="GET">
-            <input type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
-        </form>
+
         <div class="card-deck card-deck-products">
             <?php foreach ($produtos as $produto) : ?>
                 <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
@@ -54,6 +65,7 @@
                             <div class="card-img-container">
                                 <img class="card-img-top" src="../../public/img/<?= $produto->imagem ?>" alt="Imagem de capa do card">
                             </div>
+
                             <div class="card-body">
                                 <h5 class="card-title"><?= $produto->nome ?></h5>
                                 <p class="card-text"><?= $produto->descricao ?></p>
@@ -74,15 +86,18 @@
 
         </div>
 
+
     </div>
 
+
+
     <?php require('include/footer.php'); ?>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
+
 </html>
+
