@@ -201,7 +201,7 @@ class ProdutosController
         
         $num = App::get('database')->selectCatCount('produtos', 'categoria', $idCategoria);
         $num = ceil($num/$total_reg);
-        $productView = App::get('database')->readCat('produtos', 'categoria', $idCategoria);
+        $productView = App::get('database')->readCat('produtos', 'categoria', $idCategoria, $inicio, $total_reg);
 
         $tables = [
             'produtos' => $productView,

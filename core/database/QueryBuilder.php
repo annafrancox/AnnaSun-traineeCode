@@ -166,10 +166,10 @@ class QueryBuilder
 
 
 
-    public function readCat($table, $field, $parameter)
+    public function readCat($table, $field, $parameter, $inicio, $total_reg)
     {
 
-        $sql = "SELECT * FROM `{$table}` WHERE `{$field}` =  '{$parameter}' ";
+        $sql = "SELECT * FROM {$table} WHERE {$field} =  '{$parameter}' LIMIT $inicio, $total_reg ";
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();

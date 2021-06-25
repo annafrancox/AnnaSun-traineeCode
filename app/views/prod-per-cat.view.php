@@ -61,20 +61,27 @@
 
     <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <?php for($i = 0 ; $i<$num; $i++): ?>
-                <form method = "POST" action = "search/Category">
+            <?php if ($pc>1) :?>
                 <li class="page-item">
-                <input type = "hidden" name = "cat_id" value = "<?php $categorias[0] ?>">
-                <a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a>
+                    <a class="page-link" href="?pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
                 </li>
-                </form>    
-                <?php endfor; ?>
-                <li class="page-item">  
-                    <a class="page-link" href="#">Next</a>
+            <?php else: ?>
+            <li class="page-item disabled">
+                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
                 </li>
+            <?php endif;?>
+                <?php for($i = 0 ; $i<$num; $i++): ?>
+                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
+            <?php endfor; ?>
+            <?php if ($pc<$num) :?>
+                <li class="page-item">
+                    <a class="page-link" href="?pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
+                </li>
+            <?php else: ?>
+            <li class="page-item disabled">
+                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
+                </li>
+            <?php endif;?>
             </ul>
         </nav>
     </div>
