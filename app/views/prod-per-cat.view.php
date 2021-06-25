@@ -52,7 +52,6 @@
                     </form>
                 </div>
             <?php endforeach; ?>
-
         </div>
     <?php else : ?>
 
@@ -60,10 +59,27 @@
 
     <?php endif; ?>
 
-
+    <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <?php for($i = 0 ; $i<$num; $i++): ?>
+                <form method = "POST" action = "search/Category">
+                <li class="page-item">
+                <input type = "hidden" name = "cat_id" value = "<?php $categorias[0] ?>">
+                <a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a>
+                </li>
+                </form>    
+                <?php endfor; ?>
+                <li class="page-item">  
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
-    <?php require('include/footer.php'); ?>
+
 
 
 

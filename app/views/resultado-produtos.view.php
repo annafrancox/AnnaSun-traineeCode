@@ -54,13 +54,27 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+            <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <?php for($i = 0 ; $i<$num; $i++): ?>
+                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
+                <?php endfor; ?>
+                <li class="page-item">  
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
         <?php else : ?>
             <h1 style="margin-top: 120px;">Infelizmente não encontramos nenhum resultado para sua busca &#128532;</h1>
         <?php endif; ?>
+        
 
     </div>
 
-    <?php require('include/footer.php'); ?>
+   
 
 
 

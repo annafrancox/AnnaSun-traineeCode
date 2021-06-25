@@ -18,6 +18,38 @@ class QueryBuilder
 
 
 
+    public function selectCatCount($table, $field, $parameter)
+    {
+
+        $sql = "SELECT COUNT(*) FROM {$table} WHERE `{$field}` = {$parameter} ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchColumn();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+    public function selectSearchCount($table, $searchq)
+    {
+
+        $sql = "SELECT COUNT(*) from {$table} WHERE nome LIKE '%{$searchq}%'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchColumn();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
+
+
     public function selectAllCount($table)
     {
 
@@ -137,8 +169,7 @@ class QueryBuilder
     public function readCat($table, $field, $parameter)
     {
 
-        $sql = "SELECT * FROM `{$table}` WHERE `{$field}` = {$parameter}";
-
+        $sql = "SELECT * FROM `{$table}` WHERE `{$field}` =  '{$parameter}' ";
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -148,9 +179,9 @@ class QueryBuilder
         }
     }
 
-    public function search($table, $searchq)
+    public function search($table, $searchq, $inicio, $total_reg)
     {
-        $sql = "SELECT * from {$table} WHERE nome LIKE '%{$searchq}%'";
+        $sql = "SELECT * from {$table} WHERE nome LIKE '%{$searchq}%'LIMIT {$inicio}, {$total_reg}";
 
         $stmt = $this->pdo->prepare($sql);
 

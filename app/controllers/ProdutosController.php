@@ -17,18 +17,23 @@ class ProdutosController
         } else {
         $pc = $pagina;
         }
-        $total_reg = "9";
+        $total_reg = "6";
 
 
         $inicio = $pc - 1;
         $inicio = $inicio * $total_reg;
+        
 
         $num = App::get('database')->SelectAllCount('Produtos');
         $num = ceil($num/$total_reg);
         $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
+        $categorias = App::get('database')->selectAllNoPag('categorias');
+
+
         $tables = [
             'produtos' => $produtos,
-            'num'=> $num
+            'num'=> $num,
+            'categorias' =>$categorias
         ];
         return view('produtos', $tables);
 
@@ -53,27 +58,24 @@ class ProdutosController
 
         return view('detalhes-produtos', $tables);
     }
-
-
-
-
     
 
     public function admin()
     {
-        $total_reg = "9";
-
+        error_reporting(E_ERROR | E_PARSE);
         $pagina= $_GET['pagina'];
         if (!$pagina) {
         $pc = "1";
         } else {
         $pc = $pagina;
         }
+        $total_reg = "9";
+
 
         $inicio = $pc - 1;
         $inicio = $inicio * $total_reg;
 
-        $num = App::get('database')->SelectAll('Produtos');
+        $num = App::get('database')->SelectAllCount('Produtos');
         $num = ceil($num/$total_reg);
         $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
 
@@ -89,7 +91,7 @@ class ProdutosController
 
     public function create()
     {
-        $categorias = App::get('database')->selectAll('categorias');
+        $categorias = App::get('database')->selectAllNoPag('categorias');
 
 
         $params = [
@@ -123,7 +125,7 @@ class ProdutosController
     {
         $idProduto = $_POST['id'];
         $produto = App::get('database')->read('produtos', $idProduto);
-        $categorias = App::get('database')->selectAll('categorias');
+        $categorias = App::get('database')->selectAllNoPag('categorias');
 
         $tables = [
             'produto' => $produto,
@@ -175,14 +177,30 @@ class ProdutosController
 
 
     public function searchCategory(){
+        $total_reg = "9";
 
+        $pagina= $_GET['pagina'];
+        if (!$pagina) {
+        $pc = "1";
+        } else {
+        $pc = $pagina;
+        }
+
+        $inicio = $pc - 1;
+        $inicio = $inicio * $total_reg;
+        
         $idCategoria = $_POST['cat_id'];
 
+
+        
+        $num = App::get('database')->selectCatCount('produtos', 'categoria', $idCategoria);
+        $num = ceil($num/$total_reg);
         $productView = App::get('database')->readCat('produtos', 'categoria', $idCategoria);
 
         $tables = [
             'produtos' => $productView,
-            'categorias' => $idCategoria
+            'categorias' => $idCategoria,
+            'num' => $num
         ];
 
         return view('prod-per-cat', $tables);
@@ -192,13 +210,30 @@ class ProdutosController
 
     public function search()
     {
+        $total_reg = "6";
+
+        $pagina= $_GET['pagina'];
+        if (!$pagina) {
+        $pc = "1";
+        } else {
+        $pc = $pagina;
+        }
+
+        $inicio = $pc - 1;
+        $inicio = $inicio * $total_reg;
+        
         $searchq = htmlspecialchars($_GET['q']);
 
-        $result = App::get('database')->search('produtos', $searchq);
+        $num = App::get('database')->selectSearchCount('produtos', $searchq);
+        $num = ceil($num/$total_reg);
+
+
+        $result = App::get('database')->search('produtos', $searchq, $inicio, $total_reg);
 
 
         $tables = [
             'produtos' => $result,
+            'num' => $num
         ];
 
         return view('resultado-produtos', $tables);
