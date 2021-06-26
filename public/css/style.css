@@ -258,7 +258,7 @@ html, body {
   border: 1px solid black;
 }
 
-.form-control{
+.form-control-prod{
   max-width: 200px;
   margin-left: 10px;
   display: inline-block !important;
@@ -269,13 +269,10 @@ html, body {
   display: inline-block !important;
 }
 
-/* .form-selector-prod{
-  display: flex;
-  justify-content: flex-end;
-  text-align: right !important;
-  margin-left: auto;
-  margin-right: 0;
-} */
+.botaocentro{
+  margin-bottom: 10px;
+}
+
 
 
 /* ===================================================
@@ -986,4 +983,24 @@ a#noStyle {
     margin-left: 7%;
   }
 
+
+}
+
+
+@media (max-width: 425px){
+  .alinhamento01{
+    display: block !important;
+    text-align: center !important;
+  }
+
+
+  .form-control{
+    max-width: 200px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .alinhamento02{
+    text-align: center !important;
+  }
 }
