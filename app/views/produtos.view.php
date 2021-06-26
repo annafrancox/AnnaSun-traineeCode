@@ -28,7 +28,7 @@
         <div class="row alinhamento01">
             <div class="col">
                 <form action="/produtos/search" method="GET">
-                    <i class="fas fa-search"></i><input class="form-control form-control-prod" type="text" placeholder="nome do produto" name="q" maxlength="4">
+                    <i class="fas fa-search"></i><input class="form-control form-control-prod" type="text" placeholder="nome do produto" name="q" maxlength="20">
                 </form>
             </div>
             <div class="col form-right">
