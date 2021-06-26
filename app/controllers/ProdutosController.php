@@ -80,6 +80,14 @@ class ProdutosController
 
         $num = App::get('database')->SelectAllCount('Produtos');
         $num = ceil($num/$total_reg);
+        
+
+        session_start();
+
+        if(!isset($_SESSION['email']))
+		{
+		    header('location: /login');
+		}else{
         $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
 
         $tables = [
@@ -88,19 +96,6 @@ class ProdutosController
             'pc'=> $pc,
             
         ];
-        return view('admin/produtos/admin-produtos', $tables);
-
-        session_start();
-
-        if(!isset($_SESSION['email']))
-		{
-		    header('location: /login');
-		}else{
-            $produtos = App::get('database')->selectAll('produtos');
-
-            $tables = [
-                'produtos' => $produtos
-            ];
             return view('admin/produtos/admin-produtos', $tables);
         }
     }

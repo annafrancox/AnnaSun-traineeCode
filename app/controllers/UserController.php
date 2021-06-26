@@ -15,18 +15,17 @@ class UserController
     {
        
 
-        $usuarios = App::get('database')->selectAllNoPag('usuarios');
-
-
-        return view ('admin/usuarios/view_adm', compact('usuarios'));
+        
         
 		session_start();
 
 		if(!isset($_SESSION['email'])){
 		    header('location: /login');
 		}else{
-            $usuarios = App::get('database')->selectAll('usuarios');
-			return view ('admin/usuarios/view_adm', compact('usuarios'));  
+            $usuarios = App::get('database')->selectAllNoPag('usuarios');
+
+
+            return view ('admin/usuarios/view_adm', compact('usuarios'));
 		}
      
     }
