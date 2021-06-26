@@ -28,27 +28,39 @@
     <div class="form-inline form-selector-prod">
         <form method="GET" action="/produtos/searchCategory">
 
-            <select class="form-control selector" id="exampleFormControlSelect1" name="cat_id">
+    <div class="row product-filters">
 
-                <option readonly disabled value="0" selected>Todas as categorias</option>
+        <div class="form-inline form-search-prod col">
+            <form action="/produtos/search" method="GET">
+                    <input class="form-control" type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
+            </form>
+        </div>
 
-                <?php foreach ($categorias as $categoria) : ?>
+        <div class="form-inline form-selector-prod col">
 
-                    <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+            <form method="POST" action="/produtos/searchCategory">
 
-                <?php endforeach; ?>
+                <select class="form-control selector" name="cat_id">
 
-            </select>
+                    <option readonly disabled value="0" selected>Todas as categorias</option>
 
-                <button class="btn btn_select" type="submit">Selecionar</button>
+                    <?php foreach ($categorias as $categoria) : ?>
 
-        </form>
+                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+
+                    <?php endforeach; ?>
+
+                </select>
+
+                    <button class="btn btn_select" type="submit">Selecionar</button>
+
+            </form>
+
+        </div>
 
     </div>
 
-        <form action="/produtos/search" method="GET">
-            <input type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
-        </form>
+
         <div class="card-deck card-deck-products">
             <?php foreach ($produtos as $produto) : ?>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
@@ -115,6 +127,7 @@
 
 
 
+    <?php require('include/footer.php'); ?>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -128,4 +141,6 @@
         crossorigin="anonymous"></script>
 </body>
 
+
 </html>
+

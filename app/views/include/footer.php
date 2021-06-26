@@ -1,8 +1,11 @@
 <!-- Footer -->
-<footer class="footer-annasun">
+
+<footer class="footer-annasun footer">
+
         <div class="container-fluid">
 
             <div class="row">
+
                 <div class="col-sm">
                     <img src="public/img/logo_trainee.png" alt="Logo Anna_Sun">
                 </div>
@@ -27,6 +30,7 @@
             <div class=" copyright container">
                 <p>Copyright <span>&copy;</span> 2021 All Rights Reserved by <span>Anna Sun</span>.</p>
             </div>   
-        </div>
-    </footer>
 
+        </div>
+
+</footer>

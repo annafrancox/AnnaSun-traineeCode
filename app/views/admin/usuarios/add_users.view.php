@@ -26,29 +26,28 @@
                 <div class=" form-group ">
                     <label label for=" exampleFormControlInput1 "> Nome </label>
                     <input name="nome" type=" email " class=" form-control digita_adm " id=" exampleFormControlInput1 "
-                        placeholder=" Digite seu nome ">
+                        placeholder=" Digite seu nome " required>
                 </div>
                 <div class=" form-group ">
                     <label label for=" exampleFormControlInput1 "> Email </label>
                     <input name="email" type=" email " class=" form-control digita_adm" id=" exampleFormControlInput1 "
-                        placeholder=" nome@ice.ufjf.br ">
+                        placeholder=" nome@ice.ufjf.br " required>
                 </div>
                 <div class=" form-group ">
                     <label label for=" exampleFormControlInput1 "> Senha </label>
                     <input name="senha" type=" email " class=" form-control digita_adm" id=" exampleFormControlInput1 "
-                        placeholder="senha@">
+                        placeholder="senha@" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Adicionar Foto de Perfil</label>
-                    <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1" required>
 
                 </div>
                 <div class=" buttonSubmit ">
-                <a href="adminUser"><button class="btn mt-3 button_users">Voltar</button></a>
                     <button type="submit " class=" btn mt-3 button_users">Cadastrar</button>
                 </div>
             </form>
-            
+
         </div>
         
     </div>

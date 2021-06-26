@@ -7,10 +7,18 @@ use App\Core\App;
 class CategoriesController{
 
     public function index(){
+        
+        session_start();
+
+        if(!isset($_SESSION['email']))
+		{
+		    header('location: /login');
+		}else{
 
         $categorias = App::get('database')->selectAllNoPag('categorias');
 
-        return view('admin/categorias/categorias', compact('categorias'));
+            return view('admin/categorias/categorias', compact('categorias'));
+        }
     }
 
 

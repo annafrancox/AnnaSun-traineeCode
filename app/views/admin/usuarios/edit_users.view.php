@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="administrativa">
+<html>
 
 <head>
     <title> Editar Usuarios - Administrador </title>
@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="edit_user_adm">
+<body>
 
     <div>
 
@@ -27,38 +27,39 @@
                 <div class=" form-group ">
                     <label label for=" exampleFormControlInput1 "> Nome </label>
                     <input name="nome" type=" email " value=" <?= $view->nome?>" class=" form-control digita_adm "
-                        id=" exampleFormControlInput1 ">
+                        id=" exampleFormControlInput1 " required>
                 </div>
                 <form>
                     <div class=" form-group ">
                         <label label for=" exampleFormControlInput1 "> Email </label>
                         <input name="email" type=" email " value=" <?= $view->email?>" class=" form-control digita_adm"
-                            id=" exampleFormControlInput1 ">
+                            id=" exampleFormControlInput1 " required>
                     </div>
                     <div class=" form-group ">
                         <label label for=" exampleFormControlInput1 "> Senha </label>
                         <input name="senha" type=" email " value=" <?=$view->senha?>" class=" form-control digita_adm"
                             id="
-                        exampleFormControlInput1 ">
+                        exampleFormControlInput1 " required>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlFile1">Adicionar Foto</label>
                         <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1"
                             required>
                         <div class="form-group">
+                            <p></p>
                             <label for="exampleFormControlFile1">Foto</label>
                             <img src="public/img/<?= $view->imagem?>">
                         </div>
 
                     </div>
 
-                    <div class=" buttonSubmit ">
+                    <div class=" buttonSubmit pb-3">
                         <input type="hidden" name="id" value=<?=$view->id?>>
-                        <button type=" submit" class=" btn mt-3 button_users "> <b> Editar </b> </button>
+                        <button type=" submit" class=" btn mt-3 button_users ">Editar </button>
                     </div>
                 </form>
                 <?php endforeach; ?>
-                <a class="btn btn-warning button_users" href="adminUser" role="button">Voltar</a>
+                
         </div>
     </div>
 </body>

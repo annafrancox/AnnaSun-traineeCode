@@ -70,7 +70,6 @@ $router->get('', 'PagesController@index');
 $router->get('contato', 'PagesController@contato');
 $router->get('quem_somos', 'PagesController@quem_somos');
 $router->get('login', 'PagesController@login');
-$router->get('view_adm', 'PagesController@view_adm');
 
 //PAGES - post:
 $router->post('logar', 'LoginController@logar');

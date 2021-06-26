@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="../js/scripts.js">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
@@ -15,49 +15,48 @@
 </head>
 
 <body>
-    <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
+  <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
-        <!-- Brand: -->
-        <a class="navbar-brand brand-style" href="/view_adm">
-            <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
-            Anna Sun
-        </a>
+    <!-- Brand: -->
+    <a class="navbar-brand brand-style" href="#">
+        <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
+    </a>
 
-        <!-- Toggler: -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Toggler: -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Navbar Menu: -->
-        <div class="collapse navbar-collapse menu-styling" id="navbarNav">
+    <!-- Navbar Menu: -->
+    <div class="collapse navbar-collapse menu-styling" id="navbarNav">
 
-            <ul class="navbar-nav">
+        <ul class="navbar-nav">
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="/view_adm"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
-                </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/view_adm"><i class="fas fa-users"></i> Usuários</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
+            </li>
 
-            </ul>
+        </ul>
 
-            <form method='POST' action='/logout' class= "homeadm-logout">
-                <button type="submit" class="btn btn-warning">Logout</button>
-            </form>
+        <form method='POST' action='/logout' class= "homeadm-logout">
+            <button type="submit" class="btn btn-warning">Logout</button>
+        </form>
 
-        </div>
+    </div>
 
-    </nav>
+  </nav>
   <!-- Inicio listagem de categorias -->
   <div class="container" style="margin-bottom: 15px;">
         
@@ -71,14 +70,14 @@
               <h5 class="card-title"><?= $categoria->nome ?></h5>
               <div style="text-align: right;">
 
-            <div class="category_buttons_ed">
-            
-              <form action="/categorias/editar" method="POST">
+            <div class="category_buttons_ed buttonAdminProd">
+             
+              <form action="/categorias/editar" method="POST" class="buttonAdminProd">
                 <input type="hidden" name="id" value="<?= $categoria->id ?>">
                 <button type="submit" class="btn-inline btn btn-outline-warning" data-toggle="tooltip" data-placement="bottom" title="Editar"><i class="fas fa-pen"></i></button>
               </form>
 
-                <form action="/categorias/delete" method="POST">
+                <form action="/categorias/delete" method="POST" class="buttonAdminProd">
                 <input type="hidden" value="<?= $categoria->id ?>" name="id">
                   <button type="submit" class="btn-inline btn btn-outline-danger" data-toggle="modal" data-placement="bottom" title="Excluir"><i class="fas fa-trash"></i></button>
                 </form>

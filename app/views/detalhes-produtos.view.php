@@ -19,26 +19,32 @@
 
 <body>
     <div class="products-wrapper">
-    <?php foreach ($produto as $prod) : ?>
-        <div class="product-details">
-            <div class="image-container">
-                <img src="../../public/img/<?= $prod->imagem ?>" alt="">
-            </div>
-            <div class="product-body">
-                <h1 class="product-title"><?= $prod->nome ?></h1>
-                <p class="product-description"><?= $prod->descricao ?> </p>
-            <?php foreach ($categoria as $cat) : ?>
-                <p class="product-description">Categoria: <?= $cat->nome ?> </p>
-
-            <?php endforeach; ?>
-                <div class="product-body-container">
-                    <button class="btn product-price"> <?= $prod->preco ?></button>
-                    <p class="product-estoque"><?= $prod->qtdade ?> unidades restantes</p>
+        <?php foreach ($produto as $prod) : ?>
+            <div class="product-details">
+                <div class="image-container">
+                    <img src="../../public/img/<?= $prod->imagem ?>" alt="">
                 </div>
+                <div class="product-body">
+                    <h1 class="product-title"><?= $prod->nome ?></h1>
+                    <p class="product-description"><?= $prod->descricao ?> </p>
+
+                    <?php foreach ($categoria as $cat) : ?>
+                        <p class="product-description">Categoria: <?= $cat->nome ?> </p>
+                    <?php endforeach; ?>
+
+                    <div class="product-body-container">
+                        <button class="btn product-price"> R$<?= $prod->preco ?></button>
+                        <p class="product-estoque"><?= $prod->qtdade ?> unidades restantes</p>
+                    </div>
+                </div>
+                
             </div>
-        </div>
-    <?php endforeach; ?>
+            
+        <?php endforeach; ?>
     </div>
+        <div class="buttonSubmit ">
+            <a href="/produtos/admin"><button class="btn btn-warning"><b>Voltar</b></button></a>
+        </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

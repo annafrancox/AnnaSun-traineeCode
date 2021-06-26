@@ -90,6 +90,19 @@ class ProdutosController
         ];
         return view('admin/produtos/admin-produtos', $tables);
 
+        session_start();
+
+        if(!isset($_SESSION['email']))
+		{
+		    header('location: /login');
+		}else{
+            $produtos = App::get('database')->selectAll('produtos');
+
+            $tables = [
+                'produtos' => $produtos
+            ];
+            return view('admin/produtos/admin-produtos', $tables);
+        }
     }
 
 

@@ -8,6 +8,7 @@ use mysqli;
 class LoginController
 {
 	public function logar(){
+
 		session_start();
 
 		$conn = mysqli_connect("127.0.0.1", "root", "", "annasun");
@@ -30,6 +31,7 @@ class LoginController
 				$_SESSION['loginErro'] = "Email ou senha inválido";
 				header('Location: /login');
 			}elseif(isset($resultado)){
+				$_SESSION['email'] = $resultado['email'];
 				header('Location: /adminUser');
 			}else{
 				$_SESSION['loginErro'] = "Email ou senha inválido";
