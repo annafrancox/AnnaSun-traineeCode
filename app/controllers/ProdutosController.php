@@ -25,9 +25,9 @@ class ProdutosController
         $inicio = $inicio * $total_reg;
         
 
-        $num = App::get('database')->SelectAllCount('Produtos');
+        $num = App::get('database')->SelectAllCount('produtos');
         $num = ceil($num/$total_reg);
-        $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
+        $produtos = App::get('database')->selectAllPagination('produtos', $inicio, $total_reg);
         $categorias = App::get('database')->selectAllNoPag('categorias');
 
 
@@ -78,7 +78,7 @@ class ProdutosController
         $inicio = $pc - 1;
         $inicio = $inicio * $total_reg;
 
-        $num = App::get('database')->SelectAllCount('Produtos');
+        $num = App::get('database')->SelectAllCount('produtos');
         $num = ceil($num/$total_reg);
         
 
@@ -88,7 +88,7 @@ class ProdutosController
 		{
 		    header('location: /login');
 		}else{
-        $produtos = App::get('database')->selectAllPagination('Produtos', $inicio, $total_reg);
+        $produtos = App::get('database')->selectAllPagination('produtos', $inicio, $total_reg);
 
         $tables = [
             'produtos' => $produtos,

@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE html>
 <html>
 
@@ -23,40 +23,30 @@
 
     <?php require('include/nav.php'); ?>
 
-    <div class="container container-products">
+    <div class="container" style="margin-top: 110px;">
 
+        <div class="row">
+            <div class="col">
+                <form action="/produtos/search" method="GET">
+                    <i class="fas fa-search"></i><input class="form-control" type="text" placeholder="nome do produto" name="q" maxlength="4">
+                </form>
+            </div>
+            <div class="col form-right">
+                <form class="" method="GET" action="/produtos/searchCategory">
+                    <select class="form-control" name="cat_id">
 
-    <div class="row product-filters">
+                        <option readonly disabled value="0" selected>Todas as categorias</option>
 
-        <div class="form-inline form-search-prod col">
-            <form action="/produtos/search" method="GET">
-                    <input class="form-control" type="text" placeholder="Digite o nome do produto buscado aqui" name="q">
-            </form>
+                        <?php foreach ($categorias as $categoria) : ?>
+
+                            <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+
+                        <?php endforeach; ?>
+                    </select>
+                    <button class="btn btn_select form-right" type="submit">Selecionar</button>
+                </form>
+            </div>
         </div>
-
-        <div class="form-inline form-selector-prod col">
-
-            <form method="GET" action="/produtos/searchCategory">
-
-                <select class="form-control selector" name="cat_id">
-
-                    <option readonly disabled value="0" selected>Todas as categorias</option>
-
-                    <?php foreach ($categorias as $categoria) : ?>
-
-                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
-
-                    <?php endforeach; ?>
-
-                </select>
-
-                    <button class="btn btn_select" type="submit">Selecionar</button>
-
-            </form>
-
-        </div>
-
-    </div>
 
 
         <div class="card-deck card-deck-products">

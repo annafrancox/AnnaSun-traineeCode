@@ -94,67 +94,39 @@
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
-
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                    <?php if ($pc>1) :?>
+                        <li class="page-item">
+                            <a class="page-link" href="?pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
+                        </li>
+                    <?php else: ?>
+                    <li class="page-item disabled">
+                            <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
+                        </li>
+                    <?php endif;?>
+                        <?php for($i = 0 ; $i<$num; $i++): ?>
+                        <li class="page-item"><a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
+                    <?php endfor; ?>
+                    <?php if ($pc<$num) :?>
+                        <li class="page-item">
+                            <a class="page-link" href="?pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
+                        </li>
+                    <?php else: ?>
+                    <li class="page-item disabled">
+                            <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
+                        </li>
+                    <?php endif;?>
+                    </ul>
+                </nav>
+            </div>   
+            <div class="buttonCreate">
+                <a type="button" class="btn btn-warning mt-5 buttonCreate mb-5" href="/produtos/admin/create"><b>Adicionar novo produto</b></a>
+            </div>  
         </div>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-            <?php if ($pc>1) :?>
-                <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
-                </li>
-            <?php else: ?>
-            <li class="page-item disabled">
-                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
-                </li>
-            <?php endif;?>
-                <?php for($i = 0 ; $i<$num; $i++): ?>
-                <li class="page-item"><a class="page-link" href="?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
-            <?php endfor; ?>
-            <?php if ($pc<$num) :?>
-                <li class="page-item">
-                    <a class="page-link" href="?pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
-                </li>
-            <?php else: ?>
-            <li class="page-item disabled">
-                    <a class="page-link" href="?pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
-                </li>
-            <?php endif;?>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="buttonCreate">
-        <a type="button" class="btn btn-warning mt-5 buttonCreate mb-5" href="/produtos/admin/create"><b>Adicionar novo
-                produto</b></a>
-    </div>
-    </div>
-    <!--viewprodutos-->
-
-    <!--modal-->
-    <div class="modal" tabindex="-1" id="myModal" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Excluir produto</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Deseja realmente excluir este produto?.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger">Confirmar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--modal-->
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
