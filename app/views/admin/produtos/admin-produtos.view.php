@@ -35,12 +35,12 @@
 
             <ul class="navbar-nav">
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Início</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/produtos/admin"><i class="fas fa-shopping-cart"></i> Produtos<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">

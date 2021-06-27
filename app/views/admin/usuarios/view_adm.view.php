@@ -24,9 +24,9 @@
     <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
         <!-- Brand: -->
-    <a class="navbar-brand brand-style" href="#">
-        <img src="/public/img/company/logosemdescricaocirculo.png" class="d-inline-block align-top" alt="">
-    </a>
+        <a class="navbar-brand brand-style" href="#">
+            <img src="/public/img/company/logosemdescricaocirculo.png" class="d-inline-block align-top" alt="">
+        </a>
 
         <!-- Toggler: -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,8 +38,8 @@
 
             <ul class="navbar-nav">
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Início</a>
                 </li>
 
                 <li class="nav-item">
@@ -50,8 +50,8 @@
                     <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários<span class="sr-only">(current)</span></a>
                 </li>
 
             </ul>
@@ -63,64 +63,65 @@
         </div>
 
     </nav>
+
         <div class=" container principal_adm">
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col ">
-                                    <h4>Contas</h4>
-                                </div>
-                                <div class="col-auto adicionar">
-                                    <a href="/addUse" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
-                                </div> 
-                                
+            <div class="card-deck mt-2">
+                <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Contas</h4>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <table class="table">
-                                        <thead class="bg-light topicos">
-                                        <tr>
-                                            <th>Usuário</th>
-                                            <th>Nome</th>
-                                            <th>Email</th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($usuarios as $usuario) :?>
-                                                <tr class="dados">
-                                                    <td class="dados-txt">
-                                                        <img class="rounded-circle perfil-pic" src="public/img/<?= $usuario->imagem?>" alt="">
-                                                    </td>  
-                                                    <td class="dados-txt"><small><?= $usuario->nome;?></small></td>
-                                                    <td class="dados-txt"><small><?= $usuario->email;?></small></td>
-                                                    <td class="dados-center ">
-                                                    
-                                                    <div class ="container formUser">
-                                                        <form method = "POST" action = "view_user" class="buttonAdminProd">
-                                                        <input type = "hidden" name = "id" value=<?= $usuario->id?>>
-                                                        <button type="submit" class="btn"><i class="fa fa-eye"></i>
-                                                        </form>
+                            <div class="col-auto adicionar">
+                                <a href="/addUse" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
+                            </div> 
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead class="bg-light topicos">
+                                    <tr>
+                                        <th>Usuário</th>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($usuarios as $usuario) :?>
+                                            <tr class="dados">
+                                                <td class="dados-txt">
+                                                    <img class="rounded-circle perfil-pic" src="public/img/<?= $usuario->imagem?>" alt="">
+                                                </td>  
+                                                <td class="dados-txt"><small><?= $usuario->nome;?></small></td>
+                                                <td class="dados-txt"><small><?= $usuario->email;?></small></td>
+                                                <td class="dados-center ">
+                                                
+                                                <div class ="container formUser">
+                                                    <form method = "POST" action = "view_user" class="buttonAdminProd">
+                                                    <input type = "hidden" name = "id" value=<?= $usuario->id?>>
+                                                    <button type="submit" class="btn"><i class="fa fa-eye"></i>
+                                                    </form>
 
-                                                        <form method = "POST" action = "edit_user" class="buttonAdminProd">
-                                                        <input type = "hidden" name = "id" value=<?= $usuario->id?>>
-                                                        <button type="submit" class="btn"><i class="botao_editar fas fa-edit"></i>
-                                                        </form>
+                                                    <form method = "POST" action = "edit_user" class="buttonAdminProd">
+                                                    <input type = "hidden" name = "id" value=<?= $usuario->id?>>
+                                                    <button type="submit" class="btn"><i class="botao_editar fas fa-edit"></i>
+                                                    </form>
 
-                                                        <form method = "POST" action = "deleteUser" class="buttonAdminProd">
-                                                        <input type = "hidden" name="id" value = <?= $usuario->id ?>>
-                                                        <button type="submit" class="btn"><i class="botao_excluir fa fa-trash"></i>
-                                                        </form>
-                                                    </div>
-                                                    </td>
-                                                </tr>
-                                            <?php endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                    <form method = "POST" action = "deleteUser" class="buttonAdminProd">
+                                                    <input type = "hidden" name="id" value = <?= $usuario->id ?>>
+                                                    <button type="submit" class="btn"><i class="botao_excluir fa fa-trash"></i>
+                                                    </form>
+                                                </div>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
+                </div>
+            </div>
         </div>
 
 
