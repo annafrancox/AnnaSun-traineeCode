@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   background-size: 100%;
   background-image: url(../img/company/bg.png);
   height: 90%;
@@ -55,7 +56,6 @@ html, body {
   line-height: 50px; /* Vertically center the text there */
   background-color: #fcd9da !important;
   text-align: center;
-
 }
 
 .footer-annasun img {
@@ -117,7 +117,7 @@ html, body {
   background-color: #ed1c23f1 !important;
   height: 60px !important;
 }
-.brand-style img{
+.brand-style img {
   width: 50px;
 }
 .brand-styling {
@@ -134,7 +134,7 @@ html, body {
   padding: 0 3px 0 15px !important;
 }
 
-.homeadm-logout{
+.homeadm-logout {
   float: right !important;
   position: absolute;
   right: 15px;
@@ -142,8 +142,6 @@ html, body {
 /* ===================================================
                     VIEW ADMINISTRATTIVA DE PRODUTOS:
 ====================================================== */
-
-
 
 /* ===================================================
                         QUEM SOMOS:
@@ -249,34 +247,32 @@ html, body {
   border: 1px solid black;
 }
 
-.btn_select{
+.btn_select {
   margin-top: 7px;
   margin-left: 2px;
   background-color: #ffce07;
   color: black;
 }
 
-.btn_select:hover{
+.btn_select:hover {
   background-color: #cea606;
   border: 1px solid black;
 }
 
-.form-control-prod{
+.form-control-prod {
   max-width: 200px;
   margin-left: 10px;
   display: inline-block !important;
 }
 
-.form-right{
+.form-right {
   text-align: right !important;
   display: inline-block !important;
 }
 
-.botaocentro{
+.botaocentro {
   margin-bottom: 10px;
 }
-
-
 
 /* ===================================================
                     DETALHES DE PRODUTOS:
@@ -554,15 +550,19 @@ a#noStyle {
 /*====================================================
         VIEW_CATEGORIAS / CRIAR CATEGORIAS / EDITAR CATEGORIAS:
 ====================================================*/
-.cardCategorias{
+
+.categoria-result-container {
+  margin-top: 80px;
+}
+.cardCategorias {
   text-align: right;
 }
 
-.category_buttons_ed{
+.category_buttons_ed {
   display: inline !important;
 }
 
-.btn-inline{
+.btn-inline {
   display: inline-block !important;
 }
 
@@ -588,8 +588,6 @@ a#noStyle {
   justify-content: center;
 }
 
-
-
 .formBorder {
   background-color: #fefff5;
 }
@@ -608,19 +606,19 @@ a#noStyle {
   background-color: #ffce07;
 }
 
-.buttonAdminProd{
+.buttonAdminProd {
   text-align: right !important;
   display: inline-block;
 }
 
-.buttonAdminProd button{
+.buttonAdminProd button {
   margin: 0 !important;
 }
 
 /*===================================================
                         LOGIN:
 ======================================================*/
-.login-container{
+.login-container {
   padding: 200px;
   align-items: center;
 }
@@ -681,18 +679,18 @@ a#noStyle {
                         VIEW ADMINISTRATIVA USUARIOS
 ====================================================*/
 
-.formUser{
+.formUser {
   display: flex;
   justify-content: space-around;
   line-height: 520%;
   padding-top: 5%;
 }
 
-.formUser i{
+.formUser i {
   font-size: 25px;
 }
 
-.formUser button{
+.formUser button {
   background-color: #fefff5;
 }
 
@@ -702,7 +700,9 @@ a#noStyle {
   font-family: "Bentham";
 }
 
-.principal_adm div,th,td {
+.principal_adm div,
+th,
+td {
   background-color: #fefff5;
 }
 
@@ -739,7 +739,6 @@ a#noStyle {
   font-family: "Montserrat";
   font-size: 130%;
   line-height: 520%;
-  
 }
 
 .dados-txt {
@@ -794,7 +793,6 @@ a#noStyle {
   font-size: 100%;
   line-height: 500%;
 }
-
 
 /*====================================================
                         ADD USERS & EDIT USERS:
@@ -944,7 +942,6 @@ a#noStyle {
 
   /* NOME DA PÁGINA: */
 
-
   /* NOME DA PÁGINA: */
 
   .container-header img {
@@ -985,25 +982,21 @@ a#noStyle {
     justify-content: center;
     margin-left: 7%;
   }
-
-
 }
 
-
-@media (max-width: 425px){
-  .alinhamento01{
+@media (max-width: 425px) {
+  .alinhamento01 {
     display: block !important;
     text-align: center !important;
   }
 
-
-  .form-control{
+  .form-control {
     max-width: 200px;
     margin-left: 10px;
     margin-bottom: 5px;
   }
 
-  .alinhamento02{
+  .alinhamento02 {
     text-align: center !important;
   }
 }
