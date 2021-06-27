@@ -18,7 +18,7 @@ class ProdutosController
         } else {
             $pc = $pagina;
         }
-        $total_reg = "9";
+        $total_reg = "6";
 
 
         $inicio = $pc - 1;
