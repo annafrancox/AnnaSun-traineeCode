@@ -24,9 +24,9 @@
     <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
         <!-- Brand: -->
-    <a class="navbar-brand brand-style" href="#">
-        <img src="/public/img/company/logosemdescricaocirculo.png" class="d-inline-block align-top" alt="">
-    </a>
+        <a class="navbar-brand brand-style" href="#">
+            <img src="/public/img/company/logosemdescricaocirculo.png" class="d-inline-block align-top" alt="">
+        </a>
 
         <!-- Toggler: -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,8 +38,8 @@
 
             <ul class="navbar-nav">
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Início<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fas fa-home"></i> Início</a>
                 </li>
 
                 <li class="nav-item">
@@ -50,33 +50,40 @@
                     <a class="nav-link" href="/categorias"><i class="fas fa-tags"></i> Categorias</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários<span class="sr-only">(current)</span></a>
                 </li>
+
+                <li class="nav-item">
+                    <form method='POST' action='/logout' class= "homeadm-logout">
+                        <button type="submit" class="btn btn-warning">Logout</button>
+                    </form> 
+                </li>
+                
 
             </ul>
 
-            <form method='POST' action='/logout' class= "homeadm-logout">
-                <button type="submit" class="btn btn-warning">Logout</button>
-            </form>
+           
 
         </div>
 
     </nav>
+
         <div class=" container principal_adm">
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col ">
-                                    <h4>Contas</h4>
-                                </div>
-                                <div class="col-auto adicionar">
-                                    <a href="/addUse" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
-                                </div> 
-                                
+            <div class="card-deck mt-2">
+                <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Contas</h4>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
+                            <div class="col-auto adicionar">
+                                <a href="/addUse" ><button type="submit" class="btn btn-warning" >Adicionar</button></a>
+                            </div> 
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
                                     <table class="table">
                                         <thead class="bg-light topicos">
                                         <tr>
@@ -118,9 +125,11 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                
                             </div>
                         </div>
-                    </div>
+                </div>
+            </div>
         </div>
 
 

@@ -115,7 +115,7 @@ body {
 
 .nav-bg {
   background-color: #ed1c23f1 !important;
-  height: 60px !important;
+  /* height: 60px !important; */
 }
 .brand-style img {
   width: 50px;
@@ -133,6 +133,7 @@ body {
 .menu-styling i {
   padding: 0 3px 0 15px !important;
 }
+
 
 .homeadm-logout {
   float: right !important;
@@ -964,6 +965,7 @@ td {
   .cards-a {
     margin-top: 5%;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -983,6 +985,14 @@ td {
     justify-content: center;
     margin-left: 7%;
   }
+
+
+  .homeadm-logout {
+    float: right !important;
+    position: relative;
+    right: 15px;
+  }
+
 }
 
 @media (max-width: 425px) {
@@ -999,5 +1009,10 @@ td {
 
   .alinhamento02 {
     text-align: center !important;
+  }
+
+  .homeadm-logout{
+    float: right !important;
+    right: 15px;
   }
 }
