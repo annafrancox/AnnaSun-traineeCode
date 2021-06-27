@@ -42,12 +42,12 @@
 
                 <div class=" form-group">
                     <label for="exampleFormControlFile1">Foto do produto</label>
-                    <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input name="imagem" type="file" class="form-control-file" id="exampleFormControlFile1" required>
                     <img src="../../public/img/<?= $prod->imagem ?>">
                 </div>
                 <div class=" form-group">
                     <label for="exampleFormControlSelect1">Categoria do produto</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="categoria">
+                    <select class="form-control" id="exampleFormControlSelect1" name="categoria" required>
                         <option></option>
                         <?php foreach ($categorias as $categoria) : ?>
                             <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>

@@ -5,7 +5,7 @@
 
     <title>Anna Sun | Busca por Produto</title>
     <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,11 +25,11 @@
 
     <div class="container container-products">
 
-    <center><a class="navbar-brand login-nav" href="/produtos"> <i class="bi bi-arrow-bar-left"></i>   Voltar</a></center>
+        <center><a class="navbar-brand login-nav" href="/produtos"> <i class="bi bi-arrow-bar-left"></i> Voltar</a></center>
 
 
         <?php if (!empty($produtos)) : ?>
-            <div class="card-deck card-deck-products">
+            <div class="card-deck card-deck-products card-deck-products-search">
 
                 <?php foreach ($produtos as $produto) : ?>
                     <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
@@ -57,38 +57,38 @@
                 <?php endforeach; ?>
             </div>
             <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-            <?php if ($pc>1) :?>
-                <li class="page-item">
-                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php echo $pc-1; ?> " tabindex="-1">Anterior</a>
-                </li>
-            <?php else: ?>
-            <li class="page-item disabled">
-                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php $anterior?> " tabindex="-1">Anterior</a>
-                </li>
-            <?php endif;?>
-                <?php for($i = 0 ; $i<$num; $i++): ?>
-                <li class="page-item"><a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?> </a></li>
-            <?php endfor; ?>
-            <?php if ($pc<$num) :?>
-                <li class="page-item">
-                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php echo $pc+1; ?> " tabindex="-1">Proximo</a>
-                </li>
-            <?php else: ?>
-            <li class="page-item disabled">
-                    <a class="page-link" href="?q=<?php echo $_GET['q']?>&pagina=<?php $anterior?> " tabindex="-1">Proximo</a>
-                </li>
-            <?php endif;?>
-            </ul>
-        </nav>
+                <ul class="pagination justify-content-center">
+                    <?php if ($pc > 1) : ?>
+                        <li class="page-item">
+                            <a class="page-link" href="?q=<?php echo $_GET['q'] ?>&pagina=<?php echo $pc - 1; ?> " tabindex="-1">Anterior</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="?q=<?php echo $_GET['q'] ?>&pagina=<?php $anterior ?> " tabindex="-1">Anterior</a>
+                        </li>
+                    <?php endif; ?>
+                    <?php for ($i = 0; $i < $num; $i++) : ?>
+                        <li class="page-item"><a class="page-link" href="?q=<?php echo $_GET['q'] ?>&pagina=<?php echo $i + 1; ?>"><?php echo $i + 1; ?> </a></li>
+                    <?php endfor; ?>
+                    <?php if ($pc < $num) : ?>
+                        <li class="page-item">
+                            <a class="page-link" href="?q=<?php echo $_GET['q'] ?>&pagina=<?php echo $pc + 1; ?> " tabindex="-1">Proximo</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="?q=<?php echo $_GET['q'] ?>&pagina=<?php $anterior ?> " tabindex="-1">Proximo</a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </nav>
         <?php else : ?>
             <h1 style="margin-top: 120px;">Infelizmente não encontramos nenhum resultado para sua busca &#128532;</h1>
         <?php endif; ?>
-        
+
 
     </div>
 
-   
+
 
 
 
