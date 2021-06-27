@@ -115,7 +115,7 @@ body {
 
 .nav-bg {
   background-color: #ed1c23f1 !important;
-  height: 60px !important;
+  /* height: 60px !important; */
 }
 .brand-style img {
   width: 50px;
@@ -986,8 +986,9 @@ td {
   }
 
 
-  .homeadm-logout{
+  .homeadm-logout {
     float: right !important;
+    position: relative;
     right: 15px;
   }
 

@@ -50,12 +50,12 @@
                 <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
             </li>
 
+            <li class="nav-item">
+                    <form method='POST' action='/logout' class= "homeadm-logout">
+                        <button type="submit" class="btn btn-warning">Logout</button>
+                    </form> 
+            </li>         
         </ul>
-
-        <form method='POST' action='/logout' class= "homeadm-logout">
-            <button type="submit" class="btn btn-warning">Logout</button>
-        </form>
-
     </div>
 
   </nav>
