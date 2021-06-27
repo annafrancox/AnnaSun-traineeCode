@@ -21,7 +21,7 @@
 
     <body>
 
-    <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
+    <nav class="nav-bg navbar navbar-expand-lg navbar-dark">
 
         <!-- Brand: -->
         <a class="navbar-brand brand-style" href="#">
@@ -58,15 +58,9 @@
                     <form method='POST' action='/logout' class= "homeadm-logout">
                         <button type="submit" class="btn btn-warning">Logout</button>
                     </form> 
-                </li>
-                
-
-            </ul>
-
-           
-
+                </li>            
+           </ul>
         </div>
-
     </nav>
 
         <div class=" container principal_adm">

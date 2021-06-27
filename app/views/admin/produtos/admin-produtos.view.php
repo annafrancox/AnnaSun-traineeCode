@@ -18,7 +18,7 @@
 
 <body>
 
-    <nav class="nav-bg navbar navbar-expand-lg navbar-dark ">
+    <nav class="nav-bg navbar navbar-expand-lg navbar-dark">
 
         <!-- Brand: -->
         <a class="navbar-brand brand-style" href="#">
@@ -52,10 +52,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <form method='POST' action='/logout' class="homeadm-logout">
+                    <form method='POST' action='/logout' class= "homeadm-logout">
                         <button type="submit" class="btn btn-warning">Logout</button>
-                    </form>
-                </li>
+                    </form> 
+                </li>         
 
             </ul>
 

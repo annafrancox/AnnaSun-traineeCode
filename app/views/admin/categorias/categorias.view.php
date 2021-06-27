@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
+  <nav class="nav-bg navbar navbar-expand-lg navbar-dark">
 
     <!-- Brand: -->
     <a class="navbar-brand brand-style" href="#">
