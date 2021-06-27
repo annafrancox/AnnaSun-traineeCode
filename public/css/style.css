@@ -134,14 +134,10 @@ body {
   padding: 0 3px 0 15px !important;
 }
 
-<<<<<<< HEAD
-.homeadm-logout{
-=======
+
 .homeadm-logout {
   float: right !important;
->>>>>>> master
   position: absolute;
-  float: right !important;
   right: 15px;
 }
 /* ===================================================
@@ -988,14 +984,13 @@ td {
     justify-content: center;
     margin-left: 7%;
   }
-<<<<<<< HEAD
+
 
   .homeadm-logout{
     float: right !important;
     right: 15px;
   }
-=======
->>>>>>> master
+
 }
 
 @media (max-width: 425px) {
