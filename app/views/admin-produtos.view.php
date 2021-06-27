@@ -1,5 +1,7 @@
 <meta charset="utf-8">
-<title>Anna Sun - Administrar Produtos</title>
+<title>Anna Sun Administração | Produtos</title>
+<link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
+
 <link rel="stylesheet" href="../../public/css/style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">

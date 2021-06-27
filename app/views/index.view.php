@@ -4,7 +4,8 @@
 
 <head>
     <!-- Title: -->
-    <title>Anna Sun - Home</title>
+    <title>Anna Sun | Home</title>
+    <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
 
     <!-- Metas: -->
     <meta charset="utf-8">
@@ -111,7 +112,7 @@
 
                 <!-- Logo - About Us: -->
                 <div class="col-md info-inside">
-                    <img class="img-responsive mx-auto d-block" src="public/img/company/logoround.png" alt="Logo da empresa">
+                    <img class="img-responsive mx-auto d-block" src="public/img/company/logocirculo.png" alt="Logo da empresa">
                 </div>
 
                 <!-- Info - About Us: -->

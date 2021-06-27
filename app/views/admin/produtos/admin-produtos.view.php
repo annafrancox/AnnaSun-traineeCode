@@ -4,7 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Anna Sun - Administrar Produtos</title>
+    <title>Anna Sun Administração | Produtos</title>
+    <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
+    
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,9 +21,9 @@
     <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
         <!-- Brand: -->
-        <a class="navbar-brand brand-style" href="#">
-            <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
-        </a>
+    <a class="navbar-brand brand-style" href="#">
+        <img src="/public/img/company/logosemdescricaocirculo.png" class="d-inline-block align-top" alt="">
+    </a>
 
         <!-- Toggler: -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

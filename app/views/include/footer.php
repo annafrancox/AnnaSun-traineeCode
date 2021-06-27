@@ -7,7 +7,7 @@
             <div class="row">
 
                 <div class="col-sm">
-                    <img src="public/img/logo_trainee.png" alt="Logo Anna_Sun">
+                    <img src="public/img/company/logo.png" alt="Logo Anna_Sun">
                 </div>
 
                 <div class="col-sm-6">

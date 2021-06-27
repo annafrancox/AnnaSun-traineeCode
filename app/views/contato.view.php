@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Anna Sun - Contato</title>
+  <title>Anna Sun | Contato</title>
+  <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
+  
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -19,7 +21,7 @@
 
   <div class="contatofront pb-5 pt-5">
     <div class="contatoImage">
-      <img src="public/img/logo_sun-removebg-preview.png" alt="logo Anna Sun">
+      <img src="public/img/company/logopirulito.png" alt="logo Anna Sun">
     </div>
     <h1>Contato</h1>
   <div class="container container-Contact pt-4">

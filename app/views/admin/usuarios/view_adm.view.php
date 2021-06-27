@@ -4,7 +4,8 @@
 <html>
 
     <head>
-        <title> Usuarios - Administrador </title>
+    <title>Anna Sun Administração | Usuario</title>
+    <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,9 +24,9 @@
     <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
 
         <!-- Brand: -->
-        <a class="navbar-brand brand-style" href="#">
-            <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
-        </a>
+    <a class="navbar-brand brand-style" href="#">
+        <img src="/public/img/company/logosemdescricaocirculo.png" class="d-inline-block align-top" alt="">
+    </a>
 
         <!-- Toggler: -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

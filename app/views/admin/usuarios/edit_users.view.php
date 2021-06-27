@@ -3,7 +3,8 @@
 <html>
 
 <head>
-    <title> Editar Usuarios - Administrador </title>
+<title>Anna Sun Administração | Editar Usuario</title>
+<link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"

@@ -2,7 +2,7 @@
 
     <!-- Brand: -->
     <a class="navbar-brand brand-style" href="#">
-        <img src="/public/img/company/logo_trainee.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        <img src="/public/img/company/logosemdescricao.png" width="40" height="40" class="d-inline-block align-top" alt="">
     </a>
 
     <!-- Toggler: -->

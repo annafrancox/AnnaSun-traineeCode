@@ -8,6 +8,7 @@
 <head>
 
     <title>Anna Sun | Login</title>
+    <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
 
     <!-- Metas: -->
     <meta charset="utf-8">

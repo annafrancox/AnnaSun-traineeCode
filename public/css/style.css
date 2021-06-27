@@ -115,8 +115,11 @@ html, body {
 
 .nav-bg {
   background-color: #ed1c23f1 !important;
+  height: 60px !important;
 }
-
+.brand-style img{
+  width: 50px;
+}
 .brand-styling {
   font-family: "Bentham" !important;
   font-size: large;
@@ -798,7 +801,7 @@ a#noStyle {
 ====================================================*/
 
 .edit_user_adm {
-  background-image: url("../img/bg50_adm.png");
+  background-image: url("../img/company/bgadm.png");
   color: #070607;
   font-family: "Bentham";
   background-color: #fefff5;

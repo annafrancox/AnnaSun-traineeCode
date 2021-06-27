@@ -3,7 +3,9 @@
 
 <head>
 
-    <title>Produtos - AnnaSun</title>
+    <title>Anna Sun | Busca por Categoria</title>
+    <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

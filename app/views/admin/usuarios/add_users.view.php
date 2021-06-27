@@ -3,7 +3,8 @@
 <html class="administrativa">
 
 <head>
-    <title> Adicionar Usuarios - Administrador </title>
+    <title>Anna Sun Administração | Adicionar Usuario</title>
+    <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
