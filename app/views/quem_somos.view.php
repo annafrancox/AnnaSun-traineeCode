@@ -3,7 +3,8 @@
 <html>
 
     <head>
-        <title> Quem Somos - AnnaSun </title>
+        <title> Anna Sun | Quem Somos </title>
+        <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
 
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -22,7 +23,7 @@
 
             <div class="row logo">
               <div class="col image-a">
-                  <img class="w-50 img-responsive mx-auto d-block" src="../../public/img/logo_trainee.png" alt="Logo Anna Sun, Brigaderia e Café">
+                  <img class="w-50 img-responsive mx-auto d-block" src="../../public/img/company/logo.png" alt="Logo Anna Sun, Brigaderia e Café">
               </div>
               <!---Coments-->
               <div class="col-8 texto-a">
