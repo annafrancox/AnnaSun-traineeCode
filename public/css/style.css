@@ -67,7 +67,7 @@ body {
   margin-top: 30px;
   font-size: 30px;
   margin-bottom: 10px;
-  font-family: "Bentham", serif;
+  font-family: MyFirstFont;
 }
 
 .footer-annasun ul {
@@ -169,7 +169,7 @@ body {
 }
 .cards-a h5 {
   text-align: center;
-  font-family: "Bentham";
+  font-family:  myFirstFont;
   color: #070607;
   font-size: 200%;
   background-color: #fdeced;
@@ -416,7 +416,7 @@ a#noStyle {
 
 .info-inside h4 {
   text-align: center;
-  font-family: "Bentham";
+  font-family: MyFirstFont;
   color: #fffff5;
   text-shadow: #070607 2px 1px 4px;
   font-size: xx-large;
@@ -445,7 +445,7 @@ a#noStyle {
 
 .productPage h1 {
   padding: 10px 0 20px 0;
-  font-family: "Bentham";
+  font-family: MyFirstFont;
 }
 
 .product {
@@ -493,7 +493,7 @@ a#noStyle {
 ====================================================*/
 
 .contatofront {
-  font-family: "Bentham", serif;
+  font-family: "Montserrat";
 }
 .contatofront h1 {
   height: auto;
@@ -518,7 +518,7 @@ a#noStyle {
 .botaoContato {
   background-color: #ffce07;
   color: #070607;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
 .boxContact {
@@ -536,7 +536,7 @@ a#noStyle {
 }
 
 .borda-contato label input {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 18px;
 }
 
@@ -699,7 +699,7 @@ a#noStyle {
 .principal_adm {
   background-color: #fefff5;
   color: #070607;
-  font-family: "Bentham";
+  font-family: "Montserrat";
 }
 
 .principal_adm div,
@@ -712,6 +712,7 @@ td {
   background-color: #fefff5 !important;
   font-size: 120%;
   color: #070607;
+  font-family: "Montserrat";
 }
 
 .perfil-pic {
