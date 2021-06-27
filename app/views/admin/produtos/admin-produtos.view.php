@@ -16,7 +16,7 @@
 
 <body>
 
-    <nav class="nav-bg navbar navbar-expand-lg navbar-dark justify-content-center">
+    <nav class="nav-bg navbar navbar-expand-lg navbar-dark ">
 
         <!-- Brand: -->
         <a class="navbar-brand brand-style" href="#">
@@ -49,11 +49,13 @@
                     <a class="nav-link" href="/adminUser"><i class="fas fa-users"></i> Usuários</a>
                 </li>
 
-            </ul>
+                <li class="nav-item">
+                    <form method='POST' action='/logout' class="homeadm-logout">
+                        <button type="submit" class="btn btn-warning">Logout</button>
+                    </form>
+                </li>
 
-            <form method='POST' action='/logout' class="homeadm-logout">
-                <button type="submit" class="btn btn-warning">Logout</button>
-            </form>
+            </ul>
 
         </div>
 
@@ -83,7 +85,7 @@
                                     </form>
                                 
                                 
-                                
+                                    
                                     <form action="/produtos/admin/delete" method="POST" class="buttonAdminProd">
                                         <input type="hidden" value="<?= $produto->id ?>" name="id">
                                         <button type="submit" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>

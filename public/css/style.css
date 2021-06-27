@@ -132,8 +132,8 @@ html, body {
 }
 
 .homeadm-logout{
-  float: right !important;
   position: absolute;
+  float: right !important;
   right: 15px;
 }
 /* ===================================================
@@ -963,6 +963,7 @@ a#noStyle {
   .cards-a {
     margin-top: 5%;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -983,7 +984,10 @@ a#noStyle {
     margin-left: 7%;
   }
 
-
+  .homeadm-logout{
+    float: right !important;
+    right: 15px;
+  }
 }
 
 
@@ -1002,5 +1006,10 @@ a#noStyle {
 
   .alinhamento02{
     text-align: center !important;
+  }
+
+  .homeadm-logout{
+    float: right !important;
+    right: 15px;
   }
 }
