@@ -504,7 +504,8 @@ a#noStyle {
   justify-content: center;
 }
 .contatoImage img {
-  width: 15%;
+  margin-top: 25px;
+  width: 154px;
   background-color: #fefff5;
 }
 
