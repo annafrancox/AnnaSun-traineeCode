@@ -4,7 +4,7 @@
 <head>
     <title>Anna Sun | Produtos</title>
     <link rel="sortcut icon" href="/../public/img/company/logosemdescricao.png" type="image/x-icon">
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,14 +39,14 @@
                         <p class="product-estoque"><?= $prod->qtdade ?> unidades restantes</p>
                     </div>
                 </div>
-                
+
             </div>
-            
+
         <?php endforeach; ?>
     </div>
-        <div class="buttonSubmit ">
-            <a href="/produtos/admin"><button class="btn btn-warning"><b>Voltar</b></button></a>
-        </div>
+    <div class="buttonSubmit ">
+        <a href="/produtos"><button class="btn btn-warning"><b>Voltar</b></button></a>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
