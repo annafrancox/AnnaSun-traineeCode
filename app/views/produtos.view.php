@@ -25,6 +25,7 @@
 
     <?php require('include/nav.php'); ?>
 
+
     <div class="container" style="margin-top: 110px;">
 
         <div class="row alinhamento01">
