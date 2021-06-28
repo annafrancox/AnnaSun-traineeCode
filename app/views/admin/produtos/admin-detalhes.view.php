@@ -44,7 +44,7 @@
             
         <?php endforeach; ?>
     </div>
-        <div class="buttonSubmit ">
+        <div class="buttonSubmit buttonBack ">
             <a href="/produtos/admin"><button class="btn btn-warning"><b>Voltar</b></button></a>
         </div>
 

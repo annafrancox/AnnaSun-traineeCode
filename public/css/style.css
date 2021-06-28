@@ -992,6 +992,10 @@ td {
     position: relative;
     right: 15px;
   }
+  .buttonBack{
+    margin-top: 100px;
+  
+  } 
 }
 
 @media (max-width: 425px) {
